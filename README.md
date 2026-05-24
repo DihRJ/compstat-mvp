@@ -137,9 +137,17 @@ Esta separação deliberada garante:
 
 ## 🎥 Vídeo demo
 
-📽️ **[Aguardando publicação — link será adicionado em breve]**
+📽️ **[Assistir / baixar demo_60s.mp4 (57s · 1,6 MB · H.264)](https://github.com/DihRJ/compstat-mvp/releases/download/v0.1.0/demo_60s.mp4)**
 
-> Demonstração de 60 segundos cobrindo: navegação entre áreas, mapa de risco, geração do relatório DOCX e botão de sugestão IA.
+Screencast capturado via Playwright cobrindo as **7 páginas** do sistema com fade entre cenas:
+
+1. Dashboard (KPIs · mapa de risco com layer toggle · ranking)
+2. Score / Bingos (tabela comparativa lado a lado das 8 áreas)
+3. Editor de áreas (CRUD + desenho de polígono no mapa)
+4. Importar dados (drag-and-drop com detecção automática de formato)
+5. QMD (sugestão de efetivo híbrida — heurística + botão Claude opcional)
+6. Evolução 90 dias (cards semânticos + gráfico consolidado)
+7. Relatórios (DOCX no formato oficial CompStat — por área ou consolidado)
 
 ---
 
