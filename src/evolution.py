@@ -21,8 +21,10 @@ from typing import Optional
 
 from schemas import SnapshotIndicadores, ComparativoEvolucao
 
+_DEFAULT_SNAPSHOTS_PATH = Path(__file__).resolve().parent.parent / "data" / "snapshots_90d.json"
 
-def carregar_snapshots(path: Union[str, Path] = "data/snapshots_90d.json") -> list[SnapshotIndicadores]:
+
+def carregar_snapshots(path: Union[str, Path] = _DEFAULT_SNAPSHOTS_PATH) -> list[SnapshotIndicadores]:
     p = Path(path)
     if not p.exists():
         return []

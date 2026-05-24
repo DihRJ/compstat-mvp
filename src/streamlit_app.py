@@ -22,6 +22,10 @@ import streamlit as st
 # Permite rodar via `streamlit run src/streamlit_app.py`
 sys.path.insert(0, str(Path(__file__).parent))
 
+# Paths absolutos (funciona em Streamlit Cloud, Docker, scripts)
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
+
 from schemas import (
     AreaPoligonoFM, RelintEstruturado, Ocorrencia, DenunciaDisque, FatorUrbano,
     SnapshotIndicadores, AcaoRecomendada,
@@ -76,11 +80,11 @@ st.markdown(
 @st.cache_data(ttl=5)
 def carregar_tudo():
     """Carrega todos os dados base + calcula bingos."""
-    store = AreasFMStore("data/areas.json")
+    store = AreasFMStore(DATA_DIR / "areas.json")
     areas = store.listar()
 
     def _read(path, model):
-        p = Path(f"data/{path}")
+        p = DATA_DIR / path
         if not p.exists():
             return []
         return [model(**d) for d in json.loads(p.read_text(encoding="utf-8"))]
@@ -249,7 +253,7 @@ def render_scores():
 
 def render_editor():
     st.title("Editor de areas")
-    store = AreasFMStore("data/areas.json")
+    store = AreasFMStore(DATA_DIR / "areas.json")
 
     aba_listar, aba_criar, aba_editar, aba_excluir = st.tabs([
         "Listar", "Criar nova", "Editar", "Excluir",

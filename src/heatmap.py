@@ -5,6 +5,7 @@ Geração de heatmaps:
 """
 
 import io
+from pathlib import Path
 from typing import Optional
 import matplotlib
 matplotlib.use("Agg")
@@ -203,7 +204,10 @@ def gerar_grafico_evolucao(comparativos) -> bytes:
     return buf.read()
 
 
-def adicionar_cameras_ao_mapa(m, csv_path: str = "data/cameras_areas_fm.csv"):
+_DEFAULT_CAMERAS_CSV = str(Path(__file__).resolve().parent.parent / "data" / "cameras_areas_fm.csv")
+
+
+def adicionar_cameras_ao_mapa(m, csv_path: str = _DEFAULT_CAMERAS_CSV):
     """Adiciona câmeras existentes e sugere novas ao mapa folium."""
     import csv, re
     try:

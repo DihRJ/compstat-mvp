@@ -13,11 +13,13 @@ from typing import Optional
 
 from schemas import AreaPoligonoFM
 
+_DEFAULT_AREAS_PATH = Path(__file__).resolve().parent.parent / "data" / "areas.json"
+
 
 class AreasFMStore:
     """Storage simples em JSON (não GeoJSON, mais fácil para MVP)."""
 
-    def __init__(self, json_path: Union[str, Path] = "data/areas.json"):
+    def __init__(self, json_path: Union[str, Path] = _DEFAULT_AREAS_PATH):
         self.path = Path(json_path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         if not self.path.exists():
