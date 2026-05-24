@@ -138,6 +138,29 @@ st.markdown(
         text-align:center; color:#888; font-size:.75rem;
         padding:1.5rem 0 .5rem; border-top:1px solid #EEE; margin-top:2rem;
     }
+    .eyebrow {
+        font-size:.72rem; text-transform:uppercase; letter-spacing:.08em;
+        color:#888; font-weight:700; margin:1.5rem 0 .5rem;
+    }
+    .sb-section {
+        font-size:.7rem; text-transform:uppercase; letter-spacing:.08em;
+        color:#888; font-weight:600; margin:.6rem 0 .25rem;
+    }
+    .step-pill {
+        display:inline-flex; align-items:center; gap:.55rem;
+        font-size:.88rem; color:#1E2761; font-weight:600;
+        margin:.4rem 0 .5rem;
+    }
+    .step-num {
+        background:#1E2761; color:#fff; width:22px; height:22px;
+        border-radius:50%; display:inline-flex; align-items:center;
+        justify-content:center; font-size:.72rem;
+    }
+    .evo-card { border:1px solid #E0E0E0; border-radius:6px;
+        padding:1rem; margin-bottom:.65rem; }
+    .evo-card-melhora { border-left:4px solid #2E7D32; }
+    .evo-card-piora   { border-left:4px solid #C62828; }
+    .evo-card-estavel { border-left:4px solid #9E9E9E; }
     footer { visibility:hidden; }
     #MainMenu { visibility:hidden; }
     </style>
@@ -232,6 +255,22 @@ def empty_state(
     if cta_label and cta_target_pagina:
         if st.button(cta_label, type="primary", key=key or f"empty_cta_{titulo[:20]}"):
             navegar_para(cta_target_pagina)
+
+
+def secao(titulo: str) -> None:
+    """Subtítulo discreto (eyebrow) para sections dentro de uma página."""
+    st.markdown(f"<div class='eyebrow'>{titulo}</div>", unsafe_allow_html=True)
+
+
+def step_label(n: int, titulo: str, ativo: bool = True) -> None:
+    """Indicador de etapa numerada para wizards multi-step."""
+    cor = "#1E2761" if ativo else "#9E9E9E"
+    st.markdown(
+        f"<div class='step-pill' style='color:{cor}'>"
+        f"<span class='step-num' style='background:{cor}'>{n}</span>"
+        f"{titulo}</div>",
+        unsafe_allow_html=True,
+    )
 
 
 def render_footer_institucional() -> None:
@@ -597,11 +636,16 @@ def render_dashboard():
         return
 
     # ===== KPIs no topo =====
+    n_alto = sum(1 for b in bingos if b.componentes.score_final > 0.6)
     col1, col2, col3, col4 = st.columns(4)
     col1.container(border=True).metric("Áreas ativas", len(areas))
-    col2.container(border=True).metric("Ocorrências", len(dados["ocorrencias"]))
-    col3.container(border=True).metric("RELINTs", len(dados["relints"]))
-    col4.container(border=True).metric("Denúncias", len(dados["denuncias"]))
+    col2.container(border=True).metric(
+        "Em alerta (score >0,60)", f"{n_alto}/{len(bingos)}",
+    )
+    col3.container(border=True).metric("Ocorrências", len(dados["ocorrencias"]))
+    col4.container(border=True).metric(
+        "RELINTs · Denúncias", f"{len(dados['relints'])} · {len(dados['denuncias'])}",
+    )
 
     # ===== Tabs principais =====
     tab_mapa, tab_ranking = st.tabs(["🗺️  Mapa de risco", "🏆  Ranking de áreas"])
@@ -696,11 +740,15 @@ def render_dashboard():
 
         for i, b in enumerate(bingos, 1):
             c = b.componentes
+            cor_pos = "#C62828" if i == 1 else "#EF6C00" if i <= 3 else "#9E9E9E"
             with st.container(border=True):
                 col_pos, col_info, col_acao = st.columns([1, 7, 2])
                 col_pos.markdown(
-                    f"<div style='font-size:1.6rem; font-weight:700; "
-                    f"color:#1E2761; text-align:center'>{i}º</div>",
+                    f"<div style='font-size:2rem; font-weight:800; "
+                    f"color:{cor_pos}; text-align:center; line-height:1'>{i}</div>"
+                    f"<div style='font-size:.62rem; color:#888; text-align:center; "
+                    f"text-transform:uppercase; letter-spacing:.06em; "
+                    f"font-weight:600'>posição</div>",
                     unsafe_allow_html=True,
                 )
                 col_info.markdown(
@@ -727,19 +775,12 @@ def render_scores():
         "Score / Bingos detalhados",
         "Cruzamento de 4 fontes com pesos diferenciados.",
     )
-    st.markdown(
-        f"Pesos: Mancha **0,40** · {termo('RELINT')} **0,30** · "
-        f"Urbano **0,15** · Disque **0,10** · Modus+rotas **0,05**. "
-        f"{termo('RELINT')} oficial pesa **3×** mais que denúncia anônima.",
-        unsafe_allow_html=True,
-    )
 
-    # Lei dos pesos visivel
     st.markdown(
         "<div class='institucional'><strong>Lei dos pesos (score):</strong> "
-        "Mancha 0.40 &nbsp;·&nbsp; RELINT 0.30 &nbsp;·&nbsp; Urbano 0.15 "
-        "&nbsp;·&nbsp; Disque 0.10 &nbsp;·&nbsp; Modus+rotas 0.05 "
-        "&nbsp;·&nbsp; Faccao x1.0 a x1.5</div>",
+        f"Mancha 0,40 &nbsp;·&nbsp; {termo('RELINT')} 0,30 (3× o peso do Disque) "
+        "&nbsp;·&nbsp; Urbano 0,15 &nbsp;·&nbsp; Disque 0,10 "
+        "&nbsp;·&nbsp; Modus+rotas 0,05 &nbsp;·&nbsp; Facção x1,0 a x1,5</div>",
         unsafe_allow_html=True,
     )
 
@@ -747,9 +788,46 @@ def render_scores():
     bingos = dados["bingos"]
 
     if not bingos:
-        st.info("Nenhuma area com score calculado.")
+        empty_state(
+            "📊", "Nenhuma área com score calculado",
+            "Cadastre áreas e importe ocorrências para gerar scores.",
+            cta_label="Cadastrar área", cta_target_pagina="Editor de areas",
+            key="empty_scores",
+        )
         return
 
+    # Comparativo lado a lado (R2-2)
+    secao("Comparativo lado a lado")
+    tabela_comp = [
+        {
+            "Área": b.nome_area,
+            "Score": b.componentes.score_final,
+            "Mancha": b.componentes.score_mancha,
+            "RELINT": b.componentes.score_relint,
+            "Urbano": b.componentes.score_fator,
+            "Disque": b.componentes.score_disque,
+            "Modus": b.componentes.score_modus_rota,
+            "Bônus": b.componentes.bonus_faccional,
+            "Camadas": b.n_camadas_ativas,
+        }
+        for b in bingos
+    ]
+    st.dataframe(
+        tabela_comp,
+        hide_index=True, use_container_width=True,
+        column_config={
+            "Score":  st.column_config.ProgressColumn("Score",  min_value=0, max_value=1, format="%.2f"),
+            "Mancha": st.column_config.ProgressColumn("Mancha", min_value=0, max_value=1, format="%.2f"),
+            "RELINT": st.column_config.ProgressColumn("RELINT", min_value=0, max_value=1, format="%.2f"),
+            "Urbano": st.column_config.ProgressColumn("Urbano", min_value=0, max_value=1, format="%.2f"),
+            "Disque": st.column_config.ProgressColumn("Disque", min_value=0, max_value=1, format="%.2f"),
+            "Modus":  st.column_config.ProgressColumn("Modus",  min_value=0, max_value=1, format="%.2f"),
+            "Bônus":  st.column_config.NumberColumn(format="x%.2f"),
+            "Camadas": st.column_config.NumberColumn(format="%d/4"),
+        },
+    )
+
+    secao("Drill-down por área")
     # Filtro
     filtro = st.radio(
         "Filtrar",
@@ -1400,9 +1478,21 @@ def render_evolucao():
         com_periodo=False,
     )
 
+    # Aviso explícito sobre origem dos dados (R2-3)
+    st.warning(
+        "**Dados de antes/depois ainda simulados** para validação metodológica. "
+        "Substituir por leitura do DW operacional antes de uso em reunião CompStat.",
+        icon="🧪",
+    )
+
     snapshots = carregar_snapshots()
     if not snapshots:
-        st.warning("Sem snapshots em `data/snapshots_90d.json`.")
+        empty_state(
+            "📈", "Sem snapshots históricos",
+            "Importe snapshots antes/depois para visualizar a evolução das áreas.",
+            cta_label="Importar dados", cta_target_pagina="Importar dados",
+            key="empty_evo",
+        )
         return
 
     dados = carregar_tudo(*resolver_periodo())
@@ -1410,7 +1500,7 @@ def render_evolucao():
     comparativos = comparar_todas_areas(snapshots, nome_por_area)
 
     if not comparativos:
-        st.info("Snapshots insuficientes para comparacao.")
+        st.info("Snapshots insuficientes para comparação (precisa de antes + depois).")
         return
 
     # Ordenar por queda de roubos (maior queda primeiro)
@@ -1449,42 +1539,68 @@ def render_evolucao():
             f"{melhor.variacao_roubos_pct:+.1f}% em roubos."
         )
 
-    st.markdown("## Resumo por area")
-    for c in comparativos:
-        with st.container(border=True):
-            classif = c.classificacao.replace("_", " ")
-            st.markdown(
-                f"#### {c.nome_area} &nbsp; "
-                f"<span style='font-size:.8rem; color:#666'>{classif}</span>",
-                unsafe_allow_html=True,
-            )
-            m1, m2, m3 = st.columns(3)
-            m1.metric(
-                "Roubos", c.snapshot_depois.total_roubos,
-                f"{c.variacao_roubos_pct:+.1f}%", delta_color="inverse",
-            )
-            m2.metric(
-                "Furtos", c.snapshot_depois.total_furtos,
-                f"{c.variacao_furtos_pct:+.1f}%", delta_color="inverse",
-            )
-            m3.metric(
-                "Score", f"{c.snapshot_depois.score_medio:.2f}",
-                f"{c.variacao_score_pct:+.1f}%", delta_color="inverse",
-            )
-            if "melhora" in c.classificacao:
-                st.success(c.observacao, icon="📉")
-            elif "piora" in c.classificacao:
-                st.error(c.observacao, icon="📈")
-            else:
-                st.info(c.observacao, icon="➖")
+    secao("Detalhamento por área")
+    tab_cards, tab_tabela = st.tabs(["📋 Cards detalhados", "📊 Tabela comparativa"])
 
-    # Grafico consolidado
-    st.markdown("## Variacao consolidada")
+    with tab_cards:
+        for c in comparativos:
+            classif = c.classificacao.replace("_", " ")
+            if "melhora" in c.classificacao:
+                cls = "evo-card-melhora"
+            elif "piora" in c.classificacao:
+                cls = "evo-card-piora"
+            else:
+                cls = "evo-card-estavel"
+            with st.container():
+                st.markdown(
+                    f"<div class='evo-card {cls}'>"
+                    f"<strong>{c.nome_area}</strong> &nbsp; "
+                    f"<span style='font-size:.8rem; color:#666'>{classif}</span>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+                m1, m2, m3 = st.columns(3)
+                m1.metric(
+                    "Roubos", c.snapshot_depois.total_roubos,
+                    f"{c.variacao_roubos_pct:+.1f}%", delta_color="inverse",
+                )
+                m2.metric(
+                    "Furtos", c.snapshot_depois.total_furtos,
+                    f"{c.variacao_furtos_pct:+.1f}%", delta_color="inverse",
+                )
+                m3.metric(
+                    "Score", f"{c.snapshot_depois.score_medio:.2f}",
+                    f"{c.variacao_score_pct:+.1f}%", delta_color="inverse",
+                )
+                st.caption(c.observacao)
+
+    with tab_tabela:
+        df_evo = [{
+            "Área": c.nome_area,
+            "Classificação": c.classificacao.replace("_", " "),
+            "Roubos (depois)": c.snapshot_depois.total_roubos,
+            "Δ Roubos": c.variacao_roubos_pct,
+            "Furtos (depois)": c.snapshot_depois.total_furtos,
+            "Δ Furtos": c.variacao_furtos_pct,
+            "Score (depois)": c.snapshot_depois.score_medio,
+            "Δ Score": c.variacao_score_pct,
+        } for c in comparativos]
+        st.dataframe(
+            df_evo, hide_index=True, use_container_width=True,
+            column_config={
+                "Δ Roubos": st.column_config.NumberColumn(format="%+.1f%%"),
+                "Δ Furtos": st.column_config.NumberColumn(format="%+.1f%%"),
+                "Δ Score":  st.column_config.NumberColumn(format="%+.1f%%"),
+                "Score (depois)": st.column_config.NumberColumn(format="%.2f"),
+            },
+        )
+
+    secao("Variação consolidada (gráfico)")
     try:
         png = gerar_grafico_evolucao(comparativos)
         st.image(png, use_container_width=True)
     except Exception as e:
-        st.error(f"Erro ao gerar grafico: {e}")
+        st.error(f"Erro ao gerar gráfico: {e}")
 
 
 # ============================================================

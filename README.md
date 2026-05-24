@@ -1,98 +1,149 @@
-# CompStat IA MVP
-
-Plataforma de inteligência criminal para gestão municipal de segurança pública. Cruza 5 fontes de dados com pesos diferenciados, identifica modus operandi, sugere modalidade de patrulhamento e gera relatórios editáveis para reuniões CompStat.
-
-**Status:** MVP funcional. Construído solo em 3 horas com Claude Code sobre starter kit Python puro.
+# CompStat IA — Equipe 15
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Streamlit](https://img.shields.io/badge/streamlit-app-FF4B4B.svg)](https://streamlit.io/)
+[![Built with Claude](https://img.shields.io/badge/built%20with-Claude%20Code-d97757.svg)](https://claude.com/claude-code)
 
 ---
 
-## Problema
+## 🛡️ Equipe
 
-Cada relatório de área hoje leva **8 horas manuais** para o analista da prefeitura. A equipe cobre 3 a 5 áreas por semana. São **22 áreas prioritárias**. A IA não substitui o analista. Elimina o trabalho mecânico de cruzar planilhas, gerar mapas e digitar pontos prioritários.
+| | |
+|---|---|
+| **Equipe** | 15 |
+| **Tema** | Segurança (Segurança Pública Municipal) |
+| **Hackathon** | CompStat-Rio · Anthropic 2026 |
 
-## Solução
+### Membros
 
-Pipeline determinístico em Python que recebe os dados oficiais da área e devolve:
-
-1. **Score de risco** (0 a 1) com 5 camadas e pesos diferenciados
-2. **Recomendação de patrulhamento** com efetivo distribuído entre viatura, moto e a pé
-3. **Pontos de interceptação** geográficos a partir das rotas de fuga do RELINT
-4. **QMD** (Quadro de Missão Diária) — ordem de serviço para a base da Força Municipal
-5. **Relatório DOCX editável** com heatmap temporal, evolução 90 dias e tabela de componentes
-6. **Comparativo antes/depois** para medir impacto da operação
+- **Diego Alves**
+- **Felipe Passos**
+- **Lucas Xavier**
+- **Amanda Galvão**
 
 ---
 
-## Pesos do score (regra fixa)
+## 📝 Resumo
+
+**CompStat IA** é uma plataforma de inteligência criminal para a Prefeitura do Rio de Janeiro que automatiza a produção dos relatórios analíticos das **22 áreas prioritárias** da Força Municipal — hoje feitos manualmente em **8 horas por área**.
+
+A solução **cruza 5 fontes oficiais** (mancha criminal, RELINTs, fatores urbanos, Disque Denúncia e modus operandi) com pesos diferenciados, calcula um score de risco por área, sugere modalidade e efetivo de patrulhamento, gera o **Quadro de Missão Diária (QMD)** e produz o **Relatório Analítico de Área** no formato oficial CompStat Municipal pronto para a reunião semanal com o Prefeito.
+
+**Dados reais aplicados:** 8 áreas oficiais da FM, 7.508 ocorrências, 405 denúncias, 842 fatores urbanos, 8 RELINTs, 3.169 pessoas em situação de rua (Censo CPSR), cruzados com 1.628 territórios de domínio criminal.
+
+---
+
+## 🏗️ Arquitetura / Abordagem
+
+### Stack
+
+`Python 3.9` · `Streamlit` · `Folium` · `Pydantic v2` · `python-docx` · `Shapely` · `Matplotlib` · `Anthropic API (opcional)`
+
+### Pipeline determinístico
+
+```
+                ┌─────────────────────────┐
+   8 áreas FM ─►│   ingestão / parsing    │◄── JSON · CSV · PDF · DOC · DOCX
+   (shapefile)  └────────────┬────────────┘
+                             │
+              ┌──────────────▼──────────────┐
+              │  cruzamento de 5 camadas    │
+              │  (pesos: 0,40 / 0,30 /      │
+              │   0,15 / 0,10 / 0,05)       │
+              │  + bônus faccional 1,0–1,5  │
+              └──────────────┬──────────────┘
+                             │
+              ┌──────────────▼──────────────┐
+              │  Score · QMD · Recomendação │
+              │  Heatmap · Evolução 90d     │
+              └──────────────┬──────────────┘
+                             │
+                ┌────────────▼─────────────┐
+                │  Relatório DOCX oficial  │
+                │  (Capa · Resumo Exec ·   │
+                │   5 seções CompStat)     │
+                └──────────────────────────┘
+```
+
+### Como Claude foi usado para construir
+
+O sistema inteiro (~1.800 linhas de Python + 11 scripts) foi desenvolvido em sessão única usando **Claude Code (Opus 4.7, contexto 1M)**, com a seguinte divisão de trabalho:
+
+| Tarefa | Claude | Equipe |
+|---|---|---|
+| Arquitetura inicial e schemas Pydantic | ✅ | revisão |
+| Score engine determinístico (lei dos pesos) | ✅ | regras de negócio (briefing) |
+| Geração de relatórios DOCX no formato oficial | ✅ | layout do briefing |
+| UI Streamlit (7 páginas) | ✅ | direção UX |
+| Importação espacial dos dados oficiais (CSV/shapefile/DOCX/PDF) | ✅ | curadoria das fontes |
+| 2 rounds de auditoria UX/UI via subagents (UX Researcher + UI Designer) | ✅ | priorização |
+| Debug e calibragem (saturação de score, encoding latin-1, parse de hora HH:MM:SS) | ✅ | observação dos bugs |
+
+### Como Claude atua **dentro** da aplicação
+
+A regra padrão é **determinismo total no caminho crítico** (briefing exige reprodutibilidade). Há **um único ponto opcional** onde o LLM é invocado:
+
+🧠 **Botão "Explicar com IA" no QMD** — chama Claude Haiku 4.5 via Anthropic API com prompt estruturado para gerar um parágrafo em linguagem natural justificando a sugestão de efetivo. Funciona apenas se `ANTHROPIC_API_KEY` estiver configurada; o cálculo numérico em si é sempre determinístico (heurística multifatorial em `src/sugestao_efetivo.py`).
+
+Esta separação deliberada garante:
+- **Custo zero por execução** no fluxo normal
+- **Reprodutibilidade** (mesmo input → mesmo output)
+- **Resistência a downtime** da API
+- **Auditabilidade** (cada componente do score tem fórmula visível)
+
+---
+
+## 🎯 Score: lei dos pesos
 
 | Fonte | Peso | Natureza |
 |---|---|---|
-| Mancha criminal | **0.40** | Oficial quantitativo |
-| RELINT | **0.30** | Oficial qualitativo (3x peso do Disque) |
-| Fator urbano | **0.15** | Mapeamento de subprefeituras |
-| Disque Denúncia | **0.10** | Anônimo, não verificado |
-| Modus + rotas | **0.05** | Amplificação por padrão estruturado |
-| Bônus faccional | **× 1.0 a 1.5** | Multiplicativo, por rivalidade na AISP |
+| Mancha criminal | **0,40** | Oficial quantitativo (lat/long de roubos e furtos) |
+| RELINT | **0,30** | Oficial qualitativo — **3× o peso do Disque** |
+| Fator urbano | **0,15** | Iluminação, vegetação, PSR, calçada, obstáculos |
+| Disque Denúncia | **0,10** | Anônimo, não verificado |
+| Modus + rotas | **0,05** | Amplificação por padrão estruturado |
+| Bônus faccional | **× 1,0 a 1,5** | Multiplicativo, por rivalidade territorial |
 
-> O peso menor do Disque é proposital. Denúncia anônima vale menos que dado oficial verificado.
-
----
-
-## Features
-
-- **CRUD completo de áreas** (criar, editar, desativar com histórico, excluir permanente)
-- **Bônus faccional** automático quando áreas vizinhas têm facções rivais (TCP/CV/ADA/milícia)
-- **5 áreas piloto** seedadas (Bangu, Copacabana, Lapa, Méier, Tijuca)
-- **280 ocorrências, 5 RELINTs, 19 denúncias, 14 fatores urbanos** sintéticos realistas
-- **Snapshots 90 dias** pré-gerados (Bangu -38%, Méier -30%, Copa -22%, Lapa -15%, Tijuca +5% controle)
-- **Heatmap interativo** (Folium) e temporal 7×24 (matplotlib)
-- **Mapa de câmeras municipais** (CSV de 145 KB integrado)
-- **Sem chamadas a LLM no caminho crítico** — 100% determinístico, custo zero por execução
+> O peso menor do Disque é proposital: denúncia anônima vale menos que dado oficial verificado.
 
 ---
 
-## Estrutura
+## ✨ Features entregues
 
-```
-compstat-mvp/
-├── src/
-│   ├── schemas.py           # Pydantic v2 (fechado)
-│   ├── seed_data.py         # Gera 5 áreas piloto
-│   ├── area_crud.py         # CRUD com exclusão permanente
-│   ├── score_engine.py      # Cruzamento 5 camadas + pesos
-│   ├── recommendation.py    # Modalidade FM + pontos interceptação
-│   ├── qmd_generator.py     # Quadro de Missão Diária
-│   ├── evolution.py         # Comparativo 90 dias
-│   ├── heatmap.py           # Folium + PNG temporal + barras
-│   ├── docx_generator.py    # Relatório editável
-│   └── streamlit_app.py     # UI integrada (6 páginas)
-├── data/
-│   ├── areas.json           # Storage CRUD
-│   ├── areas_iniciais.json  # Seed
-│   ├── ocorrencias.json     # 280 ocorrências com modus
-│   ├── relints.json         # 5 RELINTs com modus + rotas
-│   ├── denuncias.json       # 19 denúncias Disque
-│   ├── fatores_urbanos.json # 14 fatores
-│   ├── snapshots_90d.json   # Antes/depois pré-gerados
-│   └── cameras_areas_fm.csv # Câmeras municipais georreferenciadas
-├── scripts/
-│   └── run_bangu.py         # Pipeline end-to-end para Bangu
-├── output/                  # DOCX, PNGs e QMD gerados (gitignored)
-├── PASSO_A_PASSO.md         # Roteiro de construção em 3h
-├── PITCH.md                 # Roteiro de demo de 5 min
-├── PROMPTS.md               # Prompts para Claude Code
-└── CLAUDE.md                # Regras invioláveis do projeto
-```
+- ✅ **7 páginas** (Dashboard, Score, Editor, Importar, QMD, Evolução, Relatórios)
+- ✅ **8 áreas oficiais** da Força Municipal (shapefile CompStat-Rio)
+- ✅ **Editor visual** de polígonos com `folium.Draw` (desenhar área no mapa, salvar em WKT)
+- ✅ **Importação multi-formato** (JSON/CSV/PDF/DOCX/TXT) com detecção automática
+- ✅ **Periodização** sidebar (7d/30d/60d/90d/Todo/custom) afetando mapa, heatmap e score
+- ✅ **Mapa de risco** com heatmap density (Folium HeatMap) + filtros por área e tipo de crime
+- ✅ **Layer toggle** para áreas, ocorrências, câmeras e pontos de interceptação
+- ✅ **Sugestão de efetivo híbrida** — heurística determinística + botão opcional LLM
+- ✅ **Relatório DOCX oficial CompStat** (Capa, Resumo Executivo com 4 perguntas norteadoras, 5 seções, tabela 5×4 de efetivo, plano de ação pré-populado por órgão)
+- ✅ **Relatório consolidado** das 8 áreas em um único DOCX
+- ✅ **Pacote oficial**: cruzamento com `dominio_territorial.csv` (1.628 territórios) → identificação de facção por área (TCP/CV/milícia)
 
 ---
 
-## Como rodar
+## 🔗 Links
 
-### 1. Setup
+| | |
+|---|---|
+| **Repositório** | https://github.com/DihRJ/compstat-mvp |
+| **URL pública** | _Em preparação para Streamlit Community Cloud_ |
+| **Briefing oficial** | [CompStat-Rio Hackathon](https://github.com/CompStat-Rio/claude_impact_lab_compstat_rio) |
+
+---
+
+## 🎥 Vídeo demo
+
+📽️ **[Aguardando publicação — link será adicionado em breve]**
+
+> Demonstração de 60 segundos cobrindo: navegação entre áreas, mapa de risco, geração do relatório DOCX e botão de sugestão IA.
+
+---
+
+## 🚀 Como rodar localmente
 
 ```bash
 git clone https://github.com/DihRJ/compstat-mvp.git
@@ -100,85 +151,52 @@ cd compstat-mvp
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+
+# UI interativa (7 páginas)
+streamlit run src/streamlit_app.py
+# → http://localhost:8501
+
+# OU pipeline CLI end-to-end (área Presidente Vargas como exemplo)
+python scripts/run_bangu.py
+# Gera output/relatorio_bangu.docx, qmd_bangu.md, heatmap_bangu.png, evolucao_90d.png
 ```
 
-### 2. Streamlit (UI completa, 6 páginas)
+### Opcional — botão "Explicar com IA"
 
 ```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
 streamlit run src/streamlit_app.py
 ```
 
-Abre em `http://localhost:8501`. Páginas: Dashboard, Score, Editor, QMD, Evolução, DOCX.
-
-### 3. Pipeline Bangu (end-to-end, sem UI)
-
-```bash
-.venv/bin/python scripts/run_bangu.py
-```
-
-Gera em `output/`:
-
-- `relatorio_bangu.docx` — relatório completo com heatmap e gráfico de evolução
-- `qmd_bangu.md` — preview do QMD em markdown
-- `heatmap_bangu.png` — distribuição temporal 7×24
-- `evolucao_90d.png` — barras horizontais comparando as 5 áreas
-
 ---
 
-## Exemplo: caso Bangu
+## 📂 Estrutura do projeto
 
 ```
-[ranking de score]
-  copa_01    Calcadao Copacabana Posto 4  score=0.790  bonus=1.00  camadas=4/4
-  bangu_01   Calcadao de Bangu            score=0.770  bonus=1.00  camadas=4/4
-  lapa_01    Largo da Lapa                score=0.685  bonus=1.00  camadas=4/4
-  meier_01   Dias da Cruz Meier           score=0.585  bonus=1.00  camadas=4/4
-  tijuca_01  Praca Saens Pena             score=0.492  bonus=1.00  camadas=4/4
-
-[recomendacao] modalidade=a_pe
-  viaturas=1 motos=0 a_pe=20 | efetivo=24
-  pontos interceptacao: 2
-  horario=20:00-23:00  dias=sex,sab
-  justif: 100% das ocorrencias sao 'a_pe' -> modalidade FM 'a_pe';
-          2 pontos de interceptacao sugeridos com base em rotas de fuga
-          mapeadas em RELINT; presenca de TCP requer postura defensiva.
-
-[evolucao 90d Bangu] roubos=-38.1% furtos=-28.6% score=-22.8%
-  -> melhora_significativa
+compstat-mvp/
+├── src/
+│   ├── schemas.py              # Pydantic v2 (fechado)
+│   ├── area_crud.py            # CRUD com exclusão permanente
+│   ├── score_engine.py         # Cruzamento 5 camadas + pesos diferenciados
+│   ├── recommendation.py       # Modalidade FM + pontos interceptação
+│   ├── sugestao_efetivo.py     # Heurística multifatorial de efetivo
+│   ├── explicacao_llm.py       # Botão opcional Claude Haiku
+│   ├── qmd_generator.py        # Quadro de Missão Diária
+│   ├── relatorio_compstat.py   # Geradores no formato oficial
+│   ├── docx_generator.py       # DOCX por área + consolidado
+│   ├── importador.py           # Multi-formato JSON/CSV/PDF/DOCX
+│   ├── evolution.py            # Comparativo 90 dias
+│   ├── heatmap.py              # Folium + heatmap density + PNG
+│   └── streamlit_app.py        # UI integrada (7 páginas)
+├── data/                       # 8 áreas oficiais + dados reais
+├── scripts/                    # Importação CompStat-Rio + run end-to-end
+├── output/                     # DOCX e PNGs gerados (gitignored)
+└── CLAUDE.md                   # Regras invioláveis (lei dos pesos)
 ```
 
 ---
 
-## Regras invioláveis
+## 📜 Licença
 
-Para colaboradores, ver [`CLAUDE.md`](CLAUDE.md). Resumo:
+[MIT](LICENSE) · construído por **Equipe 15** com Claude Code
 
-1. Não reescrever `schemas.py`
-2. Pesos do score são lei
-3. Modus + rotas geram `pontos_intercepcao` automaticamente
-4. Foco FM: **roubos e furtos** (não homicídio nem tráfico)
-5. CRUD áreas tem 4 operações (incluindo excluir permanente)
-6. DOCX é **editável** (não converter para PDF)
-7. QMD é o entregável principal
-
----
-
-## Roadmap
-
-- [ ] Integração com SISPMUC (RJ) para puxar ocorrências reais
-- [ ] Mapa de câmeras com sugestão de novas posições por gap analysis
-- [ ] Page de comparativo lado a lado para reunião CompStat
-- [ ] Export do QMD em PDF para impressão da base
-- [ ] Multi-tenancy por município
-
----
-
-## Stack
-
-Python 3.9+ • Pydantic v2 • Streamlit • Folium • Shapely • python-docx • Matplotlib
-
----
-
-## Licença
-
-[MIT](LICENSE) © Diego Alves
