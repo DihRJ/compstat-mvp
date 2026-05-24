@@ -35,14 +35,24 @@ from schemas import (
 
 def normalizar_mancha_criminal(
     ocorrencias_area: list[Ocorrencia],
-    max_ocorrencias_referencia: int = 100,
+    max_ocorrencias_referencia: int = 500,
+    ocorrencias_todas: Optional[list[Ocorrencia]] = None,
 ) -> float:
-    """
-    Normaliza volume de ocorrências.
-    100+ ocorrências = score 1.0 (saturação).
+    """Normaliza volume de ocorrências.
+
+    Quando recebe o conjunto completo (`ocorrencias_todas`), usa o
+    valor máximo observado entre áreas como referência adaptativa
+    (multiplicado por 1.2). Caso contrário, usa o cap fixo de 500.
     """
     n = len(ocorrencias_area)
-    return min(n / max_ocorrencias_referencia, 1.0)
+    if ocorrencias_todas:
+        from collections import Counter
+        por_area = Counter(o.poligono_fm_id for o in ocorrencias_todas)
+        ref = max(por_area.values()) * 1.2 if por_area else max_ocorrencias_referencia
+        ref = max(ref, 50)  # piso para não inflar pequenas áreas
+    else:
+        ref = max_ocorrencias_referencia
+    return min(n / ref, 1.0)
 
 
 def normalizar_relint(relints_area: list[RelintEstruturado]) -> float:
@@ -68,23 +78,28 @@ def normalizar_relint(relints_area: list[RelintEstruturado]) -> float:
 
 
 def normalizar_fator_urbano(fatores_area: list[FatorUrbano]) -> float:
-    """
-    Soma severidades dos fatores ativos.
-    Mapping: critica=0.30, alta=0.20, media=0.10, baixa=0.05
-    Cap em 1.0.
+    """Normaliza intensidade de fatores urbanos.
+
+    Considera apenas a SEVERIDADE MÁXIMA por categoria distinta (evita
+    inflar áreas com muitos fatores duplicados da mesma categoria) e
+    aplica um cap suave por número de categorias.
     """
     pesos = {"critica": 0.30, "alta": 0.20, "media": 0.10, "baixa": 0.05}
-    total = sum(pesos.get(f.severidade, 0) for f in fatores_area)
+    # Pega a severidade máxima por categoria
+    por_cat: dict[str, str] = {}
+    ordem = {"critica": 3, "alta": 2, "media": 1, "baixa": 0}
+    for f in fatores_area:
+        atual = por_cat.get(f.categoria)
+        if atual is None or ordem.get(f.severidade, 0) > ordem.get(atual, 0):
+            por_cat[f.categoria] = f.severidade
+    total = sum(pesos.get(sev, 0) for sev in por_cat.values())
     return min(total, 1.0)
 
 
 def normalizar_disque(denuncias_area: list[DenunciaDisque]) -> float:
-    """
-    Volume de denúncias normalizado.
-    10+ denúncias = score 1.0 (mas peso geral é só 0.10).
-    """
+    """Volume de denúncias normalizado (cap em 60, padrão do dataset oficial)."""
     n = len(denuncias_area)
-    return min(n / 10.0, 1.0)
+    return min(n / 60.0, 1.0)
 
 
 def calcular_bonus_modus_e_rotas(
@@ -173,13 +188,31 @@ def calcular_bonus_faccional(
     if not area_atual:
         return 1.0, [faccao_propria]
 
-    # Procura faccoes em areas vizinhas (mesma AISP)
+    # Procura faccoes em areas vizinhas (mesma AISP OU dentro de raio geográfico)
+    # IMPORTANTE: ignora AISP "A definir" (placeholder) — não casa por padrão
+    AISP_PLACEHOLDER = {"A definir", "", "—", "TBD", None}
     faccoes_vizinhas: set[TipoFaccao] = set()
+    centroide_atual = area_atual.centroide
+
+    def _proximas_por_geo(a1, a2) -> bool:
+        if not (a1.centroide and a2.centroide):
+            return False
+        # Distância euclidiana em graus, aproximadamente < 3 km no Rio
+        d2 = (a1.centroide.lat - a2.centroide.lat) ** 2 + (a1.centroide.lng - a2.centroide.lng) ** 2
+        return d2 < (0.027 ** 2)  # ~3 km
+
     for outra_area in areas:
         if outra_area.poligono_id == poligono_id:
             continue
-        if outra_area.aisp != area_atual.aisp:
+
+        mesma_aisp = (
+            outra_area.aisp == area_atual.aisp
+            and area_atual.aisp not in AISP_PLACEHOLDER
+        )
+        vizinha_geo = _proximas_por_geo(area_atual, outra_area)
+        if not (mesma_aisp or vizinha_geo):
             continue
+
         for r in relints_por_area.get(outra_area.poligono_id, []):
             if r.orcrim_influencia and r.orcrim_influencia != faccao_propria:
                 faccoes_vizinhas.add(r.orcrim_influencia)
@@ -209,12 +242,18 @@ def calcular_bingo_por_area(
     denuncias_area: list[DenunciaDisque],
     relints_por_area: dict[str, list[RelintEstruturado]],
     todas_areas: list[AreaPoligonoFM],
+    ocorrencias_todas: Optional[list[Ocorrencia]] = None,
 ) -> BingoArea:
     """
     Função principal: pega TODOS os dados de uma área e devolve BingoArea.
+
+    Quando `ocorrencias_todas` é fornecido, a normalização da mancha
+    criminal vira adaptativa em relação ao máximo entre áreas.
     """
     # Cada fonte vira score 0-1
-    s_mancha = normalizar_mancha_criminal(ocorrencias_area)
+    s_mancha = normalizar_mancha_criminal(
+        ocorrencias_area, ocorrencias_todas=ocorrencias_todas,
+    )
     s_relint = normalizar_relint(relints_area)
     s_fator = normalizar_fator_urbano(fatores_area)
     s_disque = normalizar_disque(denuncias_area)
@@ -294,6 +333,7 @@ def calcular_bingos_todas_areas(
             denuncias_area=den_por.get(area.poligono_id, []),
             relints_por_area=rel_por,
             todas_areas=areas,
+            ocorrencias_todas=ocorrencias,
         )
         bingos.append(bingo)
 

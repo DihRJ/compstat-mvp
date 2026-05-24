@@ -29,8 +29,8 @@ sys.path.insert(0, str(ROOT / "src"))
 DATA_DIR = ROOT / "data"
 FONTE_DIR = Path("/tmp/compstat_dados")
 
-CAP_OCORRENCIAS_POR_AREA = 200
-CAP_DENUNCIAS_POR_AREA = 50
+CAP_OCORRENCIAS_POR_AREA = 1500  # permite diferenciação entre áreas no score
+CAP_DENUNCIAS_POR_AREA = 100
 
 
 # Mapeamento desc_delito → TipoOcorrencia
@@ -169,17 +169,24 @@ def importar_ocorrencias(areas_geom):
                 continue
             total_mapeados += 1
 
-            ano_str = row.get("ano", "")
-            mes_str = row.get("mes", "1")
-            hora_str = row.get("hora", "12")
+            ano_str = (row.get("ano") or "").strip()
+            mes_str = (row.get("mes") or "").strip()
+            hora_str = (row.get("hora") or "").strip()
             try:
                 ano = int(ano_str) if ano_str else 2024
                 mes = int(mes_str) if mes_str else 1
-                hora = int(float(hora_str)) if hora_str else 12
+                # CSV oficial traz hora no formato HH:MM:SS
+                if hora_str and ":" in hora_str:
+                    hora = int(hora_str.split(":")[0])
+                elif hora_str:
+                    hora = int(float(hora_str))
+                else:
+                    hora = 12
                 dia = 1  # CSV não traz dia
                 dt = datetime(ano, mes, dia, hora, 0)
-            except ValueError:
+            except (ValueError, IndexError):
                 dt = datetime(2024, 1, 1, 12, 0)
+                hora = 12
 
             dia_sem = row.get("dia_semana", "").strip().lower()
             if dia_sem in ("segunda", "segunda-feira"): dia_sem = "seg"

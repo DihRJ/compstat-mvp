@@ -3,7 +3,7 @@
     "snapshot_id": "snap_rodoviaria_terminal__02_antes",
     "poligono_fm_id": "rodoviaria_terminal__02",
     "data_referencia": "2026-02-23",
-    "total_roubos": 285,
+    "total_roubos": 2142,
     "total_furtos": 0,
     "score_medio": 1.0,
     "ranking_pct": 50.0
@@ -12,106 +12,106 @@
     "snapshot_id": "snap_rodoviaria_terminal__02_depois",
     "poligono_fm_id": "rodoviaria_terminal__02",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 1500,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_metro_botafogo_rua_s_09_antes",
     "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_referencia": "2026-02-23",
-    "total_roubos": 243,
+    "total_roubos": 1001,
     "total_furtos": 0,
-    "score_medio": 0.97,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_metro_botafogo_rua_s_09_depois",
     "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 821,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_jardim_de_alah_10_antes",
     "poligono_fm_id": "jardim_de_alah_10",
     "data_referencia": "2026-02-23",
-    "total_roubos": 210,
+    "total_roubos": 313,
     "total_furtos": 0,
-    "score_medio": 0.84,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_jardim_de_alah_10_depois",
     "poligono_fm_id": "jardim_de_alah_10",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 298,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_campo_grande_estacao_11_antes",
     "poligono_fm_id": "campo_grande_estacao_11",
     "data_referencia": "2026-02-23",
-    "total_roubos": 190,
+    "total_roubos": 280,
     "total_furtos": 0,
-    "score_medio": 0.76,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_campo_grande_estacao_11_depois",
     "poligono_fm_id": "campo_grande_estacao_11",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 294,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_rio_sul_12_antes",
     "poligono_fm_id": "rio_sul_12",
     "data_referencia": "2026-02-23",
-    "total_roubos": 222,
+    "total_roubos": 507,
     "total_furtos": 0,
-    "score_medio": 0.89,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_rio_sul_12_depois",
     "poligono_fm_id": "rio_sul_12",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 457,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_praia_de_botafogo_ru_14_antes",
     "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_referencia": "2026-02-23",
-    "total_roubos": 235,
+    "total_roubos": 1338,
     "total_furtos": 0,
-    "score_medio": 0.94,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_praia_de_botafogo_ru_14_depois",
     "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 1138,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_estacoes_sao_francis_19_antes",
     "poligono_fm_id": "estacoes_sao_francis_19",
     "data_referencia": "2026-02-23",
-    "total_roubos": 256,
+    "total_roubos": 1923,
     "total_furtos": 0,
     "score_medio": 1.0,
     "ranking_pct": 50.0
@@ -120,16 +120,16 @@
     "snapshot_id": "snap_estacoes_sao_francis_19_depois",
     "poligono_fm_id": "estacoes_sao_francis_19",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 1500,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   },
   {
     "snapshot_id": "snap_presidente_vargas_ca_20_antes",
     "poligono_fm_id": "presidente_vargas_ca_20",
     "data_referencia": "2026-02-23",
-    "total_roubos": 322,
+    "total_roubos": 2419,
     "total_furtos": 0,
     "score_medio": 1.0,
     "ranking_pct": 50.0
@@ -138,9 +138,9 @@
     "snapshot_id": "snap_presidente_vargas_ca_20_depois",
     "poligono_fm_id": "presidente_vargas_ca_20",
     "data_referencia": "2026-05-24",
-    "total_roubos": 200,
+    "total_roubos": 1500,
     "total_furtos": 0,
-    "score_medio": 0.8,
+    "score_medio": 1.0,
     "ranking_pct": 50.0
   }
 ]
