@@ -143,7 +143,20 @@ def construir_mapa_folium(
             ).add_to(grupo_pi)
         grupo_pi.add_to(m)
 
-    folium.LayerControl(collapsed=False, position="topright").add_to(m)
+    # Atenção: NÃO adicionamos LayerControl aqui — quem renderiza no
+    # streamlit é responsável por chamar `finalizar_mapa(m)` ao final
+    # (depois de eventuais adições como câmeras), garantindo UM único
+    # controle de camadas com todos os layers.
+    return m
+
+
+def finalizar_mapa(m):
+    """Adiciona LayerControl único após todas as camadas terem sido inseridas."""
+    try:
+        import folium
+        folium.LayerControl(collapsed=False, position="topright").add_to(m)
+    except ImportError:
+        pass
     return m
 
 
@@ -289,5 +302,5 @@ def adicionar_cameras_ao_mapa(m, csv_path: str = _DEFAULT_CAMERAS_CSV):
             tooltip="Camera ativa",
         ).add_to(grupo)
     grupo.add_to(m)
-    folium.LayerControl().add_to(m)
+    # NÃO adiciona LayerControl aqui — chamador deve usar finalizar_mapa(m)
     return m

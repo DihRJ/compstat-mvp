@@ -561,20 +561,24 @@ def render_dashboard():
         )
 
         try:
-            from streamlit_folium import st_folium
             m = construir_mapa_folium(
                 areas_render, bingos_render,
                 ocorrencias=ocorrencias_render,
                 modo_visualizacao="heatmap" if "calor" in modo_viz else "pins",
             )
-            from heatmap import adicionar_cameras_ao_mapa
+            from heatmap import adicionar_cameras_ao_mapa, finalizar_mapa
             m = adicionar_cameras_ao_mapa(m)
-            st_folium(m, width=None, height=560, returned_objects=[])
+            m = finalizar_mapa(m)  # 1 único LayerControl com TODOS os layers
+            # Renderiza como HTML embutido — bypass do bug do streamlit-folium
+            # em st.tabs que cortava a altura do iframe.
+            from streamlit.components.v1 import html as components_html
+            html_mapa = m.get_root().render()
+            components_html(html_mapa, height=640, scrolling=False)
             st.caption(
                 f"{len(areas_render)} áreas · {len(ocorrencias_render)} ocorrências no mapa"
             )
-        except ImportError:
-            st.warning("Para o mapa instale: `pip install streamlit-folium folium`")
+        except ImportError as e:
+            st.warning(f"Falta dependência: {e}. Instale `streamlit-folium folium`.")
 
     # --------- TAB 2: RANKING ---------
     with tab_ranking:
@@ -1030,61 +1034,38 @@ def render_importar():
             f"Formatos aceitos: **{', '.join(cfg['formatos'])}**"
         )
 
-    # ---- formato + arquivo ----
-    with st.container(border=True):
-        st.markdown("### 3. Envie o arquivo")
-        formato = st.radio(
-            "Formato",
-            cfg["formatos"],
-            horizontal=True,
-            label_visibility="collapsed",
-        )
+    # ---- upload único (detecção automática pela extensão) ----
+    from importador import EXTENSOES_ACEITAS, detectar_formato
 
-        # Help específico por formato
-        if formato == "JSON":
-            with st.expander("Estrutura JSON esperada"):
-                st.code(
-                    json.dumps(
-                        cfg["schema"].model_json_schema().get("properties", {}),
-                        indent=2,
-                        ensure_ascii=False,
-                    )[:1200] + "...",
-                    language="json",
-                )
-                st.caption(
-                    "Aceita um objeto único ou lista de objetos. "
-                    f"O campo `poligono_fm_id` é preenchido automaticamente "
-                    f"com `{pid}`."
-                )
-        elif formato == "CSV":
-            st.caption(
-                "CSV com cabeçalho. Colunas obrigatórias correspondem aos "
-                "campos do schema. Coordenadas podem vir como duas colunas "
-                "`lat` e `lng`."
-            )
-        elif formato in ("DOCX", "TXT"):
-            st.caption(
-                "Documento de texto livre. Será criado um RELINT com o "
-                "conteúdo no campo `modus_operandi_principal`. Outros "
-                "campos podem ser ajustados no Editor depois."
-            )
-
-        ext_map = {"JSON": "json", "CSV": "csv", "DOCX": "docx", "TXT": "txt"}
-        arquivo_up = st.file_uploader(
-            f"Selecionar arquivo .{ext_map[formato]}",
-            type=[ext_map[formato]],
-            key=f"upload_{tipo}_{formato}",
-        )
+    arquivo_up = st.file_uploader(
+        "📎 Arraste e solte o arquivo aqui ou clique para selecionar",
+        type=EXTENSOES_ACEITAS,
+        key=f"upload_{tipo}",
+        help=(
+            f"Formatos suportados: {', '.join(e.upper() for e in EXTENSOES_ACEITAS)}. "
+            f"Para {cfg['rotulo']}, formatos válidos: {', '.join(cfg['formatos'])}."
+        ),
+    )
 
     # ---- preview + salvar ----
     if arquivo_up:
         conteudo = arquivo_up.read()
+        try:
+            formato = detectar_formato(arquivo_up.name)
+        except ValueError as e:
+            st.error(f"Erro: {e}")
+            return
+
         with st.container(border=True):
-            st.markdown("### 4. Pré-visualização e validação")
+            st.markdown(
+                f"### 📋 Validação · arquivo `{arquivo_up.name}` "
+                f"<span style='font-size:.75rem;color:#666'>(formato {formato})</span>",
+                unsafe_allow_html=True,
+            )
             try:
                 resultado = importar(tipo, pid, formato, conteudo)
             except Exception as e:
-                st.error(f"Erro ao parsear arquivo: {e}")
+                st.error(f"Erro ao processar: {e}")
                 return
 
             c1, c2 = st.columns(2)

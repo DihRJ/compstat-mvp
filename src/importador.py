@@ -48,7 +48,7 @@ TIPOS_DOCUMENTO = {
         "rotulo": "RELINT (relatório de inteligência)",
         "schema": RelintEstruturado,
         "arquivo": "relints.json",
-        "formatos": ["JSON", "DOCX", "TXT"],
+        "formatos": ["JSON", "DOCX", "PDF", "TXT"],
     },
     "denuncias": {
         "rotulo": "Denúncias do Disque",
@@ -63,6 +63,27 @@ TIPOS_DOCUMENTO = {
         "formatos": ["JSON", "CSV"],
     },
 }
+
+EXTENSOES_ACEITAS = ["json", "csv", "docx", "doc", "pdf", "txt"]
+
+
+def detectar_formato(nome_arquivo: str) -> str:
+    """Detecta formato pela extensão do arquivo (case-insensitive)."""
+    ext = Path(nome_arquivo).suffix.lower().lstrip(".")
+    mapa = {
+        "json": "JSON",
+        "csv": "CSV",
+        "docx": "DOCX",
+        "doc": "DOC",
+        "pdf": "PDF",
+        "txt": "TXT",
+    }
+    if ext not in mapa:
+        raise ValueError(
+            f"Extensão '.{ext}' não suportada. "
+            f"Aceita: {', '.join(EXTENSOES_ACEITAS)}."
+        )
+    return mapa[ext]
 
 
 # ============================================================
@@ -98,6 +119,17 @@ def parse_csv_bytes(conteudo: bytes) -> list[dict]:
     texto = conteudo.decode("utf-8-sig")
     reader = csv.DictReader(io.StringIO(texto))
     return list(reader)
+
+
+def parse_pdf_bytes(conteudo: bytes) -> str:
+    """Extrai texto de PDF (pypdf)."""
+    try:
+        from pypdf import PdfReader
+    except ImportError as e:
+        raise RuntimeError("pypdf não instalado.") from e
+    reader = PdfReader(io.BytesIO(conteudo))
+    textos = [page.extract_text() or "" for page in reader.pages]
+    return "\n".join(t for t in textos if t.strip())
 
 
 def parse_docx_bytes(conteudo: bytes) -> str:
@@ -241,21 +273,24 @@ def importar(
     coercer = COERCERS[tipo]
 
     # Parse bruto
-    if formato.upper() == "JSON":
+    fmt = formato.upper()
+    if fmt == "JSON":
         registros = parse_json_bytes(conteudo)
-    elif formato.upper() == "CSV":
+    elif fmt == "CSV":
         registros = parse_csv_bytes(conteudo)
-    elif formato.upper() in ("DOCX", "TXT"):
-        # Para texto: assume RELINT com texto único no campo modus_operandi
+    elif fmt in ("DOCX", "PDF", "TXT"):
+        # Texto livre: assume RELINT com texto único no campo modus_operandi
         if tipo != "relints":
             raise ValueError(
-                f"Formato {formato} suportado apenas para RELINTs. "
+                f"Formato {fmt} suportado apenas para RELINTs. "
                 f"Para {tipo}, use JSON ou CSV."
             )
-        texto = (
-            parse_docx_bytes(conteudo) if formato.upper() == "DOCX"
-            else conteudo.decode("utf-8-sig", errors="replace")
-        )
+        if fmt == "DOCX":
+            texto = parse_docx_bytes(conteudo)
+        elif fmt == "PDF":
+            texto = parse_pdf_bytes(conteudo)
+        else:  # TXT
+            texto = conteudo.decode("utf-8-sig", errors="replace")
         registros = [{
             "autor_orgao": "Importado via upload",
             "data_documento": date.today().isoformat(),
@@ -266,6 +301,11 @@ def importar(
             "dias_criticos": ["sex", "sab"],
             "citacao_fonte": f"Documento importado em {date.today():%d/%m/%Y}",
         }]
+    elif fmt == "DOC":
+        raise ValueError(
+            "Formato .doc não é suportado diretamente. "
+            "Abra no Word e salve como .docx, ou exporte como PDF."
+        )
     else:
         raise ValueError(f"Formato não suportado: {formato}")
 
