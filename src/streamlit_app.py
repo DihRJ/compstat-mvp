@@ -115,6 +115,29 @@ st.markdown(
         border-left:4px solid #1E2761; padding:.4rem .8rem;
         background:#FAFBFD; margin-bottom:.5rem;
     }
+    .termo {
+        border-bottom:1px dotted #1E2761; cursor:help; color:#1E2761;
+        font-weight:500;
+    }
+    .breadcrumb-area {
+        display:flex; align-items:center; gap:.4rem;
+        background:#1E2761; color:#fff; padding:.4rem .65rem;
+        border-radius:6px; font-size:.78rem; line-height:1.2;
+        margin:.4rem 0;
+    }
+    .empty-state {
+        background:#FAFBFD; border:1px dashed #C7CCD9; border-radius:8px;
+        padding:1.5rem; text-align:center; color:#555;
+    }
+    .empty-state .icon { font-size:2rem; margin-bottom:.5rem; }
+    .empty-state .titulo {
+        font-weight:600; color:#1E2761; font-size:1.05rem;
+        margin-bottom:.25rem;
+    }
+    .footer-inst {
+        text-align:center; color:#888; font-size:.75rem;
+        padding:1.5rem 0 .5rem; border-top:1px solid #EEE; margin-top:2rem;
+    }
     footer { visibility:hidden; }
     #MainMenu { visibility:hidden; }
     </style>
@@ -148,6 +171,79 @@ def navegar_para(pagina: str, area_id: str | None = None) -> None:
     if area_id is not None:
         st.session_state["area_selecionada"] = area_id
     st.rerun()
+
+
+# ----- Helpers de design padronizados (QW1/QW2/QW3) -----
+
+GLOSSARIO = {
+    "RELINT": "Relatório de Inteligência produzido pelo BPM/FM (fonte oficial qualitativa).",
+    "AISP": "Área Integrada de Segurança Pública (divisão geográfica do policiamento estadual).",
+    "BPM": "Batalhão da Polícia Militar responsável pela área.",
+    "DP": "Delegacia de Polícia responsável pela área.",
+    "QMD": "Quadro de Missão Diária — ordem de serviço entregue à base da FM.",
+    "Bingo": "Cruzamento de 4+ camadas de risco (mancha, RELINT, fator urbano, Disque) na mesma área.",
+    "FM": "Força Municipal — Divisão de Elite da Guarda Municipal do Rio de Janeiro.",
+    "PSR": "População em Situação de Rua.",
+    "ORCRIM": "Organização Criminosa que exerce influência territorial.",
+    "CPSR": "Censo da População em Situação de Rua.",
+}
+
+
+def termo(rotulo: str) -> str:
+    """Devolve HTML com tooltip explicativo para termo técnico."""
+    desc = GLOSSARIO.get(rotulo.upper())
+    if not desc:
+        return rotulo
+    return f"<abbr class='termo' title='{desc}'>{rotulo}</abbr>"
+
+
+def header_pagina(
+    titulo: str,
+    subtitulo: str | None = None,
+    com_periodo: bool = True,
+) -> None:
+    """Cabeçalho consistente para todas as páginas."""
+    st.title(titulo)
+    if com_periodo and subtitulo:
+        st.caption(f"{subtitulo} · Período: **{label_periodo()}**")
+    elif com_periodo:
+        st.caption(f"Período: **{label_periodo()}**")
+    elif subtitulo:
+        st.caption(subtitulo)
+
+
+def empty_state(
+    icone: str,
+    titulo: str,
+    descricao: str,
+    cta_label: str | None = None,
+    cta_target_pagina: str | None = None,
+    key: str | None = None,
+) -> None:
+    """Empty state amigável com CTA opcional."""
+    st.markdown(
+        f"<div class='empty-state'>"
+        f"<div class='icon'>{icone}</div>"
+        f"<div class='titulo'>{titulo}</div>"
+        f"<div>{descricao}</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
+    if cta_label and cta_target_pagina:
+        if st.button(cta_label, type="primary", key=key or f"empty_cta_{titulo[:20]}"):
+            navegar_para(cta_target_pagina)
+
+
+def render_footer_institucional() -> None:
+    """Rodapé discreto com fonte oficial."""
+    st.markdown(
+        "<div class='footer-inst'>"
+        "Secretaria-Geral do CompStat Municipal · Prefeitura do Rio de Janeiro · "
+        "Dados: <a href='https://github.com/CompStat-Rio/claude_impact_lab_compstat_rio' "
+        "target='_blank' style='color:#888'>CompStat-Rio (público)</a>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
 
 
 def render_editor_poligono(
@@ -444,14 +540,30 @@ if st.session_state["periodo_preset"] == "Custom":
 
 st.sidebar.caption(f"📅 {label_periodo()}")
 
+# Breadcrumb da área selecionada (QW7)
+_dados_carregados = carregar_tudo(*resolver_periodo())
+_area_sel_id = st.session_state.get("area_selecionada")
+if _area_sel_id:
+    _area_sel = next(
+        (a for a in _dados_carregados["areas"] if a.poligono_id == _area_sel_id),
+        None,
+    )
+    if _area_sel:
+        st.sidebar.markdown(
+            f"<div class='breadcrumb-area'>"
+            f"📍 <strong>{_area_sel.nome_area[:30]}</strong>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
+
 st.sidebar.markdown("---")
 
-# Recarregar + última atualização
+# Recarregar + última atualização (microcopy revisto — QW4)
 col_rec, col_data = st.sidebar.columns([1, 1])
-if col_rec.button("Recarregar", use_container_width=True):
+if col_rec.button("🔄 Atualizar", use_container_width=True,
+                  help="Limpa o cache e recarrega os dados do disco."):
     st.cache_data.clear()
     st.rerun()
-_dados_carregados = carregar_tudo(*resolver_periodo())
 col_data.caption(f"Atualizado:\n{_dados_carregados['carregado_em']:%H:%M:%S}")
 
 st.sidebar.markdown("---")
@@ -463,19 +575,9 @@ st.sidebar.caption(f"v MVP · {date.today():%d/%m/%Y}")
 # ============================================================
 
 def render_dashboard():
-    st.title("Dashboard")
-    st.caption(
-        f"Visão executiva das áreas prioritárias da Força Municipal · "
-        f"Período: **{label_periodo()}**"
-    )
-    st.markdown(
-        "<div class='institucional'>"
-        "<strong>Foco da análise:</strong> crimes contra o patrimônio "
-        "(roubos e furtos) — competência da Força Municipal. "
-        "Outros delitos (drogas, violência interpessoal) são "
-        "competência das polícias estaduais."
-        "</div>",
-        unsafe_allow_html=True,
+    header_pagina(
+        "Dashboard",
+        "Visão executiva das áreas prioritárias da Força Municipal",
     )
 
     dados = carregar_tudo(*resolver_periodo())
@@ -483,9 +585,14 @@ def render_dashboard():
     bingos = dados["bingos"]
 
     if not areas:
-        st.info(
-            "Nenhuma área cadastrada. Vá em **Editor de áreas → Criar nova** para começar.",
-            icon="📍",
+        empty_state(
+            "📍",
+            "Nenhuma área cadastrada",
+            "Cadastre a primeira área da Força Municipal para começar a "
+            "visualizar dados, scores e relatórios.",
+            cta_label="Cadastrar primeira área",
+            cta_target_pagina="Editor de areas",
+            key="empty_dash_areas",
         )
         return
 
@@ -616,10 +723,15 @@ def render_dashboard():
 # ============================================================
 
 def render_scores():
-    st.title("Score / Bingos detalhados")
-    st.caption(
-        "Cruzamento de 4 fontes com pesos diferenciados. "
-        "RELINT oficial tem 3x o peso da denuncia anonima."
+    header_pagina(
+        "Score / Bingos detalhados",
+        "Cruzamento de 4 fontes com pesos diferenciados.",
+    )
+    st.markdown(
+        f"Pesos: Mancha **0,40** · {termo('RELINT')} **0,30** · "
+        f"Urbano **0,15** · Disque **0,10** · Modus+rotas **0,05**. "
+        f"{termo('RELINT')} oficial pesa **3×** mais que denúncia anônima.",
+        unsafe_allow_html=True,
     )
 
     # Lei dos pesos visivel
@@ -785,10 +897,10 @@ def _render_excluir(store: AreasFMStore, areas: list) -> None:
 
 
 def render_editor():
-    st.title("Editor de areas")
-    st.caption(
-        "CRUD completo: criar nova, editar, desativar (preserva historico) "
-        "ou excluir permanentemente."
+    header_pagina(
+        "Editor de áreas",
+        "Cadastre, edite ou desative áreas. Exclusão permanente disponível.",
+        com_periodo=False,
     )
     store = AreasFMStore(DATA_DIR / "areas.json")
 
@@ -890,7 +1002,7 @@ def render_editor():
             )
             obs = st.text_area("Observacoes")
 
-            if st.form_submit_button("Criar area", type="primary"):
+            if st.form_submit_button("✅ Cadastrar área", type="primary"):
                 if not all([nome, aisp, bairros, base, subpref, wkt]):
                     st.error("Preencha todos os campos obrigatorios (*)")
                 else:
@@ -964,7 +1076,7 @@ def render_editor():
                 nova_obs = st.text_area(
                     "Observacoes", value=area_atual.observacoes or "",
                 )
-                if st.form_submit_button("Salvar", type="primary"):
+                if st.form_submit_button("💾 Salvar alterações", type="primary"):
                     try:
                         store.atualizar(
                             poligono_id=pid,
@@ -992,10 +1104,15 @@ def render_editor():
 # ============================================================
 
 def render_importar():
-    st.title("Importar dados")
-    st.caption(
-        "Adicione novos documentos (RELINTs, ocorrências, denúncias, "
-        "fatores urbanos) **vinculados a uma área pré-existente**."
+    header_pagina(
+        "Importar dados",
+        "Adicione novos documentos vinculados a uma área pré-existente.",
+        com_periodo=False,
+    )
+    st.markdown(
+        f"Aceita: {termo('RELINT')} · ocorrências · denúncias · fatores urbanos. "
+        f"Formatos: JSON, CSV, PDF, DOC, DOCX, TXT.",
+        unsafe_allow_html=True,
     )
 
     store = AreasFMStore(DATA_DIR / "areas.json")
@@ -1109,10 +1226,13 @@ def render_importar():
 # ============================================================
 
 def render_qmd():
-    st.title("Quadro de Missao Diaria (QMD)")
+    header_pagina(
+        "Quadro de Missão Diária (QMD)",
+        "Ordem de serviço entregue à base da Força Municipal.",
+    )
     st.caption(
-        "Ordem de servico que cada base da FM recebe. Gerado a partir do "
-        "score, modus operandi e rotas de fuga conhecidas."
+        "Gerado a partir do score, modus operandi e rotas de fuga "
+        "identificadas no RELINT."
     )
 
     dados = carregar_tudo(*resolver_periodo())
@@ -1274,10 +1394,10 @@ def render_qmd():
 # ============================================================
 
 def render_evolucao():
-    st.title("Evolucao apos atuacao da FM (90 dias)")
-    st.caption(
-        "Comparativo de indicadores antes e depois da atuacao da Forca "
-        "Municipal nas areas prioritarias."
+    header_pagina(
+        "Evolução após atuação da FM (90 dias)",
+        "Comparativo antes/depois de roubos, furtos e score consolidado.",
+        com_periodo=False,
     )
 
     snapshots = carregar_snapshots()
@@ -1372,10 +1492,9 @@ def render_evolucao():
 # ============================================================
 
 def render_relatorios():
-    st.title("Relatórios")
-    st.caption(
-        "Geração de relatórios analíticos no formato oficial CompStat Municipal. "
-        "Por área ou consolidado (todas as áreas ativas)."
+    header_pagina(
+        "Relatórios",
+        "Geração no formato oficial CompStat Municipal — por área ou consolidado.",
     )
 
     aba_area, aba_geral = st.tabs([
@@ -1671,3 +1790,6 @@ PAGINA_RENDERS = {
 }
 
 PAGINA_RENDERS[st.session_state["pagina"]]()
+
+# Footer institucional (QW6)
+render_footer_institucional()
