@@ -654,23 +654,14 @@ def render_dashboard():
     with tab_mapa:
         # Filtros colapsados (default fechado)
         with st.expander("⚙️ Filtros e camadas", expanded=False):
-            f1, f2 = st.columns([3, 2])
-            with f1:
-                areas_filtradas = st.multiselect(
-                    "Áreas visíveis",
-                    [a.poligono_id for a in areas],
-                    default=[a.poligono_id for a in areas],
-                    format_func=lambda i: next(
-                        a.nome_area for a in areas if a.poligono_id == i
-                    ),
-                )
-            with f2:
-                modo_viz = st.radio(
-                    "Visualização das ocorrências",
-                    ["🔥 Mapa de calor", "📍 Pins (cluster)"],
-                    horizontal=False,
-                )
-
+            areas_filtradas = st.multiselect(
+                "Áreas visíveis",
+                [a.poligono_id for a in areas],
+                default=[a.poligono_id for a in areas],
+                format_func=lambda i: next(
+                    a.nome_area for a in areas if a.poligono_id == i
+                ),
+            )
             tipos_disponiveis = sorted({o.tipo for o in dados["ocorrencias"]})
             tipos_filtrados = st.multiselect(
                 "Tipos de crime",
@@ -680,16 +671,14 @@ def render_dashboard():
             )
             st.caption(
                 "💡 No mapa, use o controle de camadas no canto superior direito "
-                "para alternar Áreas / Ocorrências / Câmeras / Pontos de interceptação."
+                "para alternar Áreas / Mapa de calor / Pins / Câmeras / Pontos."
             )
 
-        # Aplica filtros
+        # Defaults caso o expander nunca tenha sido aberto
         if "areas_filtradas" not in dir():
             areas_filtradas = [a.poligono_id for a in areas]
         if "tipos_filtrados" not in dir():
             tipos_filtrados = sorted({o.tipo for o in dados["ocorrencias"]})
-        if "modo_viz" not in dir():
-            modo_viz = "🔥 Mapa de calor"
 
         areas_render = [a for a in areas if a.poligono_id in areas_filtradas]
         bingos_render = [
@@ -715,7 +704,7 @@ def render_dashboard():
             m = construir_mapa_folium(
                 areas_render, bingos_render,
                 ocorrencias=ocorrencias_render,
-                modo_visualizacao="heatmap" if "calor" in modo_viz else "pins",
+                modo_visualizacao="heatmap",  # heatmap inicia visível; usuário alterna no LayerControl
             )
             from heatmap import adicionar_cameras_ao_mapa, finalizar_mapa
             m = adicionar_cameras_ao_mapa(m)
@@ -1053,22 +1042,28 @@ def render_editor():
             )
 
         with st.form("form_criar"):
+            secao("Identificação")
             c1, c2 = st.columns(2)
-            nome = c1.text_input("Nome da area*")
-            aisp = c2.text_input("AISP*", placeholder="ex: AISP 9")
-            base = c1.text_input("Base FM*", placeholder="ex: Base Bangu")
-            subpref = c2.text_input("Subprefeitura*", placeholder="ex: Zona Oeste")
-            dp = c1.text_input("DP")
-            bpm = c2.text_input("BPM")
+            nome = c1.text_input("Nome da área *")
+            aisp = c2.text_input("AISP *", placeholder="ex: AISP 9")
             bairros = st.text_input(
-                "Bairros (separados por virgula)*", placeholder="Bangu, Realengo",
+                "Bairros (separados por vírgula) *", placeholder="Bangu, Realengo",
             )
+
+            secao("Vínculos institucionais")
+            v1, v2 = st.columns(2)
+            base = v1.text_input("Base FM *", placeholder="ex: Base Bangu")
+            subpref = v2.text_input("Subprefeitura *", placeholder="ex: Zona Oeste")
+            dp = v1.text_input("DP", placeholder="opcional")
+            bpm = v2.text_input("BPM", placeholder="opcional")
+
+            secao("Geometria e operação")
             wkt_default = st.session_state.get("wkt_form_criar") or (
                 "POLYGON((-43.475 -22.880, -43.470 -22.880, "
                 "-43.470 -22.875, -43.475 -22.875, -43.475 -22.880))"
             )
             wkt = st.text_area(
-                "Geometria (WKT)*",
+                "Geometria (WKT) *",
                 value=wkt_default,
                 height=80,
                 help="Preenchido automaticamente se você desenhou no mapa acima.",
@@ -1076,9 +1071,9 @@ def render_editor():
             efetivo_padrao = st.number_input(
                 "Efetivo padrão da FM (nº de agentes)",
                 min_value=0, max_value=500, value=25, step=1,
-                help="Quantitativo de agentes alocado por padrão. Usado como ponto de partida no QMD e no DOCX.",
+                help="Quantitativo alocado por padrão. Usado como base no QMD e no relatório.",
             )
-            obs = st.text_area("Observacoes")
+            obs = st.text_area("Observações", placeholder="Notas internas, opcional")
 
             if st.form_submit_button("✅ Cadastrar área", type="primary"):
                 if not all([nome, aisp, bairros, base, subpref, wkt]):
@@ -1132,16 +1127,19 @@ def render_editor():
                 )
 
             with st.form("form_editar"):
+                secao("Identificação")
                 c1, c2 = st.columns(2)
                 novo_nome = c1.text_input("Nome", value=area_atual.nome_area)
                 novos_bairros = c2.text_input(
                     "Bairros", value=", ".join(area_atual.bairros),
                 )
-                novo_efetivo = c1.number_input(
+
+                secao("Geometria e operação")
+                novo_efetivo = st.number_input(
                     "Efetivo padrão da FM",
                     min_value=0, max_value=500,
                     value=int(area_atual.efetivo_padrao), step=1,
-                    help="Default usado no QMD e DOCX.",
+                    help="Default usado no QMD e no relatório.",
                 )
                 wkt_default_edit = (
                     st.session_state.get(f"wkt_form_editar_{pid}")
@@ -1152,7 +1150,7 @@ def render_editor():
                     help="Preenchido automaticamente se você redesenhou no mapa acima.",
                 )
                 nova_obs = st.text_area(
-                    "Observacoes", value=area_atual.observacoes or "",
+                    "Observações", value=area_atual.observacoes or "",
                 )
                 if st.form_submit_button("💾 Salvar alterações", type="primary"):
                     try:
@@ -1205,17 +1203,18 @@ def render_importar():
 
     # ---- seleção obrigatória de área ----
     with st.container(border=True):
-        st.markdown("### 1. Selecione a área")
+        step_label(1, "Selecione a área")
         pid = st.selectbox(
             "Área pré-existente *",
             [a.poligono_id for a in areas],
             format_func=lambda i: f"{next(a.nome_area for a in areas if a.poligono_id == i)} ({i})",
             key="import_area_select",
+            label_visibility="collapsed",
         )
 
     # ---- tipo de documento ----
     with st.container(border=True):
-        st.markdown("### 2. Tipo de documento")
+        step_label(2, "Tipo de documento")
         tipo = st.radio(
             "Tipo",
             list(TIPOS_DOCUMENTO.keys()),
@@ -1232,17 +1231,20 @@ def render_importar():
     # ---- upload único (detecção automática pela extensão) ----
     from importador import EXTENSOES_ACEITAS, detectar_formato
 
-    arquivo_up = st.file_uploader(
-        "📎 Arraste e solte o arquivo aqui ou clique para selecionar",
-        type=EXTENSOES_ACEITAS,
-        key=f"upload_{tipo}",
-        help=(
-            f"Formatos suportados: {', '.join(e.upper() for e in EXTENSOES_ACEITAS)}. "
-            f"Para {cfg['rotulo']}, formatos válidos: {', '.join(cfg['formatos'])}."
-        ),
-    )
+    with st.container(border=True):
+        step_label(3, "Envie o arquivo")
+        arquivo_up = st.file_uploader(
+            "📎 Arraste e solte o arquivo aqui ou clique para selecionar",
+            type=EXTENSOES_ACEITAS,
+            key=f"upload_{tipo}",
+            label_visibility="collapsed",
+            help=(
+                f"Formatos suportados: {', '.join(e.upper() for e in EXTENSOES_ACEITAS)}. "
+                f"Para {cfg['rotulo']}, formatos válidos: {', '.join(cfg['formatos'])}."
+            ),
+        )
 
-    # ---- preview + salvar ----
+    # ---- preview + salvar com status progressivo ----
     if arquivo_up:
         conteudo = arquivo_up.read()
         try:
@@ -1252,16 +1254,29 @@ def render_importar():
             return
 
         with st.container(border=True):
-            st.markdown(
-                f"### 📋 Validação · arquivo `{arquivo_up.name}` "
-                f"<span style='font-size:.75rem;color:#666'>(formato {formato})</span>",
-                unsafe_allow_html=True,
-            )
-            try:
-                resultado = importar(tipo, pid, formato, conteudo)
-            except Exception as e:
-                st.error(f"Erro ao processar: {e}")
-                return
+            step_label(4, f"Validação · {arquivo_up.name} ({formato})")
+
+            with st.status("Processando arquivo...", expanded=True) as status:
+                try:
+                    st.write(f"✓ Arquivo lido ({len(conteudo) // 1024} KB)")
+                    st.write(f"✓ Formato detectado: **{formato}**")
+                    st.write(
+                        f"✓ Validando contra schema "
+                        f"**{cfg['schema'].__name__}**"
+                    )
+                    resultado = importar(tipo, pid, formato, conteudo)
+                    st.write(
+                        f"✓ {resultado.n_novos} registro(s) válido(s), "
+                        f"{resultado.n_erros} erro(s)"
+                    )
+                    status.update(
+                        label="Validação concluída", state="complete",
+                        expanded=False,
+                    )
+                except Exception as e:
+                    status.update(label="Falha ao processar", state="error")
+                    st.error(f"Erro ao processar: {e}")
+                    return
 
             c1, c2 = st.columns(2)
             c1.metric("Registros válidos", resultado.n_novos)
@@ -1355,75 +1370,74 @@ def render_qmd():
     fatores_area = [f for f in dados["fatores"] if f.poligono_fm_id == pid]
     sugestao = sugerir_efetivo(area, bingo, oco_area, relints_area, fatores_area)
 
+    # ----- Card único de efetivo (R2-5): sugestão IA + padrão + final -----
+    secao("Efetivo alocado")
+    key_slider = f"qmd_efetivo_{pid}"
+    efetivo_max = max(80, area.efetivo_padrao * 2, sugestao.efetivo_sugerido * 2)
+
     with st.container(border=True):
-        cs1, cs2, cs3 = st.columns([2, 1, 1])
-        cs1.markdown(
-            f"#### 🤖 Sugestão de efetivo<br>"
-            f"<span style='font-size:.85rem;color:#666'>"
-            f"Cálculo determinístico a partir dos dados da área e do período.</span>",
-            unsafe_allow_html=True,
+        cs1, cs2, cs3 = st.columns(3)
+        cs1.metric(
+            "Sugestão IA",
+            sugestao.efetivo_sugerido,
+            delta=f"{sugestao.efetivo_sugerido - area.efetivo_padrao:+d} vs padrão",
+            delta_color="off",
+            help="Heurística determinística sobre score, volume, área, fatores e facção.",
         )
-        cs2.metric("Sugerido", f"{sugestao.efetivo_sugerido}")
+        cs2.metric("Padrão da área", area.efetivo_padrao)
         if cs3.button(
-            "Aplicar sugestão", key=f"apply_sugestao_{pid}",
+            "Aplicar sugestão →", key=f"apply_sugestao_{pid}",
             use_container_width=True, type="primary",
         ):
-            st.session_state[f"qmd_efetivo_{pid}"] = sugestao.efetivo_sugerido
+            st.session_state[key_slider] = sugestao.efetivo_sugerido
             st.rerun()
 
-        with st.expander("Como chegamos nesse número"):
-            st.markdown(sugestao.to_markdown())
-            if st.button(
-                "🧠 Explicar com IA (Claude)", key=f"llm_explain_{pid}",
-            ):
-                st.session_state[f"_explain_request_{pid}"] = True
+        st.divider()
 
-        if st.session_state.get(f"_explain_request_{pid}"):
-            with st.spinner("Consultando Claude..."):
-                try:
-                    from explicacao_llm import explicar_sugestao_efetivo
-                    texto = explicar_sugestao_efetivo(
-                        area, bingo, sugestao,
-                        n_ocorrencias=len(oco_area),
-                        relints=relints_area,
-                    )
-                    st.info(texto, icon="🧠")
-                except RuntimeError as e:
-                    st.error(str(e))
-                except Exception as e:
-                    st.error(f"Falha ao consultar Claude: {e}")
-            st.session_state[f"_explain_request_{pid}"] = False
-
-    # Slider de efetivo: usa efetivo_padrao da área como ponto de partida.
-    efetivo_max = max(80, area.efetivo_padrao * 2)
-    key_slider = f"qmd_efetivo_{pid}"
-
-    def _render_slider_efetivo() -> int:
-        col_s, col_b = st.columns([3, 1])
-        valor = col_s.slider(
-            "Efetivo alocado",
+        efetivo = st.slider(
+            "Efetivo final desta missão",
             min_value=5, max_value=efetivo_max,
             value=int(area.efetivo_padrao),
             key=key_slider,
-            help=f"Padrão atual da área: {area.efetivo_padrao} agentes.",
         )
-        if col_b.button(
-            "💾 Salvar como padrão", key=f"save_padrao_{pid}",
-            use_container_width=True,
-            disabled=(valor == area.efetivo_padrao),
-        ):
-            store = AreasFMStore(DATA_DIR / "areas.json")
-            store.atualizar(poligono_id=pid, efetivo_padrao=int(valor))
-            st.cache_data.clear()
-            st.toast(f"Padrão de {area.nome_area} agora é {valor}.", icon="💾")
-            st.rerun()
-        return valor
 
-    if hasattr(st, "popover"):
-        with st.popover(f"⚙️ Efetivo: {area.efetivo_padrao} (padrão)"):
-            efetivo = _render_slider_efetivo()
-    else:
-        efetivo = _render_slider_efetivo()
+        col_save, col_explain = st.columns([1, 1])
+        if col_save.button(
+            "💾 Salvar como novo padrão", key=f"save_padrao_{pid}",
+            use_container_width=True,
+            disabled=(efetivo == area.efetivo_padrao),
+        ):
+            AreasFMStore(DATA_DIR / "areas.json").atualizar(
+                poligono_id=pid, efetivo_padrao=int(efetivo),
+            )
+            st.cache_data.clear()
+            st.toast(f"Padrão de {area.nome_area} agora é {efetivo}.", icon="💾")
+            st.rerun()
+        if col_explain.button(
+            "🧠 Explicar com IA", key=f"llm_explain_{pid}",
+            use_container_width=True,
+            help="Chama Claude Haiku para gerar texto em linguagem natural sobre o cálculo.",
+        ):
+            st.session_state[f"_explain_request_{pid}"] = True
+
+    with st.expander("Como chegamos no número sugerido"):
+        st.markdown(sugestao.to_markdown())
+
+    if st.session_state.get(f"_explain_request_{pid}"):
+        with st.spinner("Consultando Claude..."):
+            try:
+                from explicacao_llm import explicar_sugestao_efetivo
+                texto = explicar_sugestao_efetivo(
+                    area, bingo, sugestao,
+                    n_ocorrencias=len(oco_area),
+                    relints=relints_area,
+                )
+                st.info(texto, icon="🧠")
+            except RuntimeError as e:
+                st.error(str(e))
+            except Exception as e:
+                st.error(f"Falha ao consultar Claude: {e}")
+        st.session_state[f"_explain_request_{pid}"] = False
 
     recomendacao = sugerir_modalidade(bingo, relints_area, oco_area, efetivo)
     qmd = gerar_qmd(

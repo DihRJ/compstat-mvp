@@ -83,51 +83,56 @@ def construir_mapa_folium(
             continue
     grupo_areas.add_to(m)
 
-    # ---- LAYER: OCORRÊNCIAS ----
+    # ---- LAYERS DE OCORRÊNCIAS ----
+    # Sempre adiciona heatmap E pins como camadas separadas; usuário
+    # alterna pelo LayerControl do Folium. modo_visualizacao define
+    # apenas qual começa visível.
     if ocorrencias:
-        if modo_visualizacao == "heatmap":
-            try:
-                from folium.plugins import HeatMap
-                pontos = [
-                    [o.coordenada.lat, o.coordenada.lng]
-                    for o in ocorrencias if o.coordenada
-                ]
-                if pontos:
-                    grupo_heat = folium.FeatureGroup(
-                        name=f"🔥 Mapa de calor ({len(pontos)} ocorrências)",
-                        show=mostrar_ocorrencias,
-                    )
-                    HeatMap(
-                        pontos,
-                        radius=18,
-                        blur=22,
-                        max_zoom=15,
-                        gradient={"0.3": "#2E7D32", "0.5": "#FBC02D",
-                                  "0.7": "#EF6C00", "0.9": "#C62828"},
-                    ).add_to(grupo_heat)
-                    grupo_heat.add_to(m)
-            except ImportError:
-                pass
-        else:
-            try:
-                from folium.plugins import MarkerCluster
-                grupo_pins = folium.FeatureGroup(
-                    name=f"📍 Ocorrências ({min(len(ocorrencias), 500)})",
-                    show=mostrar_ocorrencias,
+        # Heatmap density
+        try:
+            from folium.plugins import HeatMap
+            pontos = [
+                [o.coordenada.lat, o.coordenada.lng]
+                for o in ocorrencias if o.coordenada
+            ]
+            if pontos:
+                grupo_heat = folium.FeatureGroup(
+                    name=f"🔥 Mapa de calor ({len(pontos)} ocorrências)",
+                    show=(mostrar_ocorrencias and modo_visualizacao != "pins"),
                 )
-                cluster = MarkerCluster().add_to(grupo_pins)
-                for o in ocorrencias[:500]:
-                    folium.CircleMarker(
-                        location=[o.coordenada.lat, o.coordenada.lng],
-                        radius=3,
-                        color="darkred",
-                        fill=True,
-                        fill_opacity=0.6,
-                        popup=f"{o.tipo} ({o.modalidade_crime})",
-                    ).add_to(cluster)
-                grupo_pins.add_to(m)
-            except ImportError:
-                pass
+                HeatMap(
+                    pontos,
+                    radius=18,
+                    blur=22,
+                    max_zoom=15,
+                    gradient={"0.3": "#2E7D32", "0.5": "#FBC02D",
+                              "0.7": "#EF6C00", "0.9": "#C62828"},
+                ).add_to(grupo_heat)
+                grupo_heat.add_to(m)
+        except ImportError:
+            pass
+
+        # Pins (cluster) — cap 300 para performance
+        try:
+            from folium.plugins import MarkerCluster
+            cap = min(len(ocorrencias), 300)
+            grupo_pins = folium.FeatureGroup(
+                name=f"📍 Ocorrências em pins ({cap})",
+                show=(mostrar_ocorrencias and modo_visualizacao == "pins"),
+            )
+            cluster = MarkerCluster().add_to(grupo_pins)
+            for o in ocorrencias[:cap]:
+                folium.CircleMarker(
+                    location=[o.coordenada.lat, o.coordenada.lng],
+                    radius=3,
+                    color="darkred",
+                    fill=True,
+                    fill_opacity=0.6,
+                    popup=f"{o.tipo} ({o.modalidade_crime})",
+                ).add_to(cluster)
+            grupo_pins.add_to(m)
+        except ImportError:
+            pass
 
     # ---- LAYER: PONTOS DE INTERCEPTAÇÃO ----
     if pontos_intercepcao:
