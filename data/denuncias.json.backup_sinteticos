@@ -1,0 +1,249 @@
+[
+  {
+    "denuncia_id": "den_bangu_01_000",
+    "poligono_fm_id": "bangu_01",
+    "data_recebimento": "2026-04-13T12:56:27.248450",
+    "texto": "Vendendo celulares roubados no comercio da Rua Sao Goncalo proximo ao calcadao.",
+    "local_mencionado": {
+      "lat": -22.881532013591006,
+      "lng": -43.46625069700144,
+      "descricao": null
+    },
+    "horario_mencionado": "16:00-19:00",
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_bangu_01_001",
+    "poligono_fm_id": "bangu_01",
+    "data_recebimento": "2026-05-15T12:56:27.248458",
+    "texto": "Grupo de jovens armados parando pessoas no fim do calcadao a noite.",
+    "local_mencionado": {
+      "lat": -22.877781172715018,
+      "lng": -43.466639803075466,
+      "descricao": null
+    },
+    "horario_mencionado": null,
+    "tema_principal": "receptacao"
+  },
+  {
+    "denuncia_id": "den_bangu_01_002",
+    "poligono_fm_id": "bangu_01",
+    "data_recebimento": "2026-04-16T12:56:27.248461",
+    "texto": "Receptacao em loja de celular sem fachada na Av Conego Vasconcelos numero 200 aproximadamente.",
+    "local_mencionado": {
+      "lat": -22.87966846908189,
+      "lng": -43.47052121668337,
+      "descricao": null
+    },
+    "horario_mencionado": "16:00-19:00",
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_bangu_01_003",
+    "poligono_fm_id": "bangu_01",
+    "data_recebimento": "2026-04-21T12:56:27.248464",
+    "texto": "Movimento estranho na esquina do calcadao com Joao Sales a noite, sempre o mesmo grupo.",
+    "local_mencionado": {
+      "lat": -22.878587887625702,
+      "lng": -43.46733252962237,
+      "descricao": null
+    },
+    "horario_mencionado": null,
+    "tema_principal": "ponto_de_uso"
+  },
+  {
+    "denuncia_id": "den_bangu_01_004",
+    "poligono_fm_id": "bangu_01",
+    "data_recebimento": "2026-05-09T12:56:27.248466",
+    "texto": "Vi roubo de celular ontem por volta das 22h proximo ao posto de gasolina do calcadao.",
+    "local_mencionado": {
+      "lat": -22.879504745722297,
+      "lng": -43.46903085575062,
+      "descricao": null
+    },
+    "horario_mencionado": "20:00-23:00",
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_copa_01_000",
+    "poligono_fm_id": "copa_01",
+    "data_recebimento": "2026-04-09T12:56:27.248469",
+    "texto": "Arrastao no posto 4 toda sexta a tarde, sempre mesmo modus.",
+    "local_mencionado": {
+      "lat": -22.97296431361108,
+      "lng": -43.185532771949966,
+      "descricao": null
+    },
+    "horario_mencionado": "16:00-19:00",
+    "tema_principal": "violencia"
+  },
+  {
+    "denuncia_id": "den_copa_01_001",
+    "poligono_fm_id": "copa_01",
+    "data_recebimento": "2026-05-17T12:56:27.248471",
+    "texto": "Vi grupo subindo Hilario com mochila cheia depois do arrastao na orla.",
+    "local_mencionado": {
+      "lat": -22.974943524939718,
+      "lng": -43.186619701739,
+      "descricao": null
+    },
+    "horario_mencionado": "07:00-09:00",
+    "tema_principal": "moradores_indo_pra_la"
+  },
+  {
+    "denuncia_id": "den_copa_01_002",
+    "poligono_fm_id": "copa_01",
+    "data_recebimento": "2026-05-07T12:56:27.248473",
+    "texto": "Tem ponto de receptacao no inicio da Hilario de Gouveia esquina com Barata Ribeiro.",
+    "local_mencionado": {
+      "lat": -22.970657230360352,
+      "lng": -43.182821609279834,
+      "descricao": null
+    },
+    "horario_mencionado": null,
+    "tema_principal": "receptacao"
+  },
+  {
+    "denuncia_id": "den_copa_01_003",
+    "poligono_fm_id": "copa_01",
+    "data_recebimento": "2026-03-25T12:56:27.248475",
+    "texto": "Atencao para grupos de 5 jovens na orla, ja vi 3 arrastoes assim.",
+    "local_mencionado": {
+      "lat": -22.97322879373675,
+      "lng": -43.18388775621236,
+      "descricao": null
+    },
+    "horario_mencionado": null,
+    "tema_principal": "violencia"
+  },
+  {
+    "denuncia_id": "den_lapa_01_000",
+    "poligono_fm_id": "lapa_01",
+    "data_recebimento": "2026-04-17T12:56:27.248477",
+    "texto": "Roubo de celular toda madrugada na escadaria, sempre tem motoqueiro de apoio.",
+    "local_mencionado": {
+      "lat": -22.91404626845846,
+      "lng": -43.18228266910705,
+      "descricao": null
+    },
+    "horario_mencionado": "16:00-19:00",
+    "tema_principal": "violencia"
+  },
+  {
+    "denuncia_id": "den_lapa_01_001",
+    "poligono_fm_id": "lapa_01",
+    "data_recebimento": "2026-05-18T12:56:27.248479",
+    "texto": "Vi dupla com moto vermelha fazendo ronda na esquina da Mem de Sa olhando vitimas.",
+    "local_mencionado": {
+      "lat": -22.910068093673907,
+      "lng": -43.17750109799947,
+      "descricao": null
+    },
+    "horario_mencionado": "madrugada",
+    "tema_principal": "violencia"
+  },
+  {
+    "denuncia_id": "den_lapa_01_002",
+    "poligono_fm_id": "lapa_01",
+    "data_recebimento": "2026-04-24T12:56:27.248481",
+    "texto": "Receptacao de celular na Saude, predio antigo proximo a estacao.",
+    "local_mencionado": {
+      "lat": -22.911385893334412,
+      "lng": -43.180511006926174,
+      "descricao": null
+    },
+    "horario_mencionado": "07:00-09:00",
+    "tema_principal": "violencia"
+  },
+  {
+    "denuncia_id": "den_lapa_01_003",
+    "poligono_fm_id": "lapa_01",
+    "data_recebimento": "2026-05-10T12:56:27.248482",
+    "texto": "Saidinha de bar virou rotina, gerentes nao estao alertando os clientes.",
+    "local_mencionado": {
+      "lat": -22.911178948953733,
+      "lng": -43.17848907811925,
+      "descricao": null
+    },
+    "horario_mencionado": "20:00-23:00",
+    "tema_principal": "moradores_indo_pra_la"
+  },
+  {
+    "denuncia_id": "den_meier_01_000",
+    "poligono_fm_id": "meier_01",
+    "data_recebimento": "2026-04-13T12:56:27.248484",
+    "texto": "Motoqueiros armados na Dias da Cruz roubando comercio fim de tarde.",
+    "local_mencionado": {
+      "lat": -22.902673168110812,
+      "lng": -43.2793252392123,
+      "descricao": null
+    },
+    "horario_mencionado": "16:00-19:00",
+    "tema_principal": "ponto_de_uso"
+  },
+  {
+    "denuncia_id": "den_meier_01_001",
+    "poligono_fm_id": "meier_01",
+    "data_recebimento": "2026-04-29T12:56:27.248486",
+    "texto": "Dois assaltos em farmacia essa semana, sempre mesma dupla de moto.",
+    "local_mencionado": {
+      "lat": -22.902080313039296,
+      "lng": -43.27814765292228,
+      "descricao": null
+    },
+    "horario_mencionado": null,
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_meier_01_002",
+    "poligono_fm_id": "meier_01",
+    "data_recebimento": "2026-04-10T12:56:27.248488",
+    "texto": "Vi moto preta sem placa fazendo reconhecimento perto do banco Itau.",
+    "local_mencionado": {
+      "lat": -22.90175430359351,
+      "lng": -43.27909011853445,
+      "descricao": null
+    },
+    "horario_mencionado": "20:00-23:00",
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_tijuca_01_000",
+    "poligono_fm_id": "tijuca_01",
+    "data_recebimento": "2026-04-01T12:56:27.248490",
+    "texto": "Roubo na saida do metro Saens Pena cedo, todo dia da semana.",
+    "local_mencionado": {
+      "lat": -22.927807398536576,
+      "lng": -43.23460728171165,
+      "descricao": null
+    },
+    "horario_mencionado": "07:00-09:00",
+    "tema_principal": "receptacao"
+  },
+  {
+    "denuncia_id": "den_tijuca_01_001",
+    "poligono_fm_id": "tijuca_01",
+    "data_recebimento": "2026-05-10T12:56:27.248492",
+    "texto": "Grupo fingindo ser estudante na praca, paquerando vitimas.",
+    "local_mencionado": {
+      "lat": -22.922521183254887,
+      "lng": -43.23309691969113,
+      "descricao": null
+    },
+    "horario_mencionado": "07:00-09:00",
+    "tema_principal": "drogas"
+  },
+  {
+    "denuncia_id": "den_tijuca_01_002",
+    "poligono_fm_id": "tijuca_01",
+    "data_recebimento": "2026-04-12T12:56:27.248494",
+    "texto": "Tem 3 cameras quebradas na praca, ja avisei a subprefeitura.",
+    "local_mencionado": {
+      "lat": -22.925004612443047,
+      "lng": -43.23119190107668,
+      "descricao": null
+    },
+    "horario_mencionado": "madrugada",
+    "tema_principal": "drogas"
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "relint_id": "rel_bangu_01",
+    "poligono_fm_id": "bangu_01",
+    "autor_orgao": "14 BPM",
+    "data_documento": "2026-05-15",
+    "modus_operandi_principal": "Roubos a transeunte praticados a pe por grupos de 2-3 individuos, abordagem rapida no calcadao. Foco em celulares.",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_celular",
+      "roubo_transeunte"
+    ],
+    "horario_pico": "20:00-23:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [
+      {
+        "descricao": "Rota A: calcadao -> Av Conego Vasconcelos -> Rua Sao Goncalo (receptacao)",
+        "pontos": [
+          {
+            "lat": -22.8792,
+            "lng": -43.4677,
+            "descricao": "Centro do calcadao"
+          },
+          {
+            "lat": -22.878,
+            "lng": -43.4685,
+            "descricao": "Av Conego"
+          },
+          {
+            "lat": -22.877,
+            "lng": -43.469,
+            "descricao": "Rua Sao Goncalo - receptacao"
+          }
+        ],
+        "modalidade_fuga": "a_pe",
+        "horario_predominante": "20:00-23:00"
+      }
+    ],
+    "pontos_receptacao": [
+      {
+        "lat": -22.877,
+        "lng": -43.469,
+        "descricao": "Comercio irregular Rua Sao Goncalo"
+      }
+    ],
+    "esconderijos": [],
+    "orcrim_influencia": "TCP",
+    "confianca": "alta",
+    "citacao_fonte": "Relatorio operacional 14 BPM maio/2026: confirmacao de 4 prisoes em flagrante na regiao com mesmo modus."
+  },
+  {
+    "relint_id": "rel_copa_01",
+    "poligono_fm_id": "copa_01",
+    "autor_orgao": "19 BPM",
+    "data_documento": "2026-05-12",
+    "modus_operandi_principal": "Arrastoes em grupos de 4-6 individuos, principalmente em finais de semana. Foco em turistas com celulares e correntes.",
+    "modalidades_crime": [
+      "arrastao",
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_celular",
+      "roubo_transeunte"
+    ],
+    "horario_pico": "16:00-19:00",
+    "dias_criticos": [
+      "sex",
+      "sab",
+      "dom"
+    ],
+    "rotas_fuga": [
+      {
+        "descricao": "Rota B: orla -> Av Atlantica -> Rua Hilario de Gouveia -> metro Cardeal Arcoverde",
+        "pontos": [
+          {
+            "lat": -22.9725,
+            "lng": -43.1842,
+            "descricao": "Posto 4 orla"
+          },
+          {
+            "lat": -22.971,
+            "lng": -43.183,
+            "descricao": "Rua Hilario"
+          },
+          {
+            "lat": -22.9685,
+            "lng": -43.1825,
+            "descricao": "Metro Cardeal Arcoverde"
+          }
+        ],
+        "modalidade_fuga": "a_pe",
+        "horario_predominante": "fim de tarde"
+      }
+    ],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "Sintese semanal 19 BPM. Padrao confirmado em CFTV operacional."
+  },
+  {
+    "relint_id": "rel_lapa_01",
+    "poligono_fm_id": "lapa_01",
+    "autor_orgao": "5 BPM",
+    "data_documento": "2026-05-18",
+    "modus_operandi_principal": "Saidinha de bar e roubo de celular na multidao. Atuacao por individuos em pe e motociclistas dando cobertura para fuga rapida.",
+    "modalidades_crime": [
+      "a_pe",
+      "motocicleta"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_celular",
+      "roubo_transeunte",
+      "roubo_coletivo"
+    ],
+    "horario_pico": "23:00-04:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [
+      {
+        "descricao": "Rota C: Lapa -> Av Mem de Sa (de moto) -> Saude (receptacao)",
+        "pontos": [
+          {
+            "lat": -22.9122,
+            "lng": -43.1797,
+            "descricao": "Largo da Lapa"
+          },
+          {
+            "lat": -22.91,
+            "lng": -43.182,
+            "descricao": "Av Mem de Sa"
+          },
+          {
+            "lat": -22.905,
+            "lng": -43.19,
+            "descricao": "Saude - receptacao"
+          }
+        ],
+        "modalidade_fuga": "motocicleta",
+        "horario_predominante": "madrugada"
+      }
+    ],
+    "pontos_receptacao": [
+      {
+        "lat": -22.905,
+        "lng": -43.19,
+        "descricao": "Saude"
+      }
+    ],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELINT 5 BPM. Modus operandi confirmado por vitimas em 7 BOs."
+  },
+  {
+    "relint_id": "rel_meier_01",
+    "poligono_fm_id": "meier_01",
+    "autor_orgao": "3 BPM",
+    "data_documento": "2026-05-10",
+    "modus_operandi_principal": "Roubos a comercio por motociclistas armados, abordagem rapida durante movimento. Fuga em direcao a comunidades proximas.",
+    "modalidades_crime": [
+      "motocicleta",
+      "veiculo"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_comercio",
+      "roubo_celular"
+    ],
+    "horario_pico": "17:00-20:00",
+    "dias_criticos": [
+      "seg",
+      "qui",
+      "sex"
+    ],
+    "rotas_fuga": [
+      {
+        "descricao": "Rota D: Dias da Cruz -> Adolfo Bergamini -> Encantado",
+        "pontos": [
+          {
+            "lat": -22.9007,
+            "lng": -43.2807,
+            "descricao": "Dias da Cruz comercio"
+          },
+          {
+            "lat": -22.903,
+            "lng": -43.282,
+            "descricao": "Adolfo Bergamini"
+          },
+          {
+            "lat": -22.908,
+            "lng": -43.285,
+            "descricao": "Acesso Encantado"
+          }
+        ],
+        "modalidade_fuga": "motocicleta",
+        "horario_predominante": "fim de expediente"
+      }
+    ],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELINT 3 BPM. 6 roubos a comercio com mesmo MO em 30 dias."
+  },
+  {
+    "relint_id": "rel_tijuca_01",
+    "poligono_fm_id": "tijuca_01",
+    "autor_orgao": "6 BPM",
+    "data_documento": "2026-05-16",
+    "modus_operandi_principal": "Roubo a transeunte na saida do metro Saens Pena. Atuacao a pe por individuos disfarcados de estudantes/trabalhadores.",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_celular",
+      "roubo_transeunte"
+    ],
+    "horario_pico": "07:00-09:00",
+    "dias_criticos": [
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex"
+    ],
+    "rotas_fuga": [
+      {
+        "descricao": "Rota E: Praca Saens Pena -> Rua Garibaldi -> comercio (receptacao rapida)",
+        "pontos": [
+          {
+            "lat": -22.925,
+            "lng": -43.2335,
+            "descricao": "Praca Saens Pena"
+          },
+          {
+            "lat": -22.926,
+            "lng": -43.2345,
+            "descricao": "Rua Garibaldi"
+          }
+        ],
+        "modalidade_fuga": "a_pe",
+        "horario_predominante": "rush manha"
+      }
+    ],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": null,
+    "confianca": "media",
+    "citacao_fonte": "RELINT 6 BPM. Padrao em 12 BOs concentrados em 2 semanas."
+  }
+]

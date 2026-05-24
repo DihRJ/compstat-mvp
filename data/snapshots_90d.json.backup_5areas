@@ -1,0 +1,92 @@
+[
+  {
+    "snapshot_id": "snap_bangu_01_antes",
+    "poligono_fm_id": "bangu_01",
+    "data_referencia": "2026-02-23",
+    "total_roubos": 113,
+    "total_furtos": 28,
+    "score_medio": 0.82,
+    "ranking_pct": 62.72785525504121
+  },
+  {
+    "snapshot_id": "snap_bangu_01_depois",
+    "poligono_fm_id": "bangu_01",
+    "data_referencia": "2026-05-24",
+    "total_roubos": 70,
+    "total_furtos": 20,
+    "score_medio": 0.633,
+    "ranking_pct": 66.7155773578479
+  },
+  {
+    "snapshot_id": "snap_copa_01_antes",
+    "poligono_fm_id": "copa_01",
+    "data_referencia": "2026-02-23",
+    "total_roubos": 139,
+    "total_furtos": 35,
+    "score_medio": 0.78,
+    "ranking_pct": 78.18054891228225
+  },
+  {
+    "snapshot_id": "snap_copa_01_depois",
+    "poligono_fm_id": "copa_01",
+    "data_referencia": "2026-05-24",
+    "total_roubos": 108,
+    "total_furtos": 29,
+    "score_medio": 0.677,
+    "ranking_pct": 60.028009455039445
+  },
+  {
+    "snapshot_id": "snap_lapa_01_antes",
+    "poligono_fm_id": "lapa_01",
+    "data_referencia": "2026-02-23",
+    "total_roubos": 85,
+    "total_furtos": 18,
+    "score_medio": 0.71,
+    "ranking_pct": 60.28218991567119
+  },
+  {
+    "snapshot_id": "snap_lapa_01_depois",
+    "poligono_fm_id": "lapa_01",
+    "data_referencia": "2026-05-24",
+    "total_roubos": 72,
+    "total_furtos": 16,
+    "score_medio": 0.646,
+    "ranking_pct": 55.460836751534835
+  },
+  {
+    "snapshot_id": "snap_meier_01_antes",
+    "poligono_fm_id": "meier_01",
+    "data_referencia": "2026-02-23",
+    "total_roubos": 62,
+    "total_furtos": 24,
+    "score_medio": 0.65,
+    "ranking_pct": 64.220782515298
+  },
+  {
+    "snapshot_id": "snap_meier_01_depois",
+    "poligono_fm_id": "meier_01",
+    "data_referencia": "2026-05-24",
+    "total_roubos": 43,
+    "total_furtos": 18,
+    "score_medio": 0.533,
+    "ranking_pct": 78.71531318131184
+  },
+  {
+    "snapshot_id": "snap_tijuca_01_antes",
+    "poligono_fm_id": "tijuca_01",
+    "data_referencia": "2026-02-23",
+    "total_roubos": 45,
+    "total_furtos": 12,
+    "score_medio": 0.55,
+    "ranking_pct": 84.29108503927387
+  },
+  {
+    "snapshot_id": "snap_tijuca_01_depois",
+    "poligono_fm_id": "tijuca_01",
+    "data_referencia": "2026-05-24",
+    "total_roubos": 47,
+    "total_furtos": 12,
+    "score_medio": 0.567,
+    "ranking_pct": 61.49651086469943
+  }
+]

@@ -44,6 +44,7 @@ from evolution import carregar_snapshots, comparar_todas_areas
 from heatmap import construir_mapa_folium, gerar_heatmap_temporal, gerar_grafico_evolucao
 from docx_generator import gerar_relatorio_docx
 from sugestao_efetivo import sugerir_efetivo, SugestaoEfetivo
+from importador import TIPOS_DOCUMENTO, importar, salvar
 
 
 # ============================================================
@@ -257,6 +258,7 @@ PAGINAS = [
     "Dashboard",
     "Score / Bingos",
     "Editor de areas",
+    "Importar dados",
     "Quadro de Missao Diaria",
     "Evolucao 90 dias",
     "Gerar DOCX",
@@ -454,7 +456,6 @@ col_data.caption(f"Atualizado:\n{_dados_carregados['carregado_em']:%H:%M:%S}")
 
 st.sidebar.markdown("---")
 st.sidebar.caption(f"v MVP · {date.today():%d/%m/%Y}")
-st.sidebar.caption("Plenum Inteligencia · uso restrito")
 
 
 # ============================================================
@@ -484,7 +485,37 @@ def render_dashboard():
     col4.container(border=True).metric("Denuncias disque", len(dados["denuncias"]))
 
     st.markdown("## Mapa de risco")
-    # Legenda visual antes do mapa
+
+    # ---- Filtros do mapa ----
+    f1, f2 = st.columns([2, 1])
+    with f1:
+        areas_filtradas = st.multiselect(
+            "Áreas visíveis no mapa",
+            [a.poligono_id for a in areas],
+            default=[a.poligono_id for a in areas],
+            format_func=lambda i: next(
+                a.nome_area for a in areas if a.poligono_id == i
+            ),
+            help="Selecione as áreas que deseja ver. Padrão: todas.",
+        )
+    with f2:
+        modo_viz = st.radio(
+            "Visualização",
+            ["🔥 Mapa de calor", "📍 Pins (ocorrências)"],
+            horizontal=False,
+            label_visibility="visible",
+        )
+
+    # Filtro por tipo de crime
+    tipos_disponiveis = sorted({o.tipo for o in dados["ocorrencias"]})
+    tipos_filtrados = st.multiselect(
+        "Tipos de crime",
+        tipos_disponiveis,
+        default=tipos_disponiveis,
+        format_func=lambda t: t.replace("_", " ").title(),
+    )
+
+    # Legenda
     st.markdown(
         """
         <div class='legend-box'>
@@ -495,7 +526,7 @@ def render_dashboard():
           </div>
           <div class='legend-row'>
             <span class='legend-sq' style='background:#EF6C00'></span>
-            Medio (0,31 a 0,60)
+            Médio (0,31 a 0,60)
           </div>
           <div class='legend-row'>
             <span class='legend-sq' style='background:#C62828'></span>
@@ -505,13 +536,36 @@ def render_dashboard():
         """,
         unsafe_allow_html=True,
     )
+    st.caption(
+        "ℹ️ Use o controle de camadas (canto superior direito do mapa) "
+        "para ligar/desligar áreas, ocorrências e pontos de interceptação."
+    )
+
+    # Aplica filtros
+    areas_render = [a for a in areas if a.poligono_id in areas_filtradas]
+    bingos_render = [
+        b for b in bingos if b.poligono_fm_id in areas_filtradas
+    ]
+    ocorrencias_render = [
+        o for o in dados["ocorrencias"]
+        if o.poligono_fm_id in areas_filtradas and o.tipo in tipos_filtrados
+    ][:1000]  # cap para performance
 
     try:
         from streamlit_folium import st_folium
-        m = construir_mapa_folium(areas, bingos, ocorrencias=dados["ocorrencias"][:200])
+        m = construir_mapa_folium(
+            areas_render, bingos_render,
+            ocorrencias=ocorrencias_render,
+            modo_visualizacao="heatmap" if "calor" in modo_viz else "pins",
+        )
         from heatmap import adicionar_cameras_ao_mapa
         m = adicionar_cameras_ao_mapa(m)
-        st_folium(m, width=None, height=500, returned_objects=[])
+        st_folium(m, width=None, height=550, returned_objects=[])
+        st.caption(
+            f"Mostrando {len(areas_render)} áreas · "
+            f"{len(ocorrencias_render)} ocorrências · "
+            f"{', '.join(tipos_filtrados[:3]) + ('...' if len(tipos_filtrados) > 3 else '')}"
+        )
     except ImportError:
         st.warning("Para o mapa instale: `pip install streamlit-folium folium`")
 
@@ -916,6 +970,146 @@ def render_editor():
 
 
 # ============================================================
+# PAGINA 3.5: IMPORTAR DADOS
+# ============================================================
+
+def render_importar():
+    st.title("Importar dados")
+    st.caption(
+        "Adicione novos documentos (RELINTs, ocorrências, denúncias, "
+        "fatores urbanos) **vinculados a uma área pré-existente**."
+    )
+
+    store = AreasFMStore(DATA_DIR / "areas.json")
+    areas = store.listar()
+
+    if not areas:
+        st.warning(
+            "Crie pelo menos uma área no **Editor de areas** antes de importar dados.",
+            icon="⚠️",
+        )
+        return
+
+    # ---- seleção obrigatória de área ----
+    with st.container(border=True):
+        st.markdown("### 1. Selecione a área")
+        pid = st.selectbox(
+            "Área pré-existente *",
+            [a.poligono_id for a in areas],
+            format_func=lambda i: f"{next(a.nome_area for a in areas if a.poligono_id == i)} ({i})",
+            key="import_area_select",
+        )
+
+    # ---- tipo de documento ----
+    with st.container(border=True):
+        st.markdown("### 2. Tipo de documento")
+        tipo = st.radio(
+            "Tipo",
+            list(TIPOS_DOCUMENTO.keys()),
+            format_func=lambda k: TIPOS_DOCUMENTO[k]["rotulo"],
+            horizontal=True,
+            label_visibility="collapsed",
+        )
+        cfg = TIPOS_DOCUMENTO[tipo]
+        st.caption(
+            f"Schema: **{cfg['schema'].__name__}** · "
+            f"Formatos aceitos: **{', '.join(cfg['formatos'])}**"
+        )
+
+    # ---- formato + arquivo ----
+    with st.container(border=True):
+        st.markdown("### 3. Envie o arquivo")
+        formato = st.radio(
+            "Formato",
+            cfg["formatos"],
+            horizontal=True,
+            label_visibility="collapsed",
+        )
+
+        # Help específico por formato
+        if formato == "JSON":
+            with st.expander("Estrutura JSON esperada"):
+                st.code(
+                    json.dumps(
+                        cfg["schema"].model_json_schema().get("properties", {}),
+                        indent=2,
+                        ensure_ascii=False,
+                    )[:1200] + "...",
+                    language="json",
+                )
+                st.caption(
+                    "Aceita um objeto único ou lista de objetos. "
+                    f"O campo `poligono_fm_id` é preenchido automaticamente "
+                    f"com `{pid}`."
+                )
+        elif formato == "CSV":
+            st.caption(
+                "CSV com cabeçalho. Colunas obrigatórias correspondem aos "
+                "campos do schema. Coordenadas podem vir como duas colunas "
+                "`lat` e `lng`."
+            )
+        elif formato in ("DOCX", "TXT"):
+            st.caption(
+                "Documento de texto livre. Será criado um RELINT com o "
+                "conteúdo no campo `modus_operandi_principal`. Outros "
+                "campos podem ser ajustados no Editor depois."
+            )
+
+        ext_map = {"JSON": "json", "CSV": "csv", "DOCX": "docx", "TXT": "txt"}
+        arquivo_up = st.file_uploader(
+            f"Selecionar arquivo .{ext_map[formato]}",
+            type=[ext_map[formato]],
+            key=f"upload_{tipo}_{formato}",
+        )
+
+    # ---- preview + salvar ----
+    if arquivo_up:
+        conteudo = arquivo_up.read()
+        with st.container(border=True):
+            st.markdown("### 4. Pré-visualização e validação")
+            try:
+                resultado = importar(tipo, pid, formato, conteudo)
+            except Exception as e:
+                st.error(f"Erro ao parsear arquivo: {e}")
+                return
+
+            c1, c2 = st.columns(2)
+            c1.metric("Registros válidos", resultado.n_novos)
+            c2.metric("Erros", resultado.n_erros, delta_color="inverse")
+
+            if resultado.erros:
+                with st.expander(f"⚠️ {len(resultado.erros)} erro(s) de validação"):
+                    for e in resultado.erros:
+                        st.code(e, language="text")
+
+            if resultado.preview:
+                with st.expander("Preview dos primeiros 5 registros válidos", expanded=True):
+                    st.json(resultado.preview)
+
+            if resultado.n_novos > 0:
+                if st.button(
+                    f"💾 Salvar {resultado.n_novos} registro(s) em "
+                    f"data/{TIPOS_DOCUMENTO[tipo]['arquivo']}",
+                    type="primary",
+                ):
+                    try:
+                        path_salvo = salvar(resultado, DATA_DIR)
+                        st.cache_data.clear()
+                        st.toast(
+                            f"Importação concluída: {resultado.n_novos} "
+                            f"registros adicionados.",
+                            icon="✅",
+                        )
+                        st.success(f"Salvo em: `{path_salvo}`")
+                    except Exception as e:
+                        st.error(f"Falha ao salvar: {e}")
+            else:
+                st.error(
+                    "Nenhum registro válido. Corrija os erros acima e tente novamente."
+                )
+
+
+# ============================================================
 # PAGINA 4: QMD
 # ============================================================
 
@@ -1252,10 +1446,21 @@ def render_docx():
                 bingo = get_bingo(bingos, pid)
                 relints_area = [r for r in relints if r.poligono_fm_id == pid]
                 oco_area = [o for o in ocorrencias if o.poligono_fm_id == pid]
+                denuncias_area = [
+                    d for d in dados["denuncias"] if d.poligono_fm_id == pid
+                ]
+                fatores_area = [
+                    f for f in dados["fatores"] if f.poligono_fm_id == pid
+                ]
 
                 st.write("✓ Calculando recomendacao de patrulhamento")
                 recomendacao = sugerir_modalidade(
                     bingo, relints_area, oco_area, efetivo,
+                )
+
+                st.write("✓ Sugerindo efetivo pela IA (heurística)")
+                sug = sugerir_efetivo(
+                    area, bingo, oco_area, relints_area, fatores_area,
                 )
 
                 st.write("✓ Montando QMD")
@@ -1279,18 +1484,27 @@ def render_docx():
                     )
                     grafico_png = gerar_grafico_evolucao([comparativo])
 
-                st.write("✓ Renderizando DOCX")
+                st.write("✓ Renderizando DOCX (formato oficial CompStat)")
                 nome_arq = (
                     OUTPUT_DIR / f"relatorio_{pid}_{date.today():%Y%m%d}.docx"
                 )
+                periodo_ini, periodo_f = resolver_periodo()
                 gerar_relatorio_docx(
                     area=area,
                     bingo=bingo,
                     recomendacao=recomendacao,
                     qmd=qmd,
+                    ocorrencias_area=oco_area,
+                    relints_area=relints_area,
+                    denuncias_area=denuncias_area,
+                    fatores_area=fatores_area,
+                    bingos_todos=bingos,
                     comparativo_evolucao=comparativo,
                     heatmap_temporal_png=heatmap_png,
                     grafico_evolucao_png=grafico_png,
+                    efetivo_sugerido=sug.efetivo_sugerido,
+                    periodo_inicio=periodo_ini,
+                    periodo_fim=periodo_f,
                     output_path=str(nome_arq),
                 )
 
@@ -1328,6 +1542,7 @@ PAGINA_RENDERS = {
     "Dashboard": render_dashboard,
     "Score / Bingos": render_scores,
     "Editor de areas": render_editor,
+    "Importar dados": render_importar,
     "Quadro de Missao Diaria": render_qmd,
     "Evolucao 90 dias": render_evolucao,
     "Gerar DOCX": render_docx,

@@ -26,12 +26,18 @@ def construir_mapa_folium(
     pontos_intercepcao: Optional[list[Coordenada]] = None,
     centro: tuple[float, float] = (-22.9068, -43.1729),
     zoom: int = 11,
+    modo_visualizacao: str = "pins",  # "pins" | "heatmap"
+    mostrar_areas: bool = True,
+    mostrar_ocorrencias: bool = True,
+    mostrar_pontos_intercepcao: bool = True,
 ):
-    """
-    Retorna objeto folium.Map com:
-      - Polígonos coloridos por score (vermelho = alto)
-      - Marcadores de ocorrências (opcional)
-      - Marcadores de pontos de interceptação (opcional)
+    """Mapa folium com layers controláveis.
+
+    Args:
+        modo_visualizacao: "pins" (CircleMarker) ou "heatmap" (densidade).
+        mostrar_areas / mostrar_ocorrencias / mostrar_pontos_intercepcao:
+            controlam quais layers iniciam visíveis. LayerControl
+            permite o usuário ligar/desligar depois.
     """
     try:
         import folium
@@ -43,7 +49,10 @@ def construir_mapa_folium(
 
     m = folium.Map(location=centro, zoom_start=zoom, tiles="OpenStreetMap")
 
-    # Adicionar polígonos coloridos por score
+    # ---- LAYER: ÁREAS (polígonos coloridos por score) ----
+    grupo_areas = folium.FeatureGroup(
+        name="🟦 Áreas FM", show=mostrar_areas,
+    )
     for area in areas:
         if not area.ativo:
             continue
@@ -69,36 +78,72 @@ def construir_mapa_folium(
                     fill=True,
                     fill_color=cor,
                     fill_opacity=0.6,
-                ).add_to(m)
+                ).add_to(grupo_areas)
         except Exception:
             continue
+    grupo_areas.add_to(m)
 
-    # Adicionar ocorrências (cluster se muitas)
+    # ---- LAYER: OCORRÊNCIAS ----
     if ocorrencias:
-        try:
-            from folium.plugins import MarkerCluster
-            cluster = MarkerCluster(name="Ocorrencias").add_to(m)
-            for o in ocorrencias[:500]:  # cap em 500 para perf
-                folium.CircleMarker(
-                    location=[o.coordenada.lat, o.coordenada.lng],
-                    radius=3,
-                    color="darkred",
-                    fill=True,
-                    fill_opacity=0.6,
-                    popup=f"{o.tipo} ({o.modalidade_crime})",
-                ).add_to(cluster)
-        except ImportError:
-            pass
+        if modo_visualizacao == "heatmap":
+            try:
+                from folium.plugins import HeatMap
+                pontos = [
+                    [o.coordenada.lat, o.coordenada.lng]
+                    for o in ocorrencias if o.coordenada
+                ]
+                if pontos:
+                    grupo_heat = folium.FeatureGroup(
+                        name=f"🔥 Mapa de calor ({len(pontos)} ocorrências)",
+                        show=mostrar_ocorrencias,
+                    )
+                    HeatMap(
+                        pontos,
+                        radius=18,
+                        blur=22,
+                        max_zoom=15,
+                        gradient={"0.3": "#2E7D32", "0.5": "#FBC02D",
+                                  "0.7": "#EF6C00", "0.9": "#C62828"},
+                    ).add_to(grupo_heat)
+                    grupo_heat.add_to(m)
+            except ImportError:
+                pass
+        else:
+            try:
+                from folium.plugins import MarkerCluster
+                grupo_pins = folium.FeatureGroup(
+                    name=f"📍 Ocorrências ({min(len(ocorrencias), 500)})",
+                    show=mostrar_ocorrencias,
+                )
+                cluster = MarkerCluster().add_to(grupo_pins)
+                for o in ocorrencias[:500]:
+                    folium.CircleMarker(
+                        location=[o.coordenada.lat, o.coordenada.lng],
+                        radius=3,
+                        color="darkred",
+                        fill=True,
+                        fill_opacity=0.6,
+                        popup=f"{o.tipo} ({o.modalidade_crime})",
+                    ).add_to(cluster)
+                grupo_pins.add_to(m)
+            except ImportError:
+                pass
 
-    # Adicionar pontos de interceptação
+    # ---- LAYER: PONTOS DE INTERCEPTAÇÃO ----
     if pontos_intercepcao:
+        grupo_pi = folium.FeatureGroup(
+            name=f"🚩 Pontos de interceptação ({len(pontos_intercepcao)})",
+            show=mostrar_pontos_intercepcao,
+        )
         for p in pontos_intercepcao:
             folium.Marker(
                 location=[p.lat, p.lng],
                 popup=p.descricao or "Ponto de interceptacao",
                 icon=folium.Icon(color="green", icon="flag"),
-            ).add_to(m)
+            ).add_to(grupo_pi)
+        grupo_pi.add_to(m)
 
+    folium.LayerControl(collapsed=False, position="topright").add_to(m)
     return m
 
 

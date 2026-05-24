@@ -1,14 +1,28 @@
 """
-Gerador de Relatório Analítico de Área em DOCX EDITÁVEL.
+Gerador do Relatório Analítico de Área — formato oficial CompStat Municipal.
 
-Não usa template separado (mais simples para MVP). Gera o documento
-inteiramente em código, com python-docx puro. Resultado é .docx que
-abre no Word/LibreOffice e pode ser editado.
+Estrutura conforme briefing técnico (Maio/2026), anexo p. 11-16:
+
+  CAPA
+  RESUMO EXECUTIVO (Score do bingo + tabela 4×4 de perguntas norteadoras)
+  1. OCORRÊNCIAS CRIMINAIS
+     - Identificação da Área
+     - Indicadores do Período
+     - Distribuição por Tipo (top 3)
+     - Análise Temporal (heatmap 7×24 + período predominante + horário crítico)
+  2. DINÂMICA CRIMINAL (síntese qualitativa)
+  3. EFETIVO EMPREGADO – FORÇA MUNICIPAL (tabela 5×4)
+  4. FATORES DE INCIDÊNCIA CRIMINAL (tabela por órgão + total câmeras)
+  5. PLANO DE AÇÃO E RESPONSABILIZAÇÃO (pré-populado pela IA)
+
+DOCX editável no Word/LibreOffice. Sem template externo.
 """
+
+from __future__ import annotations
 
 import io
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, date
 from typing import Optional
 
 from docx import Document
@@ -19,21 +33,66 @@ from docx.enum.table import WD_ALIGN_VERTICAL
 from schemas import (
     AreaPoligonoFM,
     BingoArea,
+    Ocorrencia,
+    RelintEstruturado,
+    DenunciaDisque,
+    FatorUrbano,
     RecomendacaoModalidade,
     QMD,
     ComparativoEvolucao,
-    PadraoDisqueDenuncia,
     AcaoRecomendada,
+)
+from relatorio_compstat import (
+    TOTAL_EFETIVO_FM,
+    montar_identificacao,
+    montar_indicadores,
+    top_tipos_ocorrencia,
+    montar_analise_temporal,
+    montar_dinamica_criminal,
+    montar_tabela_efetivo,
+    gerar_perguntas_norteadoras,
+    montar_tabela_fatores,
+    montar_plano_acao,
 )
 
 
 # ============================================================
-# CORES PADRÃO
+# CORES INSTITUCIONAIS
 # ============================================================
 
-COR_TITULO = RGBColor(0x1E, 0x27, 0x61)
+COR_NAVY = RGBColor(0x1E, 0x27, 0x61)
 COR_DESTAQUE = RGBColor(0xC6, 0x28, 0x28)
 COR_OK = RGBColor(0x2E, 0x7D, 0x32)
+COR_CINZA = RGBColor(0x55, 0x55, 0x55)
+
+
+# ============================================================
+# HELPERS DE TABELA
+# ============================================================
+
+def _bold_cell(cell, text: str, color: Optional[RGBColor] = None) -> None:
+    cell.text = ""
+    p = cell.paragraphs[0]
+    run = p.add_run(text)
+    run.bold = True
+    if color:
+        run.font.color.rgb = color
+
+
+def _header_row(table, textos: list[str]) -> None:
+    """Configura primeira linha da tabela como header (negrito + cinza claro)."""
+    cells = table.rows[0].cells
+    for c, t in zip(cells, textos):
+        _bold_cell(c, t, COR_NAVY)
+
+
+def _add_table(doc, n_rows: int, n_cols: int, style: str = "Light Grid"):
+    table = doc.add_table(rows=n_rows, cols=n_cols)
+    try:
+        table.style = style
+    except KeyError:
+        pass
+    return table
 
 
 # ============================================================
@@ -45,251 +104,408 @@ def gerar_relatorio_docx(
     bingo: BingoArea,
     recomendacao: RecomendacaoModalidade,
     qmd: QMD,
+    *,
+    ocorrencias_area: Optional[list[Ocorrencia]] = None,
+    relints_area: Optional[list[RelintEstruturado]] = None,
+    denuncias_area: Optional[list[DenunciaDisque]] = None,
+    fatores_area: Optional[list[FatorUrbano]] = None,
+    bingos_todos: Optional[list[BingoArea]] = None,
     comparativo_evolucao: Optional[ComparativoEvolucao] = None,
-    padroes_disque: Optional[list[PadraoDisqueDenuncia]] = None,
     acoes_outros_orgaos: Optional[list[AcaoRecomendada]] = None,
     heatmap_temporal_png: Optional[bytes] = None,
     grafico_evolucao_png: Optional[bytes] = None,
+    mapa_segmentos_png: Optional[bytes] = None,
+    efetivo_sugerido: Optional[int] = None,
+    n_cameras: Optional[int] = None,
+    periodo_inicio: Optional[date] = None,
+    periodo_fim: Optional[date] = None,
     output_path: str = "output/relatorio.docx",
+    # Compatibilidade com chamadas antigas
+    padroes_disque=None,
 ) -> str:
-    """
-    Monta DOCX completo. Retorna path do arquivo gerado.
+    """Gera DOCX no formato oficial CompStat Municipal.
 
-    O documento é totalmente editável no Word/LibreOffice após gerado.
+    Parâmetros obrigatórios: area, bingo, recomendacao, qmd.
+    Demais são opcionais; se não fornecidos, seções omitem dados.
     """
+    ocorrencias_area = ocorrencias_area or []
+    relints_area = relints_area or []
+    denuncias_area = denuncias_area or []
+    fatores_area = fatores_area or []
+    bingos_todos = bingos_todos or [bingo]
+    efetivo_sugerido = efetivo_sugerido or qmd.efetivo_alocado
+
     doc = Document()
 
-    # ----- estilos basicos -----
     style = doc.styles["Normal"]
     style.font.name = "Calibri"
     style.font.size = Pt(11)
 
-    # ----- TITULO -----
-    titulo = doc.add_heading(f"Relatorio Analitico de Area", level=0)
-    titulo.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # ============================================================
+    # CAPA
+    # ============================================================
+    p_inst = doc.add_paragraph()
+    p_inst.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_inst.add_run("CompStat Municipal  |  Prefeitura do Rio de Janeiro")
+    run.bold = True
+    run.font.color.rgb = COR_NAVY
+    run.font.size = Pt(10)
 
-    subtitulo = doc.add_paragraph()
-    subtitulo.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = subtitulo.add_run(area.nome_area.upper())
+    titulo = doc.add_paragraph()
+    titulo.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = titulo.add_run("RELATÓRIO ANALÍTICO DE ÁREA")
+    run.bold = True
+    run.font.size = Pt(22)
+    run.font.color.rgb = COR_NAVY
+
+    subtit = doc.add_paragraph()
+    subtit.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = subtit.add_run("Subsídio para Reunião de CompStat")
+    run.italic = True
+    run.font.size = Pt(12)
+    run.font.color.rgb = COR_CINZA
+
+    doc.add_paragraph()
+
+    # Bloco metadados da capa
+    capa = _add_table(doc, 2, 2)
+    capa.rows[0].cells[0].text = "Área de análise"
+    capa.rows[0].cells[1].text = "Período de análise"
+    for c in capa.rows[0].cells:
+        for r in c.paragraphs[0].runs:
+            r.bold = True
+            r.font.color.rgb = COR_NAVY
+
+    capa.rows[1].cells[0].text = area.nome_area
+    if periodo_inicio and periodo_fim:
+        periodo_str = (
+            f"Dados criminais e fatores ambientais: "
+            f"{periodo_inicio:%d/%m/%Y} a {periodo_fim:%d/%m/%Y}"
+        )
+    else:
+        periodo_str = "Todo o histórico disponível"
+    capa.rows[1].cells[1].text = periodo_str
+
+    doc.add_paragraph()
+
+    # Total de roubos destacado
+    n_roubos_capa = sum(
+        1 for o in ocorrencias_area if o.tipo.startswith("roubo")
+    )
+    p_total = doc.add_paragraph()
+    p_total.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_total.add_run(
+        f"Total de roubos no período: {n_roubos_capa} ocorrências"
+    )
+    run.bold = True
+    run.font.size = Pt(12)
+    run.font.color.rgb = COR_DESTAQUE
+
+    # Mapa de segmentos quentes (se fornecido)
+    if mapa_segmentos_png:
+        doc.add_paragraph()
+        p_map = doc.add_paragraph()
+        p_map.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = p_map.add_run(f"Mapa de segmentos quentes — {area.nome_area}")
+        run.bold = True
+        run.font.size = Pt(10)
+        doc.add_picture(io.BytesIO(mapa_segmentos_png), width=Inches(6.0))
+
+    doc.add_page_break()
+
+    # ============================================================
+    # RESUMO EXECUTIVO
+    # ============================================================
+    doc.add_heading("RESUMO EXECUTIVO", level=1)
+
+    # Caixa lateral com Score (nosso diferencial)
+    box = _add_table(doc, 1, 3)
+    box.rows[0].cells[0].text = "Score de risco"
+    box.rows[0].cells[1].text = "Camadas ativas"
+    box.rows[0].cells[2].text = "Bônus faccional"
+    for c in box.rows[0].cells:
+        for r in c.paragraphs[0].runs:
+            r.bold = True
+            r.font.color.rgb = COR_NAVY
+
+    doc.add_paragraph()
+    cor = COR_DESTAQUE if bingo.componentes.score_final > 0.6 else COR_NAVY
+    p_score = doc.add_paragraph()
+    p_score.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_score.add_run(
+        f"{bingo.componentes.score_final:.2f}        "
+        f"{bingo.n_camadas_ativas}/4        "
+        f"x{bingo.componentes.bonus_faccional:.2f}"
+    )
     run.bold = True
     run.font.size = Pt(16)
-    run.font.color.rgb = COR_TITULO
-
-    p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.add_run(
-        f"CompStat Municipal | Gerado em {datetime.now().strftime('%d/%m/%Y %H:%M')}"
-    ).italic = True
+    run.font.color.rgb = cor
 
     doc.add_paragraph()
 
-    # ----- 1. IDENTIFICACAO -----
-    doc.add_heading("1. Identificacao da area", level=1)
-    table = doc.add_table(rows=8, cols=2)
-    table.style = "Light Grid"
-    items = [
-        ("Area FM", area.nome_area),
-        ("AISP", area.aisp),
-        ("Bairros", ", ".join(area.bairros)),
-        ("Base FM", area.base_fm),
-        ("Subprefeitura", area.subprefeitura),
-        ("DP", area.dp or "-"),
-        ("BPM", area.bpm or "-"),
-        ("Status", "Ativa" if area.ativo else "Inativa"),
-    ]
-    for i, (rotulo, valor) in enumerate(items):
-        table.rows[i].cells[0].text = rotulo
-        table.rows[i].cells[1].text = str(valor)
-        # bold no rótulo
-        for run in table.rows[i].cells[0].paragraphs[0].runs:
-            run.bold = True
-
-    doc.add_paragraph()
-
-    # ----- 2. SCORE / BINGO -----
-    doc.add_heading("2. Score de risco (Bingo)", level=1)
-
-    p = doc.add_paragraph()
-    p.add_run("Score final: ").bold = True
-    run_score = p.add_run(f"{bingo.componentes.score_final:.2f}")
-    run_score.bold = True
-    run_score.font.size = Pt(14)
-    run_score.font.color.rgb = COR_DESTAQUE if bingo.componentes.score_final > 0.5 else COR_TITULO
-
-    doc.add_paragraph(bingo.justificativa)
-
-    # Tabela de componentes (mostra pesos diferenciados)
-    doc.add_heading("Composicao do score (pesos diferenciados)", level=2)
-    comp_table = doc.add_table(rows=6, cols=4)
-    comp_table.style = "Light Grid"
-    comp_header = comp_table.rows[0].cells
-    comp_header[0].text = "Fonte"
-    comp_header[1].text = "Score normalizado"
-    comp_header[2].text = "Peso"
-    comp_header[3].text = "Contribuicao"
-    for c in comp_header:
-        for run in c.paragraphs[0].runs:
-            run.bold = True
-
-    componentes_data = [
-        ("Mancha criminal (oficial)",
-         bingo.componentes.score_mancha,
-         bingo.componentes.peso_mancha),
-        ("RELINT (oficial qualitativo)",
-         bingo.componentes.score_relint,
-         bingo.componentes.peso_relint),
-        ("Fator urbano",
-         bingo.componentes.score_fator,
-         bingo.componentes.peso_fator),
-        ("Disque Denuncia (anonimo)",
-         bingo.componentes.score_disque,
-         bingo.componentes.peso_disque),
-        ("Modus operandi + rotas",
-         bingo.componentes.score_modus_rota,
-         bingo.componentes.peso_modus),
-    ]
-    for i, (fonte, score, peso) in enumerate(componentes_data, 1):
-        row = comp_table.rows[i].cells
-        row[0].text = fonte
-        row[1].text = f"{score:.2f}"
-        row[2].text = f"{peso:.2f}"
-        row[3].text = f"{score * peso:.3f}"
-
-    if bingo.componentes.bonus_faccional > 1.0:
-        p_bonus = doc.add_paragraph()
-        run = p_bonus.add_run(
-            f"Bonus faccional aplicado: x{bingo.componentes.bonus_faccional:.2f} "
-            f"(faccoes: {', '.join(bingo.faccoes_envolvidas)})"
-        )
-        run.italic = True
-        run.font.color.rgb = COR_DESTAQUE
-
-    # ----- 3. HEATMAP TEMPORAL -----
-    if heatmap_temporal_png:
-        doc.add_heading("3. Distribuicao temporal", level=1)
-        img_stream = io.BytesIO(heatmap_temporal_png)
-        doc.add_picture(img_stream, width=Inches(6.5))
-
-    # ----- 4. RECOMENDACAO DE MODALIDADE FM -----
-    doc.add_heading("4. Recomendacao de patrulhamento", level=1)
-    doc.add_paragraph(recomendacao.justificativa)
-
-    mod_table = doc.add_table(rows=4, cols=2)
-    mod_table.style = "Light Grid"
-    mod_data = [
-        ("Modalidade principal", recomendacao.modalidade_principal),
-        ("Viaturas", str(recomendacao.n_viaturas)),
-        ("Motos", str(recomendacao.n_motos)),
-        ("Agentes a pe", str(recomendacao.n_agentes_a_pe)),
-    ]
-    for i, (rotulo, valor) in enumerate(mod_data):
-        mod_table.rows[i].cells[0].text = rotulo
-        mod_table.rows[i].cells[1].text = valor
-        for run in mod_table.rows[i].cells[0].paragraphs[0].runs:
-            run.bold = True
-
-    if recomendacao.pontos_intercepcao:
-        doc.add_heading("Pontos de interceptacao sugeridos", level=2)
-        for i, p in enumerate(recomendacao.pontos_intercepcao, 1):
-            doc.add_paragraph(
-                f"{i}. ({p.lat:.5f}, {p.lng:.5f}) - {p.descricao or 'sem descricao'}",
-                style="List Number",
-            )
-
-    # ----- 5. QMD -----
-    doc.add_heading("5. Quadro de Missao Diaria (QMD)", level=1)
-    doc.add_paragraph(
-        f"Data de referencia: {qmd.data_referencia.isoformat()} | "
-        f"Horario: {qmd.horario_cobertura} | "
-        f"Dias: {', '.join(qmd.dias_cobertura)}"
+    # Tabela das 4 perguntas norteadoras
+    analise_temporal = montar_analise_temporal(ocorrencias_area)
+    perguntas = gerar_perguntas_norteadoras(
+        area=area, bingo=bingo, recomendacao=recomendacao,
+        ocorrencias_area=ocorrencias_area, relints_area=relints_area,
+        fatores_area=fatores_area, analise_temporal=analise_temporal,
     )
-    p = doc.add_paragraph()
-    p.add_run("Modus operandi de atencao: ").bold = True
-    p.add_run(qmd.modus_operandi_atencao)
 
-    doc.add_heading("Pontos prioritarios", level=2)
-    for i, p in enumerate(qmd.pontos_prioritarios, 1):
-        doc.add_paragraph(
-            f"{i}. ({p.lat:.5f}, {p.lng:.5f}) - {p.descricao or '-'}",
-            style="List Number",
-        )
+    tab_pn = _add_table(doc, len(perguntas) + 1, 4)
+    _header_row(tab_pn, [
+        "Perguntas norteadoras",
+        "Diagnóstico com base nos dados",
+        "Operação FM / órgãos complementares",
+        "Observações / sugestão (CompStat)",
+    ])
+    for i, p in enumerate(perguntas, 1):
+        row = tab_pn.rows[i].cells
+        row[0].text = p.pergunta
+        row[1].text = p.diagnostico
+        row[2].text = p.operacao
+        row[3].text = p.observacao
 
-    if qmd.rotas_monitorar:
-        doc.add_heading("Rotas de fuga a monitorar", level=2)
-        for r in qmd.rotas_monitorar:
-            doc.add_paragraph(r, style="List Bullet")
+    doc.add_page_break()
 
-    # ----- 6. EVOLUCAO 90 DIAS -----
-    if comparativo_evolucao:
-        doc.add_heading("6. Evolucao apos atuacao da FM (90 dias)", level=1)
-        p = doc.add_paragraph()
-        p.add_run("Classificacao: ").bold = True
-        run = p.add_run(comparativo_evolucao.classificacao.upper())
-        run.bold = True
-        if "melhora" in comparativo_evolucao.classificacao:
-            run.font.color.rgb = COR_OK
-        elif "piora" in comparativo_evolucao.classificacao:
-            run.font.color.rgb = COR_DESTAQUE
+    # ============================================================
+    # 1. OCORRÊNCIAS CRIMINAIS
+    # ============================================================
+    doc.add_heading("1. OCORRÊNCIAS CRIMINAIS", level=1)
 
-        evo_table = doc.add_table(rows=4, cols=3)
-        evo_table.style = "Light Grid"
-        evo_table.rows[0].cells[0].text = "Indicador"
-        evo_table.rows[0].cells[1].text = f"Antes ({comparativo_evolucao.snapshot_antes.data_referencia.isoformat()})"
-        evo_table.rows[0].cells[2].text = f"Depois ({comparativo_evolucao.snapshot_depois.data_referencia.isoformat()})"
+    # 1.1 Identificação da Área
+    doc.add_heading("Identificação da Área", level=2)
+    ident = montar_identificacao(area, relints_area)
+    items_ident = [
+        ("Área FM", ident.nome_area),
+        ("Número de trechos críticos", str(ident.n_trechos_criticos)),
+        ("AISP", ident.aisp),
+        ("Base FM", ident.base_fm),
+        ("Bairro", ident.bairros),
+        ("Subprefeitura", ident.subprefeitura),
+        ("DP", ident.dp),
+        ("BPM", ident.bpm),
+        ("Área sob influência de grupo criminoso", ident.area_sob_influencia),
+    ]
+    tab_id = _add_table(doc, len(items_ident), 2)
+    for i, (k, v) in enumerate(items_ident):
+        _bold_cell(tab_id.rows[i].cells[0], k, COR_NAVY)
+        tab_id.rows[i].cells[1].text = v
 
-        evo_data = [
-            ("Roubos", comparativo_evolucao.snapshot_antes.total_roubos,
-             comparativo_evolucao.snapshot_depois.total_roubos),
-            ("Furtos", comparativo_evolucao.snapshot_antes.total_furtos,
-             comparativo_evolucao.snapshot_depois.total_furtos),
-            ("Score medio", comparativo_evolucao.snapshot_antes.score_medio,
-             comparativo_evolucao.snapshot_depois.score_medio),
-        ]
-        for i, (label, antes_v, depois_v) in enumerate(evo_data, 1):
-            evo_table.rows[i].cells[0].text = label
-            evo_table.rows[i].cells[1].text = str(antes_v)
-            evo_table.rows[i].cells[2].text = str(depois_v)
-
-        doc.add_paragraph()
-        doc.add_paragraph(comparativo_evolucao.observacao)
-
-        if grafico_evolucao_png:
-            img_stream = io.BytesIO(grafico_evolucao_png)
-            doc.add_picture(img_stream, width=Inches(6.5))
-
-    # ----- 7. PADROES DISQUE -----
-    if padroes_disque:
-        doc.add_heading("7. Padroes detectados no Disque Denuncia", level=1)
-        for p in padroes_disque:
-            doc.add_heading(
-                f"[{p.relevancia.upper()}] {p.tipo_padrao}", level=2
-            )
-            doc.add_paragraph(p.descricao)
-            doc.add_paragraph(
-                f"Baseado em {p.n_denuncias} denuncias. Confianca: media.",
-                style="Intense Quote",
-            )
-
-    # ----- 8. APOIO INTERINSTITUCIONAL -----
-    if acoes_outros_orgaos:
-        doc.add_heading("8. Acoes de apoio (outros orgaos)", level=1)
-        for acao in acoes_outros_orgaos:
-            p = doc.add_paragraph()
-            p.add_run(f"[{acao.orgao_responsavel}] ").bold = True
-            p.add_run(f"({acao.prioridade}, prazo {acao.prazo_sugerido_dias} dias) ")
-            p.add_run(acao.descricao_acao)
-            p.add_run(f"  [ID: {acao.acao_id}]").italic = True
-
-    # ----- FOOTER -----
     doc.add_paragraph()
-    p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run(
-        "Documento gerado pela plataforma CompStat IA. "
-        "Editavel para ajuste antes da reuniao."
+
+    # 1.2 Indicadores do Período
+    doc.add_heading("Indicadores do Período", level=2)
+    ind = montar_indicadores(
+        ocorrencias_area, bingos_todos, area.poligono_id,
+        comparativo_evolucao, periodo_inicio, periodo_fim,
+    )
+    tab_ind = _add_table(doc, 2, 6)
+    _header_row(tab_ind, [
+        "Período", "Roubos", "Furtos", "Total",
+        "Ranking (%)", "Variação vs período anterior",
+    ])
+    row = tab_ind.rows[1].cells
+    row[0].text = ind.periodo_label
+    row[1].text = str(ind.roubos)
+    row[2].text = str(ind.furtos)
+    row[3].text = str(ind.total)
+    row[4].text = f"{ind.posicao_ranking} ({ind.ranking_pct})"
+    row[5].text = ind.variacao_anterior
+
+    doc.add_paragraph()
+
+    # 1.3 Distribuição por Tipo (top 3)
+    doc.add_heading("Distribuição de ocorrências por tipo", level=2)
+    top = top_tipos_ocorrencia(ocorrencias_area, n=3)
+    if top:
+        tab_top = _add_table(doc, len(top) + 1, 5)
+        _header_row(tab_top, [
+            "Ranking", "Tipo de ocorrência", "Qtd no período",
+            "Data da última", "Variação",
+        ])
+        for i, t in enumerate(top, 1):
+            row = tab_top.rows[i].cells
+            row[0].text = t["rank"]
+            row[1].text = t["tipo"]
+            row[2].text = str(t["qtd"])
+            row[3].text = t["data_ultima"]
+            row[4].text = t["variacao"]
+    else:
+        doc.add_paragraph("Sem ocorrências no período analisado.")
+
+    doc.add_paragraph()
+
+    # 1.4 Análise Temporal
+    doc.add_heading("Análise Temporal", level=2)
+    if heatmap_temporal_png:
+        doc.add_picture(io.BytesIO(heatmap_temporal_png), width=Inches(6.5))
+
+    p_per = doc.add_paragraph()
+    p_per.add_run("Período Predominante: ").bold = True
+    p_per.add_run(analise_temporal.periodo_predominante)
+
+    p_dia = doc.add_paragraph()
+    p_dia.add_run("Dia / Horário Crítico: ").bold = True
+    p_dia.add_run(analise_temporal.dia_horario_critico)
+
+    doc.add_page_break()
+
+    # ============================================================
+    # 2. DINÂMICA CRIMINAL
+    # ============================================================
+    doc.add_heading("2. DINÂMICA CRIMINAL", level=1)
+    doc.add_paragraph(
+        "Fonte: Disque Denúncia e RELINTs da Força Municipal. "
+        "Síntese qualitativa cruzada com a mancha quantitativa.",
+        style="Intense Quote",
+    )
+    dinamica = montar_dinamica_criminal(relints_area, denuncias_area, ocorrencias_area)
+
+    p1 = doc.add_paragraph()
+    p1.add_run("Dinâmica do Crime: ").bold = True
+    p1.add_run(dinamica["descricao"])
+
+    p2 = doc.add_paragraph()
+    p2.add_run("Modalidade Predominante: ").bold = True
+    p2.add_run(dinamica["modalidade"])
+
+    p3 = doc.add_paragraph()
+    p3.add_run("Áreas de Fuga e Escoamento de Bens: ").bold = True
+    p3.add_run(dinamica["areas_fuga"])
+
+    if comparativo_evolucao:
+        doc.add_paragraph()
+        doc.add_heading("Evolução observada (período anterior vs. atual)", level=2)
+        evo = _add_table(doc, 4, 3)
+        _header_row(evo, [
+            "Indicador",
+            f"Antes ({comparativo_evolucao.snapshot_antes.data_referencia:%d/%m/%Y})",
+            f"Depois ({comparativo_evolucao.snapshot_depois.data_referencia:%d/%m/%Y})",
+        ])
+        linhas_evo = [
+            ("Roubos",
+             comparativo_evolucao.snapshot_antes.total_roubos,
+             comparativo_evolucao.snapshot_depois.total_roubos),
+            ("Furtos",
+             comparativo_evolucao.snapshot_antes.total_furtos,
+             comparativo_evolucao.snapshot_depois.total_furtos),
+            ("Score médio",
+             f"{comparativo_evolucao.snapshot_antes.score_medio:.2f}",
+             f"{comparativo_evolucao.snapshot_depois.score_medio:.2f}"),
+        ]
+        for i, (lab, a, b) in enumerate(linhas_evo, 1):
+            evo.rows[i].cells[0].text = lab
+            evo.rows[i].cells[1].text = str(a)
+            evo.rows[i].cells[2].text = str(b)
+
+        doc.add_paragraph(comparativo_evolucao.observacao)
+        if grafico_evolucao_png:
+            doc.add_picture(io.BytesIO(grafico_evolucao_png), width=Inches(6.5))
+
+    doc.add_page_break()
+
+    # ============================================================
+    # 3. EFETIVO EMPREGADO – FORÇA MUNICIPAL
+    # ============================================================
+    doc.add_heading("3. EFETIVO EMPREGADO – FORÇA MUNICIPAL", level=1)
+    doc.add_paragraph(
+        f"Total municipal de referência: {TOTAL_EFETIVO_FM} agentes para "
+        f"as 22 áreas prioritárias.",
+        style="Intense Quote",
+    )
+
+    linhas_ef = montar_tabela_efetivo(area, recomendacao, bingo, efetivo_sugerido)
+    tab_ef = _add_table(doc, len(linhas_ef) + 1, 4)
+    _header_row(tab_ef, ["Campo", "Situação atual", "Sugestão", "Justificativa"])
+    for i, le in enumerate(linhas_ef, 1):
+        row = tab_ef.rows[i].cells
+        row[0].text = le.campo
+        row[1].text = le.situacao_atual
+        row[2].text = le.sugestao
+        row[3].text = le.justificativa
+
+    doc.add_page_break()
+
+    # ============================================================
+    # 4. FATORES DE INCIDÊNCIA CRIMINAL
+    # ============================================================
+    doc.add_heading("4. FATORES DE INCIDÊNCIA CRIMINAL", level=1)
+    doc.add_paragraph(
+        "Fatores urbanos mapeados na área que contribuem para a "
+        "incidência criminal, com órgão responsável pela intervenção.",
+        style="Intense Quote",
+    )
+
+    linhas_fat = montar_tabela_fatores(fatores_area)
+    if linhas_fat:
+        tab_fat = _add_table(doc, len(linhas_fat) + 1, 3)
+        _header_row(tab_fat, ["Fator identificado", "Descrição", "Responsável"])
+        for i, lf in enumerate(linhas_fat, 1):
+            row = tab_fat.rows[i].cells
+            row[0].text = lf.fator
+            row[1].text = lf.descricao
+            row[2].text = lf.responsavel
+    else:
+        doc.add_paragraph("Sem fatores urbanos cadastrados para a área.")
+
+    if n_cameras is not None:
+        doc.add_paragraph()
+        p_cam = doc.add_paragraph()
+        p_cam.add_run("Câmeras identificadas na área: ").bold = True
+        p_cam.add_run(f"{n_cameras} câmeras.")
+
+    doc.add_page_break()
+
+    # ============================================================
+    # 5. PLANO DE AÇÃO E RESPONSABILIZAÇÃO
+    # ============================================================
+    doc.add_heading("5. PLANO DE AÇÃO E RESPONSABILIZAÇÃO", level=1)
+    doc.add_paragraph(
+        "Pré-populado pela plataforma a partir dos fatores urbanos e da "
+        "recomendação operacional da FM. Deve ser revisto, ajustado e "
+        "formalizado durante a reunião CompStat.",
+        style="Intense Quote",
+    )
+
+    linhas_plano = montar_plano_acao(
+        fatores_area, recomendacao, area, acoes_outros_orgaos,
+    )
+    if linhas_plano:
+        tab_pl = _add_table(doc, len(linhas_plano) + 1, 4)
+        _header_row(tab_pl, ["Ação acordada", "Responsável", "Prazo", "Status"])
+        for i, la in enumerate(linhas_plano, 1):
+            row = tab_pl.rows[i].cells
+            row[0].text = la.acao
+            row[1].text = la.responsavel
+            row[2].text = la.prazo
+            row[3].text = la.status
+    else:
+        doc.add_paragraph("Sem ações pré-populadas.")
+
+    # Linhas adicionais em branco para preenchimento manual na reunião
+    doc.add_paragraph()
+    p_obs = doc.add_paragraph()
+    run = p_obs.add_run(
+        "Espaço para registro de compromissos adicionais assumidos na reunião:"
+    )
+    run.italic = True
+    run.font.color.rgb = COR_CINZA
+    tab_extra = _add_table(doc, 4, 4)
+    _header_row(tab_extra, ["Ação acordada", "Responsável", "Prazo", "Status"])
+
+    # ============================================================
+    # RODAPÉ
+    # ============================================================
+    doc.add_paragraph()
+    p_footer = doc.add_paragraph()
+    p_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_footer.add_run(
+        f"Secretaria-Geral do CompStat Municipal · "
+        f"Gerado em {datetime.now():%d/%m/%Y %H:%M}"
     )
     run.italic = True
     run.font.size = Pt(9)
+    run.font.color.rgb = COR_CINZA
 
     # Save
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)

@@ -1,258 +1,194 @@
 [
   {
-    "relint_id": "rel_bangu_01",
-    "poligono_fm_id": "bangu_01",
-    "autor_orgao": "14 BPM",
-    "data_documento": "2026-05-15",
-    "modus_operandi_principal": "Roubos a transeunte praticados a pe por grupos de 2-3 individuos, abordagem rapida no calcadao. Foco em celulares.",
+    "poligono_fm_id": "rodoviaria_terminal__02",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nRODOVIÁRIA – TERMINAL GENTILEZA – ESTAÇÃO LEOPOLDINA\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nRODOVIÁRIA NOVO RIO\nA área da Rodoviária Novo Rio apresenta intenso fluxo diário de passageiros oriundos de diferentes regiões do estado e integração direta com linhas municipais, intermunicipais e interestaduais. Durante análise territorial foram identificados pontos de retenção de fluxo próximos aos acessos principais, áreas de embarque e desembarque e passarelas de circulação. A infraestrutura degradada de calçadas e pistas de rolagem dificulta a vigilância móvel, favorecendo a ação de furtadores e estelionatários. Múltiplos acessos sem controle viabilizam dispersão imediata após a prática de delitos. O entorno concentra ambulantes sem licença e abordagens oportunistas a passageiros desatentos durante o desembarque de ônibus intermunicipais e interestaduais.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — acessos, embarque, desembarque e passarelas de circulação;\n• áreas com baixa visibilidade — c",
     "modalidades_crime": [
       "a_pe"
     ],
     "tipos_ocorrencia_alvo": [
-      "roubo_celular",
-      "roubo_transeunte"
+      "roubo_transeunte",
+      "roubo_celular"
     ],
-    "horario_pico": "20:00-23:00",
+    "horario_pico": "18:00-22:00",
     "dias_criticos": [
       "sex",
       "sab"
     ],
-    "rotas_fuga": [
-      {
-        "descricao": "Rota A: calcadao -> Av Conego Vasconcelos -> Rua Sao Goncalo (receptacao)",
-        "pontos": [
-          {
-            "lat": -22.8792,
-            "lng": -43.4677,
-            "descricao": "Centro do calcadao"
-          },
-          {
-            "lat": -22.878,
-            "lng": -43.4685,
-            "descricao": "Av Conego"
-          },
-          {
-            "lat": -22.877,
-            "lng": -43.469,
-            "descricao": "Rua Sao Goncalo - receptacao"
-          }
-        ],
-        "modalidade_fuga": "a_pe",
-        "horario_predominante": "20:00-23:00"
-      }
-    ],
-    "pontos_receptacao": [
-      {
-        "lat": -22.877,
-        "lng": -43.469,
-        "descricao": "Comercio irregular Rua Sao Goncalo"
-      }
-    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
     "esconderijos": [],
     "orcrim_influencia": "TCP",
     "confianca": "alta",
-    "citacao_fonte": "Relatorio operacional 14 BPM maio/2026: confirmacao de 4 prisoes em flagrante na regiao com mesmo modus."
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat RODOVIÁRIA – TERMINAL GENTILEZA – ESTAÇÃO LEOPOLDINA A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associado"
   },
   {
-    "relint_id": "rel_copa_01",
-    "poligono_fm_id": "copa_01",
-    "autor_orgao": "19 BPM",
-    "data_documento": "2026-05-12",
-    "modus_operandi_principal": "Arrastoes em grupos de 4-6 individuos, principalmente em finais de semana. Foco em turistas com celulares e correntes.",
+    "poligono_fm_id": "metro_botafogo_rua_s_09",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nMETRÔ BOTAFOGO – RUA SÃO CLEMENTE – VOLUNTÁRIOS DA PÁTRIA\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nACESSOS AO METRÔ BOTAFOGO\nOs acessos do Metrô Botafogo concentram intenso fluxo comercial e corporativo, principalmente nos horários de entrada e saída do trabalho. Foram observados pontos de retenção de pedestres próximos às escadas, travessias e áreas de ônibus. A alta densidade de pessoas em espaço reduzido próximo às catracas favorece furtos rápidos de aparelhos celulares, com furtadores aproveitando o momento de pagamento da tarifa ou uso de dispositivos móveis pelos passageiros. Bancas, comércio informal e grades nas saídas reduzem o espaço disponível nas calçadas e comprometem a visibilidade para fiscalização.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — escadas e catracas com gargalos nos horários 07h–09h e 17h–20h;\n• áreas com baixa visibilidade — corredores de acesso cobertos com pontos de sombra;\n• obstáculos urbanos dificultando vigilância — grades, bancas e comércio informal próx",
     "modalidades_crime": [
-      "arrastao",
       "a_pe"
     ],
     "tipos_ocorrencia_alvo": [
-      "roubo_celular",
-      "roubo_transeunte"
-    ],
-    "horario_pico": "16:00-19:00",
-    "dias_criticos": [
-      "sex",
-      "sab",
-      "dom"
-    ],
-    "rotas_fuga": [
-      {
-        "descricao": "Rota B: orla -> Av Atlantica -> Rua Hilario de Gouveia -> metro Cardeal Arcoverde",
-        "pontos": [
-          {
-            "lat": -22.9725,
-            "lng": -43.1842,
-            "descricao": "Posto 4 orla"
-          },
-          {
-            "lat": -22.971,
-            "lng": -43.183,
-            "descricao": "Rua Hilario"
-          },
-          {
-            "lat": -22.9685,
-            "lng": -43.1825,
-            "descricao": "Metro Cardeal Arcoverde"
-          }
-        ],
-        "modalidade_fuga": "a_pe",
-        "horario_predominante": "fim de tarde"
-      }
-    ],
-    "pontos_receptacao": [],
-    "esconderijos": [],
-    "orcrim_influencia": "CV",
-    "confianca": "alta",
-    "citacao_fonte": "Sintese semanal 19 BPM. Padrao confirmado em CFTV operacional."
-  },
-  {
-    "relint_id": "rel_lapa_01",
-    "poligono_fm_id": "lapa_01",
-    "autor_orgao": "5 BPM",
-    "data_documento": "2026-05-18",
-    "modus_operandi_principal": "Saidinha de bar e roubo de celular na multidao. Atuacao por individuos em pe e motociclistas dando cobertura para fuga rapida.",
-    "modalidades_crime": [
-      "a_pe",
-      "motocicleta"
-    ],
-    "tipos_ocorrencia_alvo": [
-      "roubo_celular",
       "roubo_transeunte",
-      "roubo_coletivo"
+      "roubo_celular"
     ],
-    "horario_pico": "23:00-04:00",
+    "horario_pico": "18:00-22:00",
     "dias_criticos": [
       "sex",
       "sab"
     ],
-    "rotas_fuga": [
-      {
-        "descricao": "Rota C: Lapa -> Av Mem de Sa (de moto) -> Saude (receptacao)",
-        "pontos": [
-          {
-            "lat": -22.9122,
-            "lng": -43.1797,
-            "descricao": "Largo da Lapa"
-          },
-          {
-            "lat": -22.91,
-            "lng": -43.182,
-            "descricao": "Av Mem de Sa"
-          },
-          {
-            "lat": -22.905,
-            "lng": -43.19,
-            "descricao": "Saude - receptacao"
-          }
-        ],
-        "modalidade_fuga": "motocicleta",
-        "horario_predominante": "madrugada"
-      }
-    ],
-    "pontos_receptacao": [
-      {
-        "lat": -22.905,
-        "lng": -43.19,
-        "descricao": "Saude"
-      }
-    ],
-    "esconderijos": [],
-    "orcrim_influencia": "CV",
-    "confianca": "alta",
-    "citacao_fonte": "RELINT 5 BPM. Modus operandi confirmado por vitimas em 7 BOs."
-  },
-  {
-    "relint_id": "rel_meier_01",
-    "poligono_fm_id": "meier_01",
-    "autor_orgao": "3 BPM",
-    "data_documento": "2026-05-10",
-    "modus_operandi_principal": "Roubos a comercio por motociclistas armados, abordagem rapida durante movimento. Fuga em direcao a comunidades proximas.",
-    "modalidades_crime": [
-      "motocicleta",
-      "veiculo"
-    ],
-    "tipos_ocorrencia_alvo": [
-      "roubo_comercio",
-      "roubo_celular"
-    ],
-    "horario_pico": "17:00-20:00",
-    "dias_criticos": [
-      "seg",
-      "qui",
-      "sex"
-    ],
-    "rotas_fuga": [
-      {
-        "descricao": "Rota D: Dias da Cruz -> Adolfo Bergamini -> Encantado",
-        "pontos": [
-          {
-            "lat": -22.9007,
-            "lng": -43.2807,
-            "descricao": "Dias da Cruz comercio"
-          },
-          {
-            "lat": -22.903,
-            "lng": -43.282,
-            "descricao": "Adolfo Bergamini"
-          },
-          {
-            "lat": -22.908,
-            "lng": -43.285,
-            "descricao": "Acesso Encantado"
-          }
-        ],
-        "modalidade_fuga": "motocicleta",
-        "horario_predominante": "fim de expediente"
-      }
-    ],
+    "rotas_fuga": [],
     "pontos_receptacao": [],
     "esconderijos": [],
     "orcrim_influencia": "CV",
     "confianca": "alta",
-    "citacao_fonte": "RELINT 3 BPM. 6 roubos a comercio com mesmo MO em 30 dias."
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat METRÔ BOTAFOGO – RUA SÃO CLEMENTE – VOLUNTÁRIOS DA PÁTRIA A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores asso"
   },
   {
-    "relint_id": "rel_tijuca_01",
-    "poligono_fm_id": "tijuca_01",
-    "autor_orgao": "6 BPM",
-    "data_documento": "2026-05-16",
-    "modus_operandi_principal": "Roubo a transeunte na saida do metro Saens Pena. Atuacao a pe por individuos disfarcados de estudantes/trabalhadores.",
+    "poligono_fm_id": "jardim_de_alah_10",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nJARDIM DE ALAH\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nPARQUE E ACESSOS INTERNOS\nA área do Jardim de Alah apresenta grande circulação de pedestres, ciclistas e frequentadores da orla da Zona Sul. A vegetação densa em determinados pontos reduz a visibilidade noturna e favorece aproximações rápidas. Obras de revitalização iniciadas no final de 2025 instalaram tapumes ao longo de trechos internos do parque, formando nichos pouco visíveis utilizados como esconderijo e rota de fuga por furtadores. A configuração do espaço, com múltiplas entradas e saídas não controladas, dificulta o patrulhamento contínuo e favorece a dispersão imediata após a prática criminosa.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — concentração de pedestres e ciclistas nos acessos à orla;\n• áreas com baixa visibilidade — vegetação densa e nichos formados por tapumes de obras;\n• obstáculos urbanos dificultando vigilância — estruturas de obras criando pontos cegos nos acessos internos;\n• circulação intensa de motocicleta",
     "modalidades_crime": [
       "a_pe"
     ],
     "tipos_ocorrencia_alvo": [
-      "roubo_celular",
-      "roubo_transeunte"
+      "roubo_transeunte",
+      "roubo_celular"
     ],
-    "horario_pico": "07:00-09:00",
+    "horario_pico": "18:00-22:00",
     "dias_criticos": [
-      "seg",
-      "ter",
-      "qua",
-      "qui",
-      "sex"
+      "sex",
+      "sab"
     ],
-    "rotas_fuga": [
-      {
-        "descricao": "Rota E: Praca Saens Pena -> Rua Garibaldi -> comercio (receptacao rapida)",
-        "pontos": [
-          {
-            "lat": -22.925,
-            "lng": -43.2335,
-            "descricao": "Praca Saens Pena"
-          },
-          {
-            "lat": -22.926,
-            "lng": -43.2345,
-            "descricao": "Rua Garibaldi"
-          }
-        ],
-        "modalidade_fuga": "a_pe",
-        "horario_predominante": "rush manha"
-      }
-    ],
+    "rotas_fuga": [],
     "pontos_receptacao": [],
     "esconderijos": [],
-    "orcrim_influencia": null,
-    "confianca": "media",
-    "citacao_fonte": "RELINT 6 BPM. Padrao em 12 BOs concentrados em 2 semanas."
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat JARDIM DE ALAH A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos cont"
+  },
+  {
+    "poligono_fm_id": "campo_grande_estacao_11",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nCAMPO GRANDE – ESTAÇÃO – CALÇADÃO\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nESTAÇÃO DE TREM DE CAMPO GRANDE\nA Estação de Campo Grande concentra elevado fluxo de passageiros e retenção de pedestres em horários comerciais. Foram observadas áreas de grande aglomeração próximas aos acessos ferroviários. A presença de ambulantes sem licença nos acessos à estação cria ambiente de confusão visual que facilita a ação de furtadores. O entorno imediato apresenta trechos com iluminação insuficiente no período noturno e estruturas que criam pontos cegos fora do alcance do patrulhamento. A proximidade com comunidades sob influência de organizações criminosas (ORCRIM) adiciona fator de vulnerabilidade às rotas de dispersão utilizadas após a prática de delitos.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — acessos ferroviários com aglomerações nos horários 06h–09h e 17h–21h;\n• áreas com baixa visibilidade — trechos cobertos da estação com iluminação insuficiente;\n• obstáculos urbanos dificultando vigilânci",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_transeunte",
+      "roubo_celular"
+    ],
+    "horario_pico": "18:00-22:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "milicia",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat CAMPO GRANDE – ESTAÇÃO – CALÇADÃO A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de f"
+  },
+  {
+    "poligono_fm_id": "rio_sul_12",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nRIO SUL\nA Avenida Lauro Müller apresenta elevado fluxo de pedestres e usuários do Shopping Rio Sul, hospitais e universidades. Foram identificadas áreas de sombra causadas pela arborização e retenção de fluxo em travessias. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nAVENIDA LAURO MÜLLER\nA Avenida Lauro Müller apresenta elevado fluxo de pedestres e usuários do Shopping Rio Sul, hospitais e universidades. Foram identificadas áreas de sombra causadas pela arborização densa e retenção de fluxo em travessias e pontos de ônibus. A convergência de usuários de diferentes perfis — frequentadores do shopping, profissionais de saúde e estudantes — cria ambiente propício para furtos oportunistas. Veículos estacionados irregularmente nas calçadas reduzem o espaço disponível para circulação e comprometem a visibilidade do patrulhamento.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — pontos de ônibus e acessos ao shopping com aglomeração constante;\n• áreas com baixa visibilidade — arborização densa criando zonas de sombra que comprometem a iluminação pública;\n• obstáculos urbanos dificultando vigilância — veículos estacionados em calçadas reduzindo espaço e visibilidade;\n• circulação intensa de motocicletas e bicicletas — motociclistas com placas a",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_transeunte",
+      "roubo_celular"
+    ],
+    "horario_pico": "18:00-22:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat RIO SUL A Avenida Lauro Müller apresenta elevado fluxo de pedestres e usuários do Shopping Rio Sul, hospitais e universidades. Foram identificadas áreas de sombra causadas pela arborização e retenção de fluxo em travessias. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtra"
+  },
+  {
+    "poligono_fm_id": "praia_de_botafogo_ru_14",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nPRAIA DE BOTAFOGO – MARQUÊS DE ABRANTES\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nPRAIA DE BOTAFOGO\nA Praia de Botafogo apresenta grande fluxo de pedestres, ciclistas e usuários do transporte público, principalmente em horários de pico e períodos noturnos. A ausência de barreiras físicas na orla favorece fuga imediata dos furtadores após a ação. Frequentadores com atenção voltada ao lazer e turistas com equipamentos de valor constituem perfil de alta vulnerabilidade. A extensão da orla sem pontos de controle viabiliza a dispersão rápida em qualquer direção, dificultando a contenção após a prática do delito.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — alta concentração de frequentadores nos fins de semana e feriados;\n• áreas com baixa visibilidade — trechos do aterro com iluminação insuficiente no período noturno;\n• obstáculos urbanos dificultando vigilância — quiosques e estruturas de apoio criando pontos cegos na orla;\n• circulação intensa de motocicletas e bicicletas — criminosos em bici",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_transeunte",
+      "roubo_celular"
+    ],
+    "horario_pico": "18:00-22:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat PRAIA DE BOTAFOGO – MARQUÊS DE ABRANTES A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidênci"
+  },
+  {
+    "poligono_fm_id": "estacoes_sao_francis_19",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nESTAÇÕES SÃO FRANCISCO XAVIER – AFONSO PENA\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nESTAÇÃO SÃO FRANCISCO XAVIER\nA região da Estação São Francisco Xavier apresenta intensa circulação estudantil e comercial, principalmente em horários de entrada e saída de instituições de ensino. Foram observados pontos de retenção de pedestres próximos às escadas, travessias e pontos de ônibus. O perfil predominante de estudantes em deslocamento com equipamentos de valor — celulares, tablets e notebooks — constitui alvo frequente de furtos oportunistas nos horários de pico escolar. Bancas e comércio informal nos acessos à estação obstruem a visibilidade e dificultam o patrulhamento.\n\nTambém foram identificados:\n• retenção de fluxo em horários de pico — catracas e acessos com gargalos nos horários de entrada e saída escolar;\n• áreas com baixa visibilidade — corredores de acesso cobertos com iluminação insuficiente à noite;\n• obstáculos urbanos dificultando vigilância — bancas e comércio informal obstruindo visibilidade nos acessos;",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_transeunte",
+      "roubo_celular"
+    ],
+    "horario_pico": "18:00-22:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "TCP",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat ESTAÇÕES SÃO FRANCISCO XAVIER – AFONSO PENA A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incid"
+  },
+  {
+    "poligono_fm_id": "presidente_vargas_ca_20",
+    "autor_orgao": "Secretaria-Geral CompStat",
+    "data_documento": "2026-05-24",
+    "modus_operandi_principal": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA\nSubsídio para Reunião de CompStat\nPRESIDENTE VARGAS – CAMPO DE SANTANA – CENTRAL – CINELÂNDIA\nA presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores associados à incidência de furtos e roubos contra transeuntes, especialmente subtração de aparelhos celulares, além de elementos urbanos que favorecem delitos oportunistas.\nAVENIDA PRESIDENTE VARGAS\nA Avenida Presidente Vargas concentra intenso fluxo de pedestres e usuários do transporte público, favorecendo furtos e roubos de celulares em pontos de ônibus e calçadas. Com extensão de 4,5 km entre a Praça da República e o Cais do Porto, a via é a principal artéria do Centro e opera como rota de escape para criminosos após ações nas ruas adjacentes. O cruzamento com a Rua Uruguaiana (altura do nº 580) funciona como ponto de escoamento de produtos subtraídos para o Camelódromo da Uruguaiana, maior polo de receptação de celulares furtados do estado, conforme identificado em investigações da Polícia Civil. Registros de roubos a pedestres com arma branca foram documentados no trecho entre os nºs 500 e 1.500, próximo ao metrô da Cidade Nova (Rua Senador Pompeu, s/n). Em 2025, mais de 5.000 furtos foram registrados no Centro — alta de 36% em relação ao período anterior, segundo dados do Instit",
+    "modalidades_crime": [
+      "a_pe"
+    ],
+    "tipos_ocorrencia_alvo": [
+      "roubo_transeunte",
+      "roubo_celular"
+    ],
+    "horario_pico": "18:00-22:00",
+    "dias_criticos": [
+      "sex",
+      "sab"
+    ],
+    "rotas_fuga": [],
+    "pontos_receptacao": [],
+    "esconderijos": [],
+    "orcrim_influencia": "CV",
+    "confianca": "alta",
+    "citacao_fonte": "RELATÓRIO DE INTELIGÊNCIA DE ÁREA Subsídio para Reunião de CompStat PRESIDENTE VARGAS – CAMPO DE SANTANA – CENTRAL – CINELÂNDIA A presente análise territorial visa identificar fatores urbanos, dinâmica criminal e vulnerabilidades relacionadas à sensação de segurança da população, considerando áreas de grande circulação de pedestres e integração com o transporte público. Foram observados fatores as"
   }
 ]

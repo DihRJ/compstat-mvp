@@ -27,8 +27,9 @@ from evolution import carregar_snapshots, comparar_todas_areas
 from heatmap import gerar_heatmap_temporal, gerar_grafico_evolucao
 
 
-ALVO = "bangu_01"
-EFETIVO = 24  # 2 viaturas + 2 motos + agentes a pe (24 agentes totais)
+# Usando área oficial real (Presidente Vargas — maior volume de ocorrências)
+ALVO = "presidente_vargas_ca_20"
+EFETIVO = 40
 
 
 def _load_json(path: Path) -> list[dict]:
@@ -122,18 +123,34 @@ def main() -> None:
     print(f"\n[imagens] heatmap={len(heatmap_png)}B"
           f" grafico={len(grafico_png) if grafico_png else 0}B")
 
-    # ---- DOCX ----
+    # ---- sugestao IA de efetivo ----
+    from sugestao_efetivo import sugerir_efetivo
+    fat_por = _agrupar(fatores, "poligono_fm_id")
+    den_por = _agrupar(denuncias, "poligono_fm_id")
+    fatores_bangu = fat_por.get(ALVO, [])
+    relints_bangu = rel_por.get(ALVO, [])
+    denuncias_bangu = den_por.get(ALVO, [])
+
+    sug = sugerir_efetivo(area, bingo, ocorrencias_bangu, relints_bangu, fatores_bangu)
+    print(f"\n[sugestao IA efetivo] {sug.efetivo_sugerido} agentes "
+          f"(padrao da area: {area.efetivo_padrao})")
+
+    # ---- DOCX no formato oficial CompStat ----
     docx_path = out_dir / "relatorio_bangu.docx"
     gerar_relatorio_docx(
         area=area,
         bingo=bingo,
         recomendacao=rec,
         qmd=qmd,
+        ocorrencias_area=ocorrencias_bangu,
+        relints_area=relints_bangu,
+        denuncias_area=denuncias_bangu,
+        fatores_area=fatores_bangu,
+        bingos_todos=bingos,
         comparativo_evolucao=comp_bangu,
-        padroes_disque=None,
-        acoes_outros_orgaos=None,
         heatmap_temporal_png=heatmap_png,
         grafico_evolucao_png=grafico_png,
+        efetivo_sugerido=sug.efetivo_sugerido,
         output_path=str(docx_path),
     )
     print(f"\n[DOCX] salvo em {docx_path.relative_to(ROOT)}"

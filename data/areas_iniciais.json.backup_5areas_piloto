@@ -1,0 +1,108 @@
+[
+  {
+    "poligono_id": "bangu_01",
+    "nome_area": "Calcadao de Bangu",
+    "aisp": "AISP 9",
+    "bairros": [
+      "Bangu"
+    ],
+    "geometria_wkt": "POLYGON((-43.4685 -22.8810, -43.4670 -22.8810, -43.4670 -22.8775, -43.4685 -22.8775, -43.4685 -22.8810))",
+    "base_fm": "Base FM Bangu",
+    "subprefeitura": "Zona Oeste",
+    "dp": "34a DP",
+    "bpm": "14 BPM",
+    "ativo": true,
+    "centroide": {
+      "lat": -22.8792,
+      "lng": -43.4677
+    },
+    "criado_em": "2026-05-20T08:00:00",
+    "atualizado_em": "2026-05-20T08:00:00",
+    "observacoes": "Caso do briefing oficial. 70 roubos no periodo."
+  },
+  {
+    "poligono_id": "copa_01",
+    "nome_area": "Calcadao Copacabana Posto 4",
+    "aisp": "AISP 19",
+    "bairros": [
+      "Copacabana"
+    ],
+    "geometria_wkt": "POLYGON((-43.1855 -22.9740, -43.1830 -22.9740, -43.1830 -22.9710, -43.1855 -22.9710, -43.1855 -22.9740))",
+    "base_fm": "Base FM Copacabana",
+    "subprefeitura": "Zona Sul",
+    "dp": "12a DP",
+    "bpm": "19 BPM",
+    "ativo": true,
+    "centroide": {
+      "lat": -22.9725,
+      "lng": -43.1842
+    },
+    "criado_em": "2026-05-20T08:00:00",
+    "atualizado_em": "2026-05-20T08:00:00",
+    "observacoes": "Area turistica. Picos de fim de semana e periodo do verao."
+  },
+  {
+    "poligono_id": "lapa_01",
+    "nome_area": "Largo da Lapa",
+    "aisp": "AISP 5",
+    "bairros": [
+      "Lapa",
+      "Centro"
+    ],
+    "geometria_wkt": "POLYGON((-43.1810 -22.9135, -43.1785 -22.9135, -43.1785 -22.9110, -43.1810 -22.9110, -43.1810 -22.9135))",
+    "base_fm": "Base FM Centro",
+    "subprefeitura": "Centro",
+    "dp": "5a DP",
+    "bpm": "5 BPM",
+    "ativo": true,
+    "centroide": {
+      "lat": -22.9122,
+      "lng": -43.1797
+    },
+    "criado_em": "2026-05-20T08:00:00",
+    "atualizado_em": "2026-05-20T08:00:00",
+    "observacoes": "Vida noturna intensa. Concentracao 22h-04h."
+  },
+  {
+    "poligono_id": "meier_01",
+    "nome_area": "Dias da Cruz Meier",
+    "aisp": "AISP 3",
+    "bairros": [
+      "Meier"
+    ],
+    "geometria_wkt": "POLYGON((-43.2820 -22.9020, -43.2795 -22.9020, -43.2795 -22.8995, -43.2820 -22.8995, -43.2820 -22.9020))",
+    "base_fm": "Base FM Meier",
+    "subprefeitura": "Zona Norte",
+    "dp": "23a DP",
+    "bpm": "3 BPM",
+    "ativo": true,
+    "centroide": {
+      "lat": -22.9007,
+      "lng": -43.2807
+    },
+    "criado_em": "2026-05-20T08:00:00",
+    "atualizado_em": "2026-05-20T08:00:00",
+    "observacoes": "Comercio popular. Roubos motociclistas no comercio."
+  },
+  {
+    "poligono_id": "tijuca_01",
+    "nome_area": "Praca Saens Pena",
+    "aisp": "AISP 6",
+    "bairros": [
+      "Tijuca"
+    ],
+    "geometria_wkt": "POLYGON((-43.2350 -22.9265, -43.2320 -22.9265, -43.2320 -22.9235, -43.2350 -22.9235, -43.2350 -22.9265))",
+    "base_fm": "Base FM Tijuca",
+    "subprefeitura": "Grande Tijuca",
+    "dp": "19a DP",
+    "bpm": "6 BPM",
+    "ativo": true,
+    "centroide": {
+      "lat": -22.925,
+      "lng": -43.2335
+    },
+    "criado_em": "2026-05-20T08:00:00",
+    "atualizado_em": "2026-05-20T08:00:00",
+    "observacoes": "Polo de servicos. Saidas de metro com concentracao."
+  }
+]
