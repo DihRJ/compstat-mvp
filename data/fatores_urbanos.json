@@ -1,0 +1,184 @@
+[
+  {
+    "fator_id": "fat_bangu_01_000",
+    "poligono_fm_id": "bangu_01",
+    "categoria": "iluminacao_deficiente",
+    "descricao": "Iluminacao publica em manutencao na entrada lateral",
+    "coordenada": {
+      "lat": -22.880108114148683,
+      "lng": -43.46744764095569,
+      "descricao": null
+    },
+    "orgao_responsavel": "RIOLUZ",
+    "severidade": "alta"
+  },
+  {
+    "fator_id": "fat_bangu_01_001",
+    "poligono_fm_id": "bangu_01",
+    "categoria": "vegetacao_obstrutiva",
+    "descricao": "Vegetacao alta encobrindo postes",
+    "coordenada": {
+      "lat": -22.878526595642274,
+      "lng": -43.46866743729525,
+      "descricao": null
+    },
+    "orgao_responsavel": "COMLURB",
+    "severidade": "critica"
+  },
+  {
+    "fator_id": "fat_bangu_01_002",
+    "poligono_fm_id": "bangu_01",
+    "categoria": "comercio_irregular",
+    "descricao": "Ambulantes apos 20h sem permissao",
+    "coordenada": {
+      "lat": -22.878341134249307,
+      "lng": -43.46838403297005,
+      "descricao": null
+    },
+    "orgao_responsavel": "SEOP",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_copa_01_000",
+    "poligono_fm_id": "copa_01",
+    "categoria": "ponto_cego_camera",
+    "descricao": "3 cameras CFTV quebradas no posto 4",
+    "coordenada": {
+      "lat": -22.97258696372806,
+      "lng": -43.18321632352236,
+      "descricao": null
+    },
+    "orgao_responsavel": "SECONSERVA",
+    "severidade": "alta"
+  },
+  {
+    "fator_id": "fat_copa_01_001",
+    "poligono_fm_id": "copa_01",
+    "categoria": "comercio_irregular",
+    "descricao": "Quiosques fora do horario",
+    "coordenada": {
+      "lat": -22.972644401398266,
+      "lng": -43.183208611862526,
+      "descricao": null
+    },
+    "orgao_responsavel": "SEOP",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_copa_01_002",
+    "poligono_fm_id": "copa_01",
+    "categoria": "psr_concentrada",
+    "descricao": "Concentracao PSR escadaria principal",
+    "coordenada": {
+      "lat": -22.971681185571374,
+      "lng": -43.18343570447191,
+      "descricao": null
+    },
+    "orgao_responsavel": "SMAS",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_lapa_01_000",
+    "poligono_fm_id": "lapa_01",
+    "categoria": "lixo_entulho",
+    "descricao": "Entulho permanente nos Arcos",
+    "coordenada": {
+      "lat": -22.912596268991244,
+      "lng": -43.178951153261465,
+      "descricao": null
+    },
+    "orgao_responsavel": "COMLURB",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_lapa_01_001",
+    "poligono_fm_id": "lapa_01",
+    "categoria": "iluminacao_deficiente",
+    "descricao": "Becos sem iluminacao",
+    "coordenada": {
+      "lat": -22.911446809925526,
+      "lng": -43.18051332003095,
+      "descricao": null
+    },
+    "orgao_responsavel": "RIOLUZ",
+    "severidade": "alta"
+  },
+  {
+    "fator_id": "fat_lapa_01_002",
+    "poligono_fm_id": "lapa_01",
+    "categoria": "comercio_irregular",
+    "descricao": "Vendedores ambulantes excedendo limites",
+    "coordenada": {
+      "lat": -22.912479129233205,
+      "lng": -43.18053515893859,
+      "descricao": null
+    },
+    "orgao_responsavel": "SEOP",
+    "severidade": "alta"
+  },
+  {
+    "fator_id": "fat_meier_01_000",
+    "poligono_fm_id": "meier_01",
+    "categoria": "estacionamento_irregular",
+    "descricao": "Carros bloqueando visibilidade entrada",
+    "coordenada": {
+      "lat": -22.900370982377176,
+      "lng": -43.280402177581706,
+      "descricao": null
+    },
+    "orgao_responsavel": "CET_RIO",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_meier_01_001",
+    "poligono_fm_id": "meier_01",
+    "categoria": "ponto_onibus_inseguro",
+    "descricao": "Ponto onibus sem cobertura proximo banco",
+    "coordenada": {
+      "lat": -22.901596425449902,
+      "lng": -43.280448791451676,
+      "descricao": null
+    },
+    "orgao_responsavel": "SECONSERVA",
+    "severidade": "alta"
+  },
+  {
+    "fator_id": "fat_tijuca_01_000",
+    "poligono_fm_id": "tijuca_01",
+    "categoria": "ponto_cego_camera",
+    "descricao": "Cameras Saens Pena com falha",
+    "coordenada": {
+      "lat": -22.92454802327306,
+      "lng": -43.23298953568587,
+      "descricao": null
+    },
+    "orgao_responsavel": "SECONSERVA",
+    "severidade": "critica"
+  },
+  {
+    "fator_id": "fat_tijuca_01_001",
+    "poligono_fm_id": "tijuca_01",
+    "categoria": "comercio_irregular",
+    "descricao": "Ambulantes na boca metro",
+    "coordenada": {
+      "lat": -22.92514153811849,
+      "lng": -43.23431760162556,
+      "descricao": null
+    },
+    "orgao_responsavel": "SEOP",
+    "severidade": "media"
+  },
+  {
+    "fator_id": "fat_tijuca_01_002",
+    "poligono_fm_id": "tijuca_01",
+    "categoria": "calcada_obstruida",
+    "descricao": "Bancas excedendo calcada",
+    "coordenada": {
+      "lat": -22.925809632644043,
+      "lng": -43.23407315764611,
+      "descricao": null
+    },
+    "orgao_responsavel": "SEOP",
+    "severidade": "baixa"
+  }
+]

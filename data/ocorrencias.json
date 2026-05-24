@@ -1,0 +1,4202 @@
+[
+  {
+    "ocorrencia_id": "oco_bangu_01_0000",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878006531349193,
+      "lng": -43.46800179848458,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.248500",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0001",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87881766187489,
+      "lng": -43.46682376190691,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248503",
+    "dia_semana": "qui",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0002",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87865914976923,
+      "lng": -43.46885634477105,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.248505",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0003",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.877838552217437,
+      "lng": -43.46657244117887,
+      "descricao": null
+    },
+    "data_hora": "2026-05-13T12:56:27.248508",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0004",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878174991955483,
+      "lng": -43.46767701135407,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248510",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0005",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879234182875916,
+      "lng": -43.46886439682404,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.248512",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0006",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880443039643797,
+      "lng": -43.467742028610054,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.248515",
+    "dia_semana": "sab",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0007",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879116978637747,
+      "lng": -43.467380218247555,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.248517",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0008",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87771455193002,
+      "lng": -43.467250365827084,
+      "descricao": null
+    },
+    "data_hora": "2026-04-08T12:56:27.248520",
+    "dia_semana": "sab",
+    "hora": 21,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0009",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87893467965677,
+      "lng": -43.469178427483044,
+      "descricao": null
+    },
+    "data_hora": "2026-05-02T12:56:27.248522",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0010",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879864568208106,
+      "lng": -43.46774375650255,
+      "descricao": null
+    },
+    "data_hora": "2026-05-19T12:56:27.248525",
+    "dia_semana": "sex",
+    "hora": 10,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0011",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880417022610526,
+      "lng": -43.46722305175145,
+      "descricao": null
+    },
+    "data_hora": "2026-04-02T12:56:27.248527",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0012",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878515359234676,
+      "lng": -43.46679822246742,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.248555",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0013",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87807654213779,
+      "lng": -43.46897384533488,
+      "descricao": null
+    },
+    "data_hora": "2026-05-06T12:56:27.248557",
+    "dia_semana": "sab",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0014",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.877920899050977,
+      "lng": -43.46665391279676,
+      "descricao": null
+    },
+    "data_hora": "2026-03-31T12:56:27.248560",
+    "dia_semana": "dom",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0015",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.877744073468662,
+      "lng": -43.468404390825484,
+      "descricao": null
+    },
+    "data_hora": "2026-05-13T12:56:27.248562",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0016",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880235609524178,
+      "lng": -43.46830987652352,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.248565",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0017",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87919144885124,
+      "lng": -43.46664184032385,
+      "descricao": null
+    },
+    "data_hora": "2026-05-20T12:56:27.248567",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0018",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879488673346046,
+      "lng": -43.46637521161831,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248570",
+    "dia_semana": "dom",
+    "hora": 2,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0019",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87789588122679,
+      "lng": -43.46858722240173,
+      "descricao": null
+    },
+    "data_hora": "2026-04-11T12:56:27.248572",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0020",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.877912945004883,
+      "lng": -43.466392797137665,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248574",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0021",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87790022186602,
+      "lng": -43.466557407478945,
+      "descricao": null
+    },
+    "data_hora": "2026-04-21T12:56:27.248577",
+    "dia_semana": "sex",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0022",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878696410388862,
+      "lng": -43.46753619315253,
+      "descricao": null
+    },
+    "data_hora": "2026-04-08T12:56:27.248580",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0023",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879882955363055,
+      "lng": -43.46738551051891,
+      "descricao": null
+    },
+    "data_hora": "2026-04-06T12:56:27.248582",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0024",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878797146658073,
+      "lng": -43.46671195573188,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.248585",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0025",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87904495873662,
+      "lng": -43.46791693924306,
+      "descricao": null
+    },
+    "data_hora": "2026-05-13T12:56:27.248587",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0026",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87941063986136,
+      "lng": -43.4690745134255,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248589",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0027",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878699199768093,
+      "lng": -43.468138964096156,
+      "descricao": null
+    },
+    "data_hora": "2026-05-10T12:56:27.248592",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0028",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87805575138601,
+      "lng": -43.46912564091431,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248594",
+    "dia_semana": "qui",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0029",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.88022240647106,
+      "lng": -43.46709616543558,
+      "descricao": null
+    },
+    "data_hora": "2026-04-02T12:56:27.248597",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0030",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880031229358384,
+      "lng": -43.46721990045175,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248599",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0031",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87866144564492,
+      "lng": -43.46666901651018,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248601",
+    "dia_semana": "sex",
+    "hora": 8,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0032",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87966293866496,
+      "lng": -43.46684071546539,
+      "descricao": null
+    },
+    "data_hora": "2026-05-21T12:56:27.248604",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0033",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.8785736441485,
+      "lng": -43.46919492616534,
+      "descricao": null
+    },
+    "data_hora": "2026-05-11T12:56:27.248606",
+    "dia_semana": "dom",
+    "hora": 0,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0034",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878709837571204,
+      "lng": -43.46882612405301,
+      "descricao": null
+    },
+    "data_hora": "2026-04-11T12:56:27.248608",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0035",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.88012447972103,
+      "lng": -43.46720521169736,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.248611",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0036",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879788375152195,
+      "lng": -43.468569451945356,
+      "descricao": null
+    },
+    "data_hora": "2026-04-28T12:56:27.248613",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0037",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878318793802684,
+      "lng": -43.46632050398895,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.248615",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0038",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87824472960639,
+      "lng": -43.46694658558738,
+      "descricao": null
+    },
+    "data_hora": "2026-04-14T12:56:27.248617",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0039",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879333751494862,
+      "lng": -43.46654158927285,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.248620",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0040",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878022020521367,
+      "lng": -43.46661867830373,
+      "descricao": null
+    },
+    "data_hora": "2026-05-14T12:56:27.248622",
+    "dia_semana": "sab",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0041",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.8790277826179,
+      "lng": -43.46644758995664,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.248625",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0042",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878862043031717,
+      "lng": -43.46704217811617,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248628",
+    "dia_semana": "sab",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0043",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879922425354607,
+      "lng": -43.46845828078747,
+      "descricao": null
+    },
+    "data_hora": "2026-04-06T12:56:27.248630",
+    "dia_semana": "qui",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0044",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87999651926596,
+      "lng": -43.46819245739014,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248632",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0045",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880507313447858,
+      "lng": -43.467977201891,
+      "descricao": null
+    },
+    "data_hora": "2026-05-14T12:56:27.248634",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0046",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87812980390309,
+      "lng": -43.466903216271646,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.248637",
+    "dia_semana": "sex",
+    "hora": 12,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0047",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87923531156735,
+      "lng": -43.46838119406471,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.248639",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0048",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87797921341224,
+      "lng": -43.467424321673114,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.248642",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0049",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879562688407436,
+      "lng": -43.46856501914736,
+      "descricao": null
+    },
+    "data_hora": "2026-05-12T12:56:27.248644",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0050",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.88064185013885,
+      "lng": -43.46758174285623,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.248646",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0051",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880101917952913,
+      "lng": -43.46913885994804,
+      "descricao": null
+    },
+    "data_hora": "2026-05-21T12:56:27.248649",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0052",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87839930570493,
+      "lng": -43.468696632569895,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248651",
+    "dia_semana": "sex",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0053",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87791333849478,
+      "lng": -43.46747260981476,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248653",
+    "dia_semana": "sex",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0054",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.88039429608366,
+      "lng": -43.466882557345144,
+      "descricao": null
+    },
+    "data_hora": "2026-03-31T12:56:27.248656",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0055",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87910176426407,
+      "lng": -43.46721543597794,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.248658",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0056",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878793244681695,
+      "lng": -43.46671387806699,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.248660",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0057",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87939327652099,
+      "lng": -43.46700692135708,
+      "descricao": null
+    },
+    "data_hora": "2026-04-04T12:56:27.248663",
+    "dia_semana": "sab",
+    "hora": 0,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0058",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87844857115452,
+      "lng": -43.46749045106596,
+      "descricao": null
+    },
+    "data_hora": "2026-03-28T12:56:27.248665",
+    "dia_semana": "sab",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0059",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878306502929515,
+      "lng": -43.46817898347051,
+      "descricao": null
+    },
+    "data_hora": "2026-04-22T12:56:27.248668",
+    "dia_semana": "sab",
+    "hora": 5,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0060",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.87853977600769,
+      "lng": -43.46773426645945,
+      "descricao": null
+    },
+    "data_hora": "2026-05-11T12:56:27.248670",
+    "dia_semana": "sab",
+    "hora": 0,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0061",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.879486796613968,
+      "lng": -43.46847008450837,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248672",
+    "dia_semana": "sab",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0062",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878591435173444,
+      "lng": -43.468387250719076,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.248675",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0063",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.88012537708097,
+      "lng": -43.466984186039475,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.248677",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0064",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880161675368946,
+      "lng": -43.46915755489823,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.248680",
+    "dia_semana": "sab",
+    "hora": 6,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0065",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "furto_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880392237059638,
+      "lng": -43.469163203789876,
+      "descricao": null
+    },
+    "data_hora": "2026-05-15T12:56:27.248682",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0066",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878233653064104,
+      "lng": -43.46799787767325,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.248685",
+    "dia_semana": "sab",
+    "hora": 20,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0067",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.880344645313368,
+      "lng": -43.46690666966402,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248687",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0068",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878119500002523,
+      "lng": -43.4662299062186,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248690",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_bangu_01_0069",
+    "poligono_fm_id": "bangu_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.878718715588423,
+      "lng": -43.46872882871986,
+      "descricao": null
+    },
+    "data_hora": "2026-04-13T12:56:27.248692",
+    "dia_semana": "sex",
+    "hora": 6,
+    "descricao_modus": "Aborgadem a pe por grupo, foco em celular"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0000",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973305571296333,
+      "lng": -43.18357913251036,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.248695",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0001",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972724583101687,
+      "lng": -43.18406631286386,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.248697",
+    "dia_semana": "dom",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0002",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972682539653977,
+      "lng": -43.18429390608917,
+      "descricao": null
+    },
+    "data_hora": "2026-05-13T12:56:27.248699",
+    "dia_semana": "sab",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0003",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97133173133212,
+      "lng": -43.18349639823014,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248702",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0004",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97227125904619,
+      "lng": -43.183410672987485,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248704",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0005",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971092834291802,
+      "lng": -43.184289968815115,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248707",
+    "dia_semana": "sab",
+    "hora": 5,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0006",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973135346613915,
+      "lng": -43.18286441938131,
+      "descricao": null
+    },
+    "data_hora": "2026-04-27T12:56:27.248710",
+    "dia_semana": "sex",
+    "hora": 10,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0007",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971405268247846,
+      "lng": -43.18322521839019,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.248712",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0008",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972123773773564,
+      "lng": -43.183420028391815,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.248714",
+    "dia_semana": "qua",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0009",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.9718706515247,
+      "lng": -43.184767749584815,
+      "descricao": null
+    },
+    "data_hora": "2026-05-16T12:56:27.248717",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0010",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972504873485878,
+      "lng": -43.183550190022025,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248719",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0011",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972849241960258,
+      "lng": -43.182934395550205,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248722",
+    "dia_semana": "sab",
+    "hora": 7,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0012",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971538351580442,
+      "lng": -43.184851483050146,
+      "descricao": null
+    },
+    "data_hora": "2026-05-02T12:56:27.248724",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0013",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97296462817492,
+      "lng": -43.18404424774879,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248727",
+    "dia_semana": "dom",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0014",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973299312661826,
+      "lng": -43.1833733665747,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.248730",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0015",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97251401405115,
+      "lng": -43.18558894116596,
+      "descricao": null
+    },
+    "data_hora": "2026-04-29T12:56:27.248733",
+    "dia_semana": "dom",
+    "hora": 12,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0016",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973953957206255,
+      "lng": -43.185267533752096,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.248735",
+    "dia_semana": "sex",
+    "hora": 14,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0017",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972050490042264,
+      "lng": -43.183144704122945,
+      "descricao": null
+    },
+    "data_hora": "2026-05-02T12:56:27.248738",
+    "dia_semana": "dom",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0018",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972147621615193,
+      "lng": -43.18499568927069,
+      "descricao": null
+    },
+    "data_hora": "2026-04-08T12:56:27.248740",
+    "dia_semana": "qua",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0019",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972668964345015,
+      "lng": -43.183617996511614,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.248743",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0020",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972406501045555,
+      "lng": -43.184002215814246,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.248745",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0021",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972506998242896,
+      "lng": -43.183950528608044,
+      "descricao": null
+    },
+    "data_hora": "2026-04-14T12:56:27.248748",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0022",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971967167342903,
+      "lng": -43.185226073133784,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.248750",
+    "dia_semana": "sab",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0023",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97146408822457,
+      "lng": -43.18510234900267,
+      "descricao": null
+    },
+    "data_hora": "2026-04-09T12:56:27.248753",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0024",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97393418120642,
+      "lng": -43.18320988731552,
+      "descricao": null
+    },
+    "data_hora": "2026-04-17T12:56:27.248755",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0025",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97150148330098,
+      "lng": -43.18299119524465,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.248758",
+    "dia_semana": "dom",
+    "hora": 15,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0026",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97211525568894,
+      "lng": -43.18298978888778,
+      "descricao": null
+    },
+    "data_hora": "2026-04-14T12:56:27.248761",
+    "dia_semana": "sab",
+    "hora": 16,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0027",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97127111656304,
+      "lng": -43.184719842622854,
+      "descricao": null
+    },
+    "data_hora": "2026-04-07T12:56:27.248764",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0028",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971508582141297,
+      "lng": -43.184929089746305,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.248767",
+    "dia_semana": "dom",
+    "hora": 11,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0029",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971111320121395,
+      "lng": -43.18527772895498,
+      "descricao": null
+    },
+    "data_hora": "2026-04-02T12:56:27.248769",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0030",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973729091373293,
+      "lng": -43.18451627631901,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.248772",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0031",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.9736749616934,
+      "lng": -43.18499853429336,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248774",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0032",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972093788232865,
+      "lng": -43.18430719739103,
+      "descricao": null
+    },
+    "data_hora": "2026-05-09T12:56:27.248776",
+    "dia_semana": "qui",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0033",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973708424004133,
+      "lng": -43.18303822207441,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248778",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0034",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.971343758648302,
+      "lng": -43.18373523430752,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.248781",
+    "dia_semana": "dom",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0035",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971148334490447,
+      "lng": -43.18313364942008,
+      "descricao": null
+    },
+    "data_hora": "2026-05-10T12:56:27.248783",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0036",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973172355677416,
+      "lng": -43.18279537937219,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248786",
+    "dia_semana": "dom",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0037",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97326929330851,
+      "lng": -43.18532222834407,
+      "descricao": null
+    },
+    "data_hora": "2026-05-22T12:56:27.248788",
+    "dia_semana": "dom",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0038",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971676894266587,
+      "lng": -43.18333406873717,
+      "descricao": null
+    },
+    "data_hora": "2026-04-01T12:56:27.248790",
+    "dia_semana": "dom",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0039",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97201682707221,
+      "lng": -43.18562265955064,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.248793",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0040",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973619724368863,
+      "lng": -43.184437118329264,
+      "descricao": null
+    },
+    "data_hora": "2026-05-12T12:56:27.248795",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0041",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972488483930643,
+      "lng": -43.18286375307109,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248797",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0042",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.971004239734732,
+      "lng": -43.1831581043705,
+      "descricao": null
+    },
+    "data_hora": "2026-04-12T12:56:27.248800",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0043",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.9721751077291,
+      "lng": -43.18550295330004,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.248802",
+    "dia_semana": "dom",
+    "hora": 2,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0044",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972638853747274,
+      "lng": -43.18388371962539,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248804",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0045",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972645335252103,
+      "lng": -43.185014519276905,
+      "descricao": null
+    },
+    "data_hora": "2026-04-07T12:56:27.248806",
+    "dia_semana": "dom",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0046",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972877096929693,
+      "lng": -43.18524208322569,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.248810",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0047",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971564692144167,
+      "lng": -43.18403088779315,
+      "descricao": null
+    },
+    "data_hora": "2026-04-06T12:56:27.248812",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0048",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971395723553393,
+      "lng": -43.183536817963756,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248814",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0049",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973327265392676,
+      "lng": -43.185375344854215,
+      "descricao": null
+    },
+    "data_hora": "2026-05-10T12:56:27.248817",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0050",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97217301525334,
+      "lng": -43.183726506316,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.248819",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0051",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973981682631788,
+      "lng": -43.183090411880386,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.248822",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0052",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97287141678289,
+      "lng": -43.18433906262798,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248824",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0053",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973533260289788,
+      "lng": -43.18343669236262,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248826",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0054",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973180499466906,
+      "lng": -43.18343517056899,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248828",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0055",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973863747912187,
+      "lng": -43.18451420981173,
+      "descricao": null
+    },
+    "data_hora": "2026-04-22T12:56:27.248830",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0056",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973015632932185,
+      "lng": -43.18567681028029,
+      "descricao": null
+    },
+    "data_hora": "2026-04-05T12:56:27.248833",
+    "dia_semana": "sab",
+    "hora": 4,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0057",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973783773510224,
+      "lng": -43.183114706913926,
+      "descricao": null
+    },
+    "data_hora": "2026-04-21T12:56:27.248835",
+    "dia_semana": "sab",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0058",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971871503115292,
+      "lng": -43.184446918120464,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.248838",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0059",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973735610356105,
+      "lng": -43.18316654692055,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248840",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0060",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97300079413252,
+      "lng": -43.18519560187586,
+      "descricao": null
+    },
+    "data_hora": "2026-04-06T12:56:27.248842",
+    "dia_semana": "dom",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0061",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97329119345316,
+      "lng": -43.18526066734516,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248845",
+    "dia_semana": "dom",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0062",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971956599565054,
+      "lng": -43.18305385553022,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248847",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0063",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973795141224514,
+      "lng": -43.18437337580849,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.248849",
+    "dia_semana": "ter",
+    "hora": 20,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0064",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973887178263286,
+      "lng": -43.18459378720153,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248852",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0065",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97265079888905,
+      "lng": -43.1832705522469,
+      "descricao": null
+    },
+    "data_hora": "2026-04-29T12:56:27.248854",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0066",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97105284325672,
+      "lng": -43.18544701260392,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248857",
+    "dia_semana": "sab",
+    "hora": 15,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0067",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972908306120942,
+      "lng": -43.182946189632645,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.248859",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0068",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972326110362744,
+      "lng": -43.184540307385824,
+      "descricao": null
+    },
+    "data_hora": "2026-05-19T12:56:27.248861",
+    "dia_semana": "dom",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0069",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97124976063483,
+      "lng": -43.184769304787345,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248863",
+    "dia_semana": "qui",
+    "hora": 10,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0070",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.972069520209917,
+      "lng": -43.184714570337235,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.248867",
+    "dia_semana": "sex",
+    "hora": 15,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0071",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97247453454073,
+      "lng": -43.185645308386626,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248869",
+    "dia_semana": "dom",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0072",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973535164481167,
+      "lng": -43.18481262369503,
+      "descricao": null
+    },
+    "data_hora": "2026-05-11T12:56:27.248872",
+    "dia_semana": "ter",
+    "hora": 15,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0073",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97137082168237,
+      "lng": -43.18384590560352,
+      "descricao": null
+    },
+    "data_hora": "2026-05-21T12:56:27.248874",
+    "dia_semana": "dom",
+    "hora": 16,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0074",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.973868922716136,
+      "lng": -43.18460710175761,
+      "descricao": null
+    },
+    "data_hora": "2026-04-02T12:56:27.248876",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0075",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.973071596310312,
+      "lng": -43.18327412838673,
+      "descricao": null
+    },
+    "data_hora": "2026-05-09T12:56:27.248879",
+    "dia_semana": "qui",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0076",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97166562788825,
+      "lng": -43.184191279925535,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.248881",
+    "dia_semana": "ter",
+    "hora": 19,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0077",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972076462891387,
+      "lng": -43.183077649164844,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248883",
+    "dia_semana": "sex",
+    "hora": 4,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0078",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97265204233888,
+      "lng": -43.18415994178621,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248886",
+    "dia_semana": "dom",
+    "hora": 9,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0079",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.97384022933849,
+      "lng": -43.18419397865592,
+      "descricao": null
+    },
+    "data_hora": "2026-03-25T12:56:27.248888",
+    "dia_semana": "sex",
+    "hora": 11,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0080",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "arrastao",
+    "coordenada": {
+      "lat": -22.971625858087553,
+      "lng": -43.18528720123682,
+      "descricao": null
+    },
+    "data_hora": "2026-03-25T12:56:27.248891",
+    "dia_semana": "ter",
+    "hora": 17,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0081",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97128242753269,
+      "lng": -43.185642988345265,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.248893",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0082",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97309654641624,
+      "lng": -43.185556751660144,
+      "descricao": null
+    },
+    "data_hora": "2026-05-16T12:56:27.248895",
+    "dia_semana": "dom",
+    "hora": 18,
+    "descricao_modus": "Arrastao em grupo de 4-6"
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0083",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_coletivo",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.97210413517396,
+      "lng": -43.183974857627405,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248899",
+    "dia_semana": "sab",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_copa_01_0084",
+    "poligono_fm_id": "copa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.972006886094775,
+      "lng": -43.18544315813504,
+      "descricao": null
+    },
+    "data_hora": "2026-04-17T12:56:27.248901",
+    "dia_semana": "sex",
+    "hora": 16,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0000",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.912939049216792,
+      "lng": -43.18115127330667,
+      "descricao": null
+    },
+    "data_hora": "2026-05-21T12:56:27.248903",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0001",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.913566992935113,
+      "lng": -43.179561958764374,
+      "descricao": null
+    },
+    "data_hora": "2026-04-05T12:56:27.248906",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0002",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.9135106983889,
+      "lng": -43.17887142880089,
+      "descricao": null
+    },
+    "data_hora": "2026-04-13T12:56:27.248908",
+    "dia_semana": "sab",
+    "hora": 15,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0003",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91073263189311,
+      "lng": -43.179570907907035,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.248910",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0004",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.913326574975265,
+      "lng": -43.18009594247705,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248913",
+    "dia_semana": "sex",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0005",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.910927068600117,
+      "lng": -43.179642172439394,
+      "descricao": null
+    },
+    "data_hora": "2026-04-22T12:56:27.248915",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0006",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91339220627665,
+      "lng": -43.180216240283976,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.248917",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0007",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911519556812866,
+      "lng": -43.178465178307455,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248919",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0008",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91084163181116,
+      "lng": -43.18077166159491,
+      "descricao": null
+    },
+    "data_hora": "2026-04-28T12:56:27.248922",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0009",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91255143679493,
+      "lng": -43.17949826607482,
+      "descricao": null
+    },
+    "data_hora": "2026-04-04T12:56:27.248924",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0010",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91250589786214,
+      "lng": -43.17925131778988,
+      "descricao": null
+    },
+    "data_hora": "2026-04-17T12:56:27.248926",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0011",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.911375106549404,
+      "lng": -43.17908788656638,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.248929",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0012",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.913182030908047,
+      "lng": -43.17905989031691,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.248931",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0013",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.911026004952937,
+      "lng": -43.17864591384774,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.248933",
+    "dia_semana": "sab",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0014",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91074460235981,
+      "lng": -43.17882380297916,
+      "descricao": null
+    },
+    "data_hora": "2026-04-21T12:56:27.248936",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0015",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.913502755684195,
+      "lng": -43.180005520057684,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.248938",
+    "dia_semana": "sab",
+    "hora": 0,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0016",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91177298423184,
+      "lng": -43.179850076513006,
+      "descricao": null
+    },
+    "data_hora": "2026-05-19T12:56:27.248940",
+    "dia_semana": "sab",
+    "hora": 2,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0017",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.912145693601225,
+      "lng": -43.18028762637157,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.248943",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0018",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.912948184073052,
+      "lng": -43.17929482872584,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.248945",
+    "dia_semana": "seg",
+    "hora": 2,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0019",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.913186398130833,
+      "lng": -43.179326562437694,
+      "descricao": null
+    },
+    "data_hora": "2026-04-21T12:56:27.248947",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0020",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.911746610067542,
+      "lng": -43.17889912299725,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.248950",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0021",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91296536626805,
+      "lng": -43.17877795205671,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.248952",
+    "dia_semana": "sab",
+    "hora": 17,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0022",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.912679422294943,
+      "lng": -43.180768993926506,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.248955",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0023",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91274265234079,
+      "lng": -43.179800582298874,
+      "descricao": null
+    },
+    "data_hora": "2026-04-05T12:56:27.248957",
+    "dia_semana": "sab",
+    "hora": 4,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0024",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91081194244328,
+      "lng": -43.17849306751877,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248960",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0025",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.911062773009196,
+      "lng": -43.179707889180854,
+      "descricao": null
+    },
+    "data_hora": "2026-04-22T12:56:27.248963",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0026",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.913548378786114,
+      "lng": -43.17971531738942,
+      "descricao": null
+    },
+    "data_hora": "2026-04-16T12:56:27.248965",
+    "dia_semana": "sab",
+    "hora": 6,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0027",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91329819516802,
+      "lng": -43.18040658130062,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.248967",
+    "dia_semana": "sab",
+    "hora": 22,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0028",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.912040331220137,
+      "lng": -43.180979404750765,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.248969",
+    "dia_semana": "sex",
+    "hora": 2,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0029",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.910774751553756,
+      "lng": -43.18001828886181,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.248972",
+    "dia_semana": "sab",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0030",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.913564089942597,
+      "lng": -43.18078889087929,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.248974",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0031",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.913212493862368,
+      "lng": -43.17822815278731,
+      "descricao": null
+    },
+    "data_hora": "2026-05-15T12:56:27.248976",
+    "dia_semana": "sab",
+    "hora": 2,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0032",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.912275322200003,
+      "lng": -43.18115008913349,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.248978",
+    "dia_semana": "sab",
+    "hora": 2,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0033",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91290340868904,
+      "lng": -43.179233227083465,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.248981",
+    "dia_semana": "sab",
+    "hora": 3,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0034",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.913256672875097,
+      "lng": -43.179157819314845,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.248983",
+    "dia_semana": "sex",
+    "hora": 2,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0035",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91246111967063,
+      "lng": -43.18058832495189,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.248985",
+    "dia_semana": "dom",
+    "hora": 1,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0036",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91214395036532,
+      "lng": -43.17951733968127,
+      "descricao": null
+    },
+    "data_hora": "2026-04-07T12:56:27.248988",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0037",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91167239427033,
+      "lng": -43.17859703678963,
+      "descricao": null
+    },
+    "data_hora": "2026-04-24T12:56:27.249001",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0038",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91302539888602,
+      "lng": -43.178281268117225,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.249003",
+    "dia_semana": "ter",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0039",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91201853722929,
+      "lng": -43.17839654383222,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.249005",
+    "dia_semana": "sex",
+    "hora": 1,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0040",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91282864204402,
+      "lng": -43.18033710897515,
+      "descricao": null
+    },
+    "data_hora": "2026-04-01T12:56:27.249008",
+    "dia_semana": "sab",
+    "hora": 12,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0041",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911216144889476,
+      "lng": -43.180386601834,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.249010",
+    "dia_semana": "sab",
+    "hora": 3,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0042",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91169049810532,
+      "lng": -43.1796068755308,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.249012",
+    "dia_semana": "sex",
+    "hora": 2,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0043",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.910806443698323,
+      "lng": -43.1782662678645,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.249015",
+    "dia_semana": "sab",
+    "hora": 1,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0044",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91284375397609,
+      "lng": -43.18102251224127,
+      "descricao": null
+    },
+    "data_hora": "2026-04-05T12:56:27.249017",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0045",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.912446345053265,
+      "lng": -43.17868718533272,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.249019",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0046",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.91367219849456,
+      "lng": -43.179496114394006,
+      "descricao": null
+    },
+    "data_hora": "2026-03-25T12:56:27.249022",
+    "dia_semana": "sab",
+    "hora": 23,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0047",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911146820784264,
+      "lng": -43.17979593769298,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.249024",
+    "dia_semana": "ter",
+    "hora": 3,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0048",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911490146313522,
+      "lng": -43.178827697006724,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.249026",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0049",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.91215415802312,
+      "lng": -43.18093978669045,
+      "descricao": null
+    },
+    "data_hora": "2026-03-27T12:56:27.249029",
+    "dia_semana": "sex",
+    "hora": 3,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0050",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.912993436241592,
+      "lng": -43.17893873004465,
+      "descricao": null
+    },
+    "data_hora": "2026-05-23T12:56:27.249031",
+    "dia_semana": "sex",
+    "hora": 23,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0051",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911696641655602,
+      "lng": -43.17980381502717,
+      "descricao": null
+    },
+    "data_hora": "2026-04-09T12:56:27.249033",
+    "dia_semana": "sex",
+    "hora": 0,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0052",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.911856123655568,
+      "lng": -43.18054261419719,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.249036",
+    "dia_semana": "sab",
+    "hora": 3,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0053",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911414421140087,
+      "lng": -43.17915897424024,
+      "descricao": null
+    },
+    "data_hora": "2026-03-26T12:56:27.249038",
+    "dia_semana": "sab",
+    "hora": 2,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_lapa_01_0054",
+    "poligono_fm_id": "lapa_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.911213677838123,
+      "lng": -43.178491335519276,
+      "descricao": null
+    },
+    "data_hora": "2026-05-19T12:56:27.249040",
+    "dia_semana": "sab",
+    "hora": 0,
+    "descricao_modus": "Saidinha de bar com apoio de moto"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0000",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901927175066646,
+      "lng": -43.280668873937906,
+      "descricao": null
+    },
+    "data_hora": "2026-05-16T12:56:27.249043",
+    "dia_semana": "seg",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0001",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.900030159760526,
+      "lng": -43.281012153870144,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.249045",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0002",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.899396251603346,
+      "lng": -43.28199294256152,
+      "descricao": null
+    },
+    "data_hora": "2026-05-01T12:56:27.249047",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0003",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.899221430204257,
+      "lng": -43.28105256114345,
+      "descricao": null
+    },
+    "data_hora": "2026-04-04T12:56:27.249050",
+    "dia_semana": "qui",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0004",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.90166457911299,
+      "lng": -43.28058822454081,
+      "descricao": null
+    },
+    "data_hora": "2026-04-12T12:56:27.249052",
+    "dia_semana": "qua",
+    "hora": 18,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0005",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.90060419917451,
+      "lng": -43.27972991868788,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.249054",
+    "dia_semana": "seg",
+    "hora": 0,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0006",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.90147800111757,
+      "lng": -43.28199812729134,
+      "descricao": null
+    },
+    "data_hora": "2026-05-21T12:56:27.249058",
+    "dia_semana": "qui",
+    "hora": 17,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0007",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.900883111565538,
+      "lng": -43.28058072057328,
+      "descricao": null
+    },
+    "data_hora": "2026-05-08T12:56:27.249060",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0008",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.90148928789567,
+      "lng": -43.27957122503348,
+      "descricao": null
+    },
+    "data_hora": "2026-05-09T12:56:27.249062",
+    "dia_semana": "seg",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0009",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.90053244800205,
+      "lng": -43.28205934770914,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.249065",
+    "dia_semana": "qui",
+    "hora": 17,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0010",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901752347176526,
+      "lng": -43.28107061943448,
+      "descricao": null
+    },
+    "data_hora": "2026-04-09T12:56:27.249067",
+    "dia_semana": "qui",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0011",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.90051284215124,
+      "lng": -43.279296641434364,
+      "descricao": null
+    },
+    "data_hora": "2026-04-02T12:56:27.249069",
+    "dia_semana": "seg",
+    "hora": 18,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0012",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.89965859984224,
+      "lng": -43.281922608010426,
+      "descricao": null
+    },
+    "data_hora": "2026-04-12T12:56:27.249072",
+    "dia_semana": "seg",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0013",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.89978604814645,
+      "lng": -43.280437248933524,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.249074",
+    "dia_semana": "qui",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0014",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.899388520710392,
+      "lng": -43.27931376733166,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.249076",
+    "dia_semana": "seg",
+    "hora": 10,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0015",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.89945462062122,
+      "lng": -43.280543762122356,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.249079",
+    "dia_semana": "qua",
+    "hora": 22,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0016",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.900801987799287,
+      "lng": -43.27979155013454,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.249081",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0017",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.900512425817606,
+      "lng": -43.28153617770506,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.249083",
+    "dia_semana": "qui",
+    "hora": 11,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0018",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.901210404142066,
+      "lng": -43.28106048067578,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.249085",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0019",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.900817513004657,
+      "lng": -43.28000168328893,
+      "descricao": null
+    },
+    "data_hora": "2026-05-07T12:56:27.249088",
+    "dia_semana": "sex",
+    "hora": 10,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0020",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.8993644356664,
+      "lng": -43.28019535336983,
+      "descricao": null
+    },
+    "data_hora": "2026-04-20T12:56:27.249090",
+    "dia_semana": "sex",
+    "hora": 17,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0021",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.90108039792194,
+      "lng": -43.280346494292374,
+      "descricao": null
+    },
+    "data_hora": "2026-05-23T12:56:27.249093",
+    "dia_semana": "sex",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0022",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.90214982155719,
+      "lng": -43.28003342183513,
+      "descricao": null
+    },
+    "data_hora": "2026-05-23T12:56:27.249095",
+    "dia_semana": "qui",
+    "hora": 17,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0023",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.899445853466624,
+      "lng": -43.28062684379633,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.249098",
+    "dia_semana": "sex",
+    "hora": 21,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0024",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.90108084524961,
+      "lng": -43.28098191777038,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.249101",
+    "dia_semana": "qui",
+    "hora": 8,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0025",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.900984165105687,
+      "lng": -43.28106849129455,
+      "descricao": null
+    },
+    "data_hora": "2026-04-12T12:56:27.249103",
+    "dia_semana": "seg",
+    "hora": 17,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0026",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.90050243011615,
+      "lng": -43.27962611905991,
+      "descricao": null
+    },
+    "data_hora": "2026-03-30T12:56:27.249105",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0027",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.900146713769608,
+      "lng": -43.28135888095873,
+      "descricao": null
+    },
+    "data_hora": "2026-05-06T12:56:27.249108",
+    "dia_semana": "seg",
+    "hora": 20,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0028",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.89994323659046,
+      "lng": -43.28006186580016,
+      "descricao": null
+    },
+    "data_hora": "2026-05-22T12:56:27.249110",
+    "dia_semana": "seg",
+    "hora": 10,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0029",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.89993317220644,
+      "lng": -43.2817801482173,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.249112",
+    "dia_semana": "seg",
+    "hora": 20,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0030",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901503567986815,
+      "lng": -43.2819719452603,
+      "descricao": null
+    },
+    "data_hora": "2026-05-20T12:56:27.249115",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0031",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.900728189631668,
+      "lng": -43.28113256640689,
+      "descricao": null
+    },
+    "data_hora": "2026-05-22T12:56:27.249117",
+    "dia_semana": "sex",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0032",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.900060674401967,
+      "lng": -43.281953885970985,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.249119",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0033",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.901925438713914,
+      "lng": -43.27937111931798,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.249122",
+    "dia_semana": "sex",
+    "hora": 20,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0034",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901890121217974,
+      "lng": -43.281931143474125,
+      "descricao": null
+    },
+    "data_hora": "2026-04-26T12:56:27.249124",
+    "dia_semana": "seg",
+    "hora": 18,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0035",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.899862492683127,
+      "lng": -43.2800254684679,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.249126",
+    "dia_semana": "qui",
+    "hora": 0,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0036",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.901783479823123,
+      "lng": -43.28129660620388,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.249128",
+    "dia_semana": "seg",
+    "hora": 18,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0037",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901444900786633,
+      "lng": -43.28146022979496,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.249131",
+    "dia_semana": "qui",
+    "hora": 19,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0038",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_comercio",
+    "modalidade_crime": "veiculo",
+    "coordenada": {
+      "lat": -22.901203348354066,
+      "lng": -43.28033942343638,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.249133",
+    "dia_semana": "seg",
+    "hora": 18,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_meier_01_0039",
+    "poligono_fm_id": "meier_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "motocicleta",
+    "coordenada": {
+      "lat": -22.900762970772814,
+      "lng": -43.28166708818605,
+      "descricao": null
+    },
+    "data_hora": "2026-05-04T12:56:27.249140",
+    "dia_semana": "qui",
+    "hora": 18,
+    "descricao_modus": "Roubo a comercio por motociclista"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0000",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.9240505164537,
+      "lng": -43.23382119461078,
+      "descricao": null
+    },
+    "data_hora": "2026-05-03T12:56:27.249143",
+    "dia_semana": "qui",
+    "hora": 7,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0001",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.923671075253747,
+      "lng": -43.234371054810914,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.249145",
+    "dia_semana": "sex",
+    "hora": 5,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0002",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92459999188104,
+      "lng": -43.23427393649699,
+      "descricao": null
+    },
+    "data_hora": "2026-04-10T12:56:27.249147",
+    "dia_semana": "dom",
+    "hora": 13,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0003",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92486906438984,
+      "lng": -43.23262783724885,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.249150",
+    "dia_semana": "qui",
+    "hora": 9,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0004",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92600098452016,
+      "lng": -43.23316196629306,
+      "descricao": null
+    },
+    "data_hora": "2026-05-17T12:56:27.249152",
+    "dia_semana": "qui",
+    "hora": 7,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0005",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.926468356681646,
+      "lng": -43.23422378488879,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.249155",
+    "dia_semana": "qui",
+    "hora": 10,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0006",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925110810374342,
+      "lng": -43.232961333537354,
+      "descricao": null
+    },
+    "data_hora": "2026-04-25T12:56:27.249157",
+    "dia_semana": "sex",
+    "hora": 7,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0007",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92400604676588,
+      "lng": -43.23280954783093,
+      "descricao": null
+    },
+    "data_hora": "2026-04-27T12:56:27.249159",
+    "dia_semana": "seg",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0008",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92433401817016,
+      "lng": -43.23364265842023,
+      "descricao": null
+    },
+    "data_hora": "2026-04-23T12:56:27.249161",
+    "dia_semana": "ter",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0009",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.923710232660536,
+      "lng": -43.23277853154591,
+      "descricao": null
+    },
+    "data_hora": "2026-04-12T12:56:27.249164",
+    "dia_semana": "seg",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0010",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92594083922415,
+      "lng": -43.23302807626652,
+      "descricao": null
+    },
+    "data_hora": "2026-05-09T12:56:27.249166",
+    "dia_semana": "qua",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0011",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.9258826465619,
+      "lng": -43.23274302351392,
+      "descricao": null
+    },
+    "data_hora": "2026-04-29T12:56:27.249168",
+    "dia_semana": "ter",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0012",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92590877717456,
+      "lng": -43.234658135087884,
+      "descricao": null
+    },
+    "data_hora": "2026-05-12T12:56:27.249171",
+    "dia_semana": "seg",
+    "hora": 9,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0013",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92544404522675,
+      "lng": -43.23362641824147,
+      "descricao": null
+    },
+    "data_hora": "2026-04-28T12:56:27.249173",
+    "dia_semana": "qua",
+    "hora": 9,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0014",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.926146415042016,
+      "lng": -43.234083859992396,
+      "descricao": null
+    },
+    "data_hora": "2026-05-18T12:56:27.249175",
+    "dia_semana": "qua",
+    "hora": 18,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0015",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925942738902123,
+      "lng": -43.233093495073824,
+      "descricao": null
+    },
+    "data_hora": "2026-05-15T12:56:27.249177",
+    "dia_semana": "sex",
+    "hora": 9,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0016",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925556259956018,
+      "lng": -43.23364699708776,
+      "descricao": null
+    },
+    "data_hora": "2026-05-05T12:56:27.249180",
+    "dia_semana": "ter",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0017",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925272596954898,
+      "lng": -43.233524822359925,
+      "descricao": null
+    },
+    "data_hora": "2026-04-01T12:56:27.249182",
+    "dia_semana": "seg",
+    "hora": 7,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0018",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.926401914739426,
+      "lng": -43.23432546975007,
+      "descricao": null
+    },
+    "data_hora": "2026-04-03T12:56:27.249184",
+    "dia_semana": "ter",
+    "hora": 7,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0019",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925696333271823,
+      "lng": -43.23337068145372,
+      "descricao": null
+    },
+    "data_hora": "2026-04-18T12:56:27.249186",
+    "dia_semana": "sex",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0020",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.926192750683366,
+      "lng": -43.23250978785037,
+      "descricao": null
+    },
+    "data_hora": "2026-04-19T12:56:27.249189",
+    "dia_semana": "seg",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0021",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.923904128588873,
+      "lng": -43.234647841920506,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.249191",
+    "dia_semana": "seg",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0022",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.924651546400654,
+      "lng": -43.23264545207009,
+      "descricao": null
+    },
+    "data_hora": "2026-04-14T12:56:27.249194",
+    "dia_semana": "sex",
+    "hora": 9,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0023",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92356299953079,
+      "lng": -43.23412209590623,
+      "descricao": null
+    },
+    "data_hora": "2026-04-15T12:56:27.249196",
+    "dia_semana": "qui",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0024",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.923611684015018,
+      "lng": -43.23264292685513,
+      "descricao": null
+    },
+    "data_hora": "2026-04-01T12:56:27.249199",
+    "dia_semana": "qui",
+    "hora": 21,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0025",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.926061269669727,
+      "lng": -43.23403370986517,
+      "descricao": null
+    },
+    "data_hora": "2026-03-29T12:56:27.249201",
+    "dia_semana": "sab",
+    "hora": 9,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0026",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.925374483016462,
+      "lng": -43.234773451180004,
+      "descricao": null
+    },
+    "data_hora": "2026-04-13T12:56:27.249203",
+    "dia_semana": "qua",
+    "hora": 9,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0027",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.923649237763403,
+      "lng": -43.23401813215952,
+      "descricao": null
+    },
+    "data_hora": "2026-04-09T12:56:27.249205",
+    "dia_semana": "qui",
+    "hora": 8,
+    "descricao_modus": "Roubo na saida do metro"
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0028",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_transeunte",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.924112966220058,
+      "lng": -43.23380685239543,
+      "descricao": null
+    },
+    "data_hora": "2026-04-13T12:56:27.249208",
+    "dia_semana": "seg",
+    "hora": 8,
+    "descricao_modus": null
+  },
+  {
+    "ocorrencia_id": "oco_tijuca_01_0029",
+    "poligono_fm_id": "tijuca_01",
+    "tipo": "roubo_celular",
+    "modalidade_crime": "a_pe",
+    "coordenada": {
+      "lat": -22.92413508903957,
+      "lng": -43.23231753602588,
+      "descricao": null
+    },
+    "data_hora": "2026-05-02T12:56:27.249210",
+    "dia_semana": "qua",
+    "hora": 8,
+    "descricao_modus": null
+  }
+]
