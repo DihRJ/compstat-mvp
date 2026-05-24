@@ -61,30 +61,6 @@
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2026-03-02T17:49:00",
-    "texto": "NA RUA MENCIONADA PROXIMO AO N 168 CENTO E SESSENTA E OITO LOCALIZASE UM TERRENO ONDE FREQUENTEMENTE ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS QUE INVADEM O LOCAL PARA USAR DROGAS E QUEIMAR FIOS ROUBADOS E OUTROS MATERIAIS INFORMA QUE ESSES INDIVIDUOS FREQUENTEMENTE AMEACAM OS MORADORES DA LOCALIDADE",
-    "local_mencionado": {
-      "lat": -22.9181492,
-      "lng": -43.2118415,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2026-02-27T21:04:00",
-    "texto": "NA RUA CITADA ALTURA DO N 547 QUINHENTOS E QUARENTA E [NOME] ESQUINA COM RUA JACUMA E PROXIMO A UM POSTO DE COMBUSTIVEL VARIOS INDIVIDUOS NAO IDENTIFICADOS SE REUNEM TODOS OS [NOME] EM HORARIOS DIVERSOS PARA FAZEREM USO DE ENTORPECENTES CAUSANDO MUITO BARULHO E BADERNA INCOMODANDO OS MORADORES NAO IDENTIFICADOS DA LOCALIDADE",
-    "local_mencionado": {
-      "lat": -22.9205856,
-      "lng": -43.2126386,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
     "data_recebimento": "2026-02-18T09:27:00",
     "texto": "NA RUA CITADA ESQUINA COM A RUA JACUMA DIARIAMENTE A QUALQUER HORARIO PODEM SER VISTOS INDIVIDUOS NAO IDENTIFICADOS USANDO ENTORPECENTES ESPALHANDO LIXOS [NOME] RUA E FURTANDO TRANSEUNTES E SEMPRE APARECEM COM BICICLETA DO ITAU NO LOCAL [NOME] INFORMACOES ELES PRATICAM RELACOES SEXUAIS NA RUA NA FRENTE DE PESSOAS",
     "local_mencionado": {
@@ -130,18 +106,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-12-28T06:16:00",
-    "texto": "NA RUA CITADA ALTURA DO N 575 QUINHENTOS E SETENTA E CINCO NESTE MOMENTO HA MUITO LIXO ACUMULADO QUE ESTAO ESPALHADOS [NOME] METADE DA RUA E NA CALCADA ATRAPALHANDO A PASSAGEM DE VEICULOS E DE PEDESTRES [NOME] RELATOS USUARIOS DE DROGAS NAO IDENTIFICADOS QUE ESPALHARAM OS LIXOS E OS MESMOS ESTAO FURTANDO HIDROMETROS E TAMPAS DE BUEIROS [NOME] LOCALIDADE",
-    "local_mencionado": {
-      "lat": -22.9239006,
-      "lng": -43.2188378,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
@@ -229,54 +193,6 @@
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-10-18T11:42:00",
-    "texto": "NA RUA CITADA PROXIMO A RUA [NOME] DE FROTEM USUARIOS DE ENTORPECENTES ESTAO FURTANDO PORTOES TAMPA DE BUEIRO FIOS DE COBRE E MEDIDORES",
-    "local_mencionado": {
-      "lat": -22.9149937,
-      "lng": -43.211178,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-10-18T10:13:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA DO MATOSO ENCONTRASE USUARIOS DE ENTORPECENTES QUE ESTAO FURTANDO FIOS DE COBRE CAIXAS DE CORREIO E INVADINDO RESIDENCIAS PELO TELHADO",
-    "local_mencionado": {
-      "lat": -22.9149937,
-      "lng": -43.211178,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-09-24T13:43:00",
-    "texto": "NA AVENIDA CITADA PROXIMO AO HOSPITAL DO CORPO DE BOMBEIROS A PRACA DO RIO COMPRIDO TAMBEM A IGREJA DE SAO [NOME] E A UMA CLINICA GERIATRICA LOCALIZAMSE INDIVIDUOS NAO IDENTIFICADOS QUE ESTAO SE AGLOMERANDO CADA VEZ MAIS NESSA LOCALIDADE PARA CONSUMO DE CRACK ALEM DISSO MUITAS CRIANCAS E ADOLESCENTES PASSAM POR ESSA AREA E SE DEPARAM COM ESSA SITUACAO",
-    "local_mencionado": {
-      "lat": -22.9190247,
-      "lng": -43.2103811,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-09-08T14:21:00",
-    "texto": "NA RUA CITADA NA CALCADA EM FRENTE AO COLEGIO INSTITUTO [NOME] NESTE MOMENTO UM HOMEM NAO IDENTIFICADO ESTA COMETENDO AGRESSOES FISICAS A UMA MULHER NAO IDENTIFICADA PROMOVENDO XINGAMENTOS E CONSUMINDO DROGAS INFORMA SE UM CASAL EM SITUACAO DE RUA QUE ESTA HA [NOME] NESTE LOCAL",
-    "local_mencionado": {
-      "lat": -22.917278,
-      "lng": -43.2177663,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
     "data_recebimento": "2025-08-26T17:34:00",
     "texto": "NA RUA CITADA EM FRENTE AO COLEGIO ESTADUAL [NOME] DE FRONTIN ADOLESCENTES NAO IDENTIFICADOS INCLUSIVE UNIFORMIZADOS ESTAO ASSALTANDO NESTE MOMENTO NO LOCAL",
     "local_mencionado": {
@@ -286,18 +202,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-08-19T12:05:00",
-    "texto": "NA RUA CITADA EM FRENTE A UM BAR ONDE E POSSIVEL ENCONTRAR DIARIAMENTE DOIS MORADORES DE RUA NAO IDENTIFICADOS QUE SAO USUARIOS DE DROGAS INVADEM E FURTAM COMERCIOS NA MADRUGADA",
-    "local_mencionado": {
-      "lat": -22.9135341,
-      "lng": -43.2158887,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
@@ -322,18 +226,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-08-08T14:31:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 67 SESSENTA E [NOME] ESQUINA COM A RUA BARAO DE ITAPAGIPE DIVERSOS INDIVIDUOS NAO IDENTIFICADOS USUARIO DE DROGAS SE AGLOMERAM NO LOCAL PARA CONSUMIR AS SUBSTANCIAS [NOME] INFORMACOES O FERRO VELHO CLANDESTINO NO FINAL DA RUA COMPRA MERCADORIA ROUBADA E FIOS DE COBRE FURTADOS PARA COMERCIALIZACAO TROCANDO POR ENTORPECENTES PARA OS USUARIOS QUE PERMANECEM NO LOCAL DURANTE TODO O DIA FAZENDO BARULHO E BADERNA PERTURBANDO A PAZ DE MORADORES",
-    "local_mencionado": {
-      "lat": -22.9255745,
-      "lng": -43.2223543,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
@@ -457,30 +349,6 @@
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-05-07T22:36:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA [NOME] E DOUTOR SATAMINI EM FRENTE O N17 [NOME] NESTE MOMENTO USUARIOS DE DROGAS ESTAO ABORDANDO OS TRANSEUNTES DE FORMA AGRESSIVA",
-    "local_mencionado": {
-      "lat": -22.9138307,
-      "lng": -43.2129778,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2025-03-07T09:44:00",
-    "texto": "NA RUA CITADA NA PRACA [NOME] PENA INDIVIDUOS NAO IDENTIFICADOS ENTREGADORES EM BICICLETAS E MOTOCICLETAS DE MODELO COR E PLACA NAO CITADAS FAZEM O USO DE ENTORPECENTES NO LOCAL E UTILIZAM AS CALCADAS PARA ESTACIONAR SEUS VEICULOS",
-    "local_mencionado": {
-      "lat": -22.9184846,
-      "lng": -43.217888,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
     "data_recebimento": "2025-02-22T15:50:00",
     "texto": "NA RUA CITADA PROXIMO A UMA PRACA DOIS INDIVIDUOS NAO IDENTIFICADOS ARMADOS EM UMA  MOTOCICLETA NORMALMENTE DURANTE AS MANHAS TEM ASSALTADO OS MORADORES ELES ABORDAM AS PESSOAS E LEVAM SEUS PERTENCES",
     "local_mencionado": {
@@ -541,18 +409,6 @@
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2024-06-19T20:30:00",
-    "texto": "NA RUA CITADA EM FRENTE AO N 562 QUINHENTOS E SESSENTA E DOIS ESQUINA COM A RUA JACUMA PODEM SER VISTOS TODOS OS [NOME] ENTRE 19H E 23H SEIS USUARIOS DE ENTORPECENTES CONSUMINDO AS DROGAS NA FRENTE DE QUALQUER [NOME]",
-    "local_mencionado": {
-      "lat": -22.9244603,
-      "lng": -43.2217176,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
     "data_recebimento": "2024-05-27T15:58:00",
     "texto": "NA RUA CITADA PROXIMO DA RUA HADDOCK LOBO FREQUENTEMENTE ENTRE 1H E 3H DA MADRUGADA DOIS INDIVIDUOS NAO IDENTIFICADOS PORTANDO PISTOLAS ESTAO ASSALTANDO TRANSEUNTES E MOTORISTAS DA LOCALIDADE CITA QUE OS MESMOS FOGEM SENTIDO MORRO DO SAO [NOME]",
     "local_mencionado": {
@@ -574,18 +430,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "estacoes_sao_francis_19",
-    "data_recebimento": "2024-01-24T15:04:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA [NOME] DE [NOME] HA UMA LOJA FECHADA ONDE FUNCIONAVA O ANTIGO BAR SIROCO CUJA MARQUISE HA UM CASAL DE MORADORES DE RUA QUE ALI DORMEM E QUE FREQUENTEMENTE FAZEM AMEACAS DE AGRESSAO AOS PEDESTRES QUE ALI PASSEM CASO NAO LHES DEEM ALGUMA DINHEIRO ESTE CASAL EM QUESTAO COSTUMA FAZER O USO DE CRACK",
-    "local_mencionado": {
-      "lat": -22.9220834,
-      "lng": -43.2258078,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "estacoes_sao_francis_19",
@@ -625,18 +469,6 @@
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2025-12-19T12:31:00",
-    "texto": "NA RUA MENCIONADA PROXIMO A UMA CASA DE FESTAS NAO DENOMINADA ALTURA DO N 20 VINTE SITUASE UM QUIOSQUE NAO DENOMINADO CUJO PROPRIETARIO IGNORADO NAO POSSUI AS DEVIDAS AUTORIZACOES PARA O FUNCIONAMENTO DISPOEM MESAS E CADEIRA SOBRE A CALCADA QUE DIFICULTA A PASSAGEM DE PEDESTRES NO LOCAL CITA TAMBEM QUE NO LOCAL HA A VENDA E CONSUMO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9037069,
-      "lng": -43.5579001,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
     "data_recebimento": "2025-11-10T18:47:00",
     "texto": "NO ENDERECO CITADO LOCALIZASE O ESTACIONAMENTO OPEN PARK ONDE PODEM SER ENCONTRADOS MERCADORIAS E PRODUTOS IMPORTADOS SEM NOTAL FISCAL SUSPEITO DE ROUBO DOS CAMELOS DO CALCADAO DE CAMPO GRANDE",
     "local_mencionado": {
@@ -646,42 +478,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2025-07-13T11:22:00",
-    "texto": "NO ENDERECO MENCIONADO PROXIMO A FUNDACAO EDUCACIONAL UNIFICADA CAMPO GRANDENSE LOCALIZASE UM TERRENO QUE E USADO COMO POSTO DE SAUDE DA PREFEITURA ONDE A PROPRIETARIA ELOA E SUA [NOME] CONHECIDA COMO BEBEL FREQUENTEMENTE ALUGAM O ESPACO PARA EVENTOS QUE FICAM ATE DE MANHA COM SOM ALTO BADERNA BRIGAS E CONSUMO DE DROGAS TAMBEM HA PRESENCA DE MILICIANOS NAO IDENTIFICADOS QUE CHEGAM NO LOCAL ARMADOS",
-    "local_mencionado": {
-      "lat": -22.8983065,
-      "lng": -43.5531397,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2025-06-26T15:40:00",
-    "texto": "NO ENDERECO MENCIONADO AO LADO DO TEATRO [NOME] LOCALIZASE UM PREDIO DE QUATRO ANDARES ONDE NO APARTAMENTO N 303 TREZENTOS E TRES DIARIAMENTE PODE SER ENCONTRADO O RODNEY DE [NOME] COM PASSAGEM [NOME] POLICIA CONSUMINDO DROGAS E QUANDO DROGADO AMEACANDO MORADORES NAO IDENTIFICADOS",
-    "local_mencionado": {
-      "lat": -22.8999345,
-      "lng": -43.5631272,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2025-04-07T18:59:00",
-    "texto": "NO ENDERECO CITADO ESQUINA COM A ESTRADA DA REPRESA LOCALIZASE UMA KITNET ONDE RESIDE [NOME] QUE ESTA NESTE MOMENTO NO LOCAL E E FORAGIDO DA JUSTICA POR FALTA DE PAGAMENTO DE PENSAO ALIMENTICIA INFORMA QUE ELE E USUARIO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.900438,
-      "lng": -43.5518496,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
@@ -697,42 +493,6 @@
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2024-09-16T20:44:00",
-    "texto": "NO ENDERECO CITADO DENTRO DO TERMINAL RODOVIARIO DE CAMPO GRANDE AO LADO DO CAFE CAMERA NO BAR DA LOIRA TODOS OS [NOME] 24H FUNCIONA UM BINGO CLANDESTINO COM MAIS DE VINTE MAQUINAS CACANIQUEIS E PESSOAS COSUMINDO DROGAS A RESPONSAVEL PELO BAR E A [NOME] NAO CARACTERIZADA QUE PODE SER ENCONTRADA NO LOCAL TODO OS [NOME] DAS 09H AS 11H",
-    "local_mencionado": {
-      "lat": -22.901867,
-      "lng": -43.5552166,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-12-14T17:42:00",
-    "texto": "NA PRACA CITADA EM FRENTE A IGREJA CATOLICA PAROQUIA NOSSA SENHORA DO DESTERRO DIARIAMENTE DE 17H ATE CERCA DE 2H OS MORADORES DE RUA [NOME] DE PELE MORENA E BAIXA ESTATURA JUNTAMENTE COM O VULGO CHUCK DE PELE NEGRA E ESTATUARA BAIXA [NOME] DE PELE NEGRA E ESTATURA BAIXA E [NOME] DE VULGO SORRISO DE PELE BRANCA E ESTATURA ALTA SAO VISTOS AGREDINDO E AMEACANDO POPULARES QUE VAO ATE LA PARA RECEBER DOACOES DE ALIMENTOS FEITAS ATRAVES DE CARREATAS PROMOVIDAS [NOME] IGREJA [NOME] RELATOS OS INDIVIDUOS USAM  FACAS NAS AMEACAS QUE FICAM ESCONDIDAS EM BUEIROS LOCALIZADOS NA PRACA ACRESCENTA QUE O USO DE DROGAS NA LOCALIDADE E INTENSO",
-    "local_mencionado": {
-      "lat": -22.9056641,
-      "lng": -43.5615601,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-08-24T10:17:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA [NOME] PROXIMO DA RODOVIARIA DE CAMPO GRANDE ONDE CONSTANTEMENTE NO PERIODO DA NOITE HA UM GRANDE CONCENTRACAO DE MORADORES DE RUA CONSUMINDO ENTORPECENTES OS QUAIS SEMPRE PORTAM FACAS PARA ASSALTAREM OS TRANSEUNTES QUE POR ALI PASSEM ESTAS FACAS FICAM ESCONDIDAS NAS MURETAS OU BUEIROS DO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9031815,
-      "lng": -43.5565496,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
     "data_recebimento": "2023-08-15T16:53:00",
     "texto": "NA RUA CITADA NO CALCADAO DE CAMPO GRANDE TEM SIDO VISTO COM FREQUENCIA EM HORARIOS ALTERNADOSUM INDIVIDUO CARACTERIZADO QUE ANDA COM UMA MOCHILA NAS COSTAS ONDE ELE GUARDA UMA TESOURA DE CORTAR CORRENTES QUE ESTA ROUBANDO AS BICICLETAS DOS TRANSEUNTES QUE ESTEJAM ESTACIONADAS TRANCADAS HOJE 15082023 POR VOLTA DAS 16H ELE TENTOU CORTAR A CORRENTE DE UMA BICICLETA EM FRENTE A UMA FARMACIA MAS FOI IMPEDIDO POR TERCEIROS ESTE INDIVIDUO LEVA AS BICICLETAS PARA VENDER NA [NOME] DE CAMPO GRANDE",
     "local_mencionado": {
@@ -742,18 +502,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-08-14T10:20:00",
-    "texto": "NO ENDERECO CITADO SITUA O SITIO CASA BOSQUE CUJOS RESPONSAVEIS NAO IDENTIFICADOS TODOS OS FINAIS DE SEMANA PROMOVEM EVENTOS FESTIVOS COM INGRESSOS PAGOS A PARTIR DAS 21H  CUJOS PARTICIPANTES FAZEM O USO DE ENTORPECENTES E PROMOVEM MUITA BADERNA E BRIGAS NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.8983065,
-      "lng": -43.5531397,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
@@ -790,54 +538,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-05-05T13:55:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA [NOME] PROXIMO DA RODOVIARIA DE CAMPO GRANDE ONDE DIARIAMENTE NO PERIODO DA NOITE E MADRUGADA SEMPRE FICAM GRUPOS DE MORADORES DE RUA CONSUMINDO ENTORPECENTES E AMEACANDO OS TRANSEUNTES",
-    "local_mencionado": {
-      "lat": -22.9031815,
-      "lng": -43.5565496,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-05-03T21:38:00",
-    "texto": "NO ENDERECO CITADO PROXIMO A PADARIA BIG BIG LOCALIZASE O BAR DA MANGUEIRA ONDE DIARIAMENTE DAS 16H ATE DE MADRUGADA PERMANECE UM GRUPO DE APROXIMADAMENTE DEZ TRAFICANTES NAO IDENTIFICADOS ARMADOS COM PISTOLAS ENQUANTO COMERCIALIZAM E CONSOMEM DROGAS NO ESTABELECIMENTO HA MAIS DE UM ANO",
-    "local_mencionado": {
-      "lat": -22.9010103,
-      "lng": -43.5543926,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-04-19T14:00:00",
-    "texto": "NO ENDERECO CITADO PROXIMO A UM DEPOSITO DE GAS LOCALIZASE UMA [NOME] DE CASAS ONDE DIARIAMENTE DURANTE TODO O DIA PODEM SER ENCONTRADOS INDIVIDUOS NAO IDENTIFICADOS COMERCIALIZANDO E CONSUMINDO ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.900542,
-      "lng": -43.5542902,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2023-03-24T10:06:00",
-    "texto": "NA RUA CITADA ESQUINA COM RUA LUCILIA NA FRENTE DO ANTIGO COLEGIO SOMEC LOCALIZASE UMA CALCADA AMPLA ONDE DE SEGUNDAFEIRA A SABADO DE 8H30 AS 18H PODE SER VISTO UM INDIVIDUO CONHECIDO COMO RUSSO EXTORQUINDO MOTORISTAS QUE ESTACIONAM NA CALCADA MENCIONA QUE RUSSO SE DIZ INTEGRANTE DE UMA MILICIA E APROVEITA A SITUACAO PARA ANOTAR AS PLACAS E PROFERIR AMEACAS A QUEM SE RECUSA A PAGAR O VALOR DE R 500 [NOME] VAGA ACRESCENTA QUE NA CALCADA TAMBEM FOI INSTALADA ILEGALMENTE UMA PEQUENA GUARITA ONDE A NOITE FICAM REUNIDOS USUARIOS DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9023262,
-      "lng": -43.5602388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
@@ -901,30 +601,6 @@
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2022-06-28T18:15:00",
-    "texto": "NO ENDERECO CITADO PERTO DA ESTRADA [NOME] LOCALIZASE UM IMOVEL QUE FOI INVADIDO POR UM USUARIO DE DROGAS QUE ESTA RESIDINDO NO LOCAL O MESMO PEGA ANIMAIS DE RUA E LEVA PARA O IMOVEL ONDE OS ANIMAIS SOFREM MAUS TRATOS PASSAM FOME COME FEZES  VIVEM EM UM AMBIENTE SUJO E COM AS FEMEAS ELE [NOME] ZOOFILIA",
-    "local_mencionado": {
-      "lat": -22.9040488,
-      "lng": -43.5595763,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2022-06-20T20:34:00",
-    "texto": "NA RUA CITADA NAS IMEDIACOES DA RODOVIARIA PODEM SER ENCONTRADOS TODOS OS [NOME] ALGUNS MORADORES NAO IDENTIFICADOS CONSUMINDO DROGAS A NOITE POR VOLTA DAS 20H SAO DISTRIBUIDAS QUENTINHAS EM FRENTE A LOJA MARRAFAS ESPORTE ONDE A MULHER [NOME] JUNTO COM ANDERSON VULGO CHUCK E O VULGO [NOME] LEVA AS DROGAS PARA FORNECER AOS USUARIOS ELES ADQUIREM AS DROGAS EM UMA [NOME] DE SENADOR CAMARA HA CERCA DE DUAS SEMANAS CHUCK TENTOU MATAR UM MORADOR DE RUA NAO IDENTIFICADO QUE TEM PROBLEMAS MENTAIS ELE ESTA SEMPRE EM POSSE DE UMA FACAOBS ENVOLVIDOS NAO CARACTERIZADOS",
-    "local_mencionado": {
-      "lat": -22.9031815,
-      "lng": -43.5565496,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
     "data_recebimento": "2021-06-23T09:50:00",
     "texto": "NO ENDERECO CITADO APOS O RESTAURANTE POPULAR SITUASE A EMPRESA ATENTTO E EM FRENTE [NOME] VARIOS INDIVIDUOS ARMADOS CONDUZINDO UM AUTO NAO DESCRITO NA COR BRANCA E PLACA IGNORADA ASSALTAVAM OS TRANSEUNTES QUE PASSAVAM EM FRENTE DA EMPRESA EM QUESTAO ONTEM 220621 DOIS INDIVIDUOS CONDUZINDO MOTOS E UM DELES VESTIA A CAMISA DO FLAMENGO OS ASSALTOS OCORREM ENTRE 11H E 17H OU AS 19H NAO SE VE POLICIAMENTO NO LOCAL",
     "local_mencionado": {
@@ -934,54 +610,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2021-05-20T20:27:00",
-    "texto": "NA RUA CITADA NO PONTO FINAL DAS VANS AO LADO DO SENAC SITUASE UM BAR ONDE DIARIAMENTE FUNCIONAM CERCA QUINZE MAQUINAS CACANIQUEIS COM CONSUMO DE DROGAS O PROPRIETARIO BETO NAO FICA NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.8988613,
-      "lng": -43.558953,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2021-01-15T15:39:00",
-    "texto": "NO ENDERECO CITADO LOCALIZASE UM APARTAMENTO ONDE RESIDE A IDOSA [NOME] NAO CARACTERIZADA A QUAL SOFRE MAUS TRATOS POR PARTE DE SEU [NOME] NAO CARACTERIZADO RELATA QUE O MESMO A AGRIDE VERBAL E FISICAMENTE COM EMPURROES E XINGAMENTOS ALEM DE AMEACALA CONSTANTEMENTE ACRESCENTA INFORMANDO QUE [NOME] E ALCOOLATRA E USUARIO DE DROGAS E QUE AS AGRESSOES ACONTECEM JUSTAMENTE QUANDO ELE ESTA SOB OS EFEITOS DAS DROGAS",
-    "local_mencionado": {
-      "lat": -22.8979108,
-      "lng": -43.5506443,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2021-01-05T15:28:00",
-    "texto": "NO ENDERECO CITADO PROXIMO A FACULDADE FILOSOFIA LOCALIZASE UMA CASA ABANDONADA ONDE DIARIAMENTE DURANTE TODO O DIA PODEM SER ENCONTRADOS INDIVIDUOS NAO IDENTIFICADOS QUEIMANDO MADEIRA EXALANDO MUITA FUMACA PREJUDICANDO A RESPIRACAO DOS MORADORES DA LOCALIDADE SUSPEITASE QUE ELES CONSOMEM ENTORPECENTES NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.899187,
-      "lng": -43.554952,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2020-11-18T21:40:00",
-    "texto": "NO ENDERECO CITADO ANTES DA ESTACAO DE [NOME] AO LADO DO CONDOMINIO OITI SITUASE A RESIDENCIA DE [NOME] E DE SEU COMPANHEIRO [NOME] USUARIOS DE ENTORPECENTES [NOME] TEM UM [NOME] NAO IDENTIFICADO DE 5 ANOS QUE APANHA MUITO A PONTO DE SER JOGADO NA PAREDE [NOME] E PADASTRO DA CRIANCA E PARTICIPA DO ESPANCAMENTO",
-    "local_mencionado": {
-      "lat": -22.8979089,
-      "lng": -43.5506355,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
@@ -1006,30 +634,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2019-06-25T09:47:00",
-    "texto": "NO ENDERECO MENCIONADO PROXIMO AO BAR DA [NOME] RESIDE [NOME] MICA UTILIZA MACONHA NA FRENTE DE CRIANCAS NAO IDENTIFICADAS E POSSUI UMA PLANTACAO NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.900748,
-      "lng": -43.555408,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "campo_grande_estacao_11",
-    "data_recebimento": "2019-06-08T20:03:00",
-    "texto": "NA RUA CITADA EM FRENTE DA POLICAMP CENTRO MEDICO NO ESTACIONAMENTO DA PAROQUIA NOSSA SENHORA DO DESTERRO DURANTE A NOITE COM MAIS FREQUENCIA NOS FINAIS DE SEMANA INDIVIDUOS NAO IDENTIFICADOS  UTILIZAM O LOCAL PARA CONSUMO DE ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.9046406,
-      "lng": -43.5629116,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "campo_grande_estacao_11",
@@ -1066,102 +670,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2026-02-25T16:48:00",
-    "texto": "NA RUA CITADA PROXIMO AOS SUPERMERCADOS MUNDIAL LOCALIZAMSE INDIVIDUOS NAO IDENTIFICADOS ESTAO NO LOCAL FAZENDO USO DE DROGAS E COAGINDO QUEM TRANSITA PELAS IMEDIACOES",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2026-02-24T19:46:00",
-    "texto": "NO ENDERECO MENCIONADO NESTE MOMENTO INDIVIDUOS NAO IDENTIFICADOS ESTAO COM SOM ALTO E USANDO ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.9565682,
-      "lng": -43.1927859,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2026-02-18T13:41:00",
-    "texto": "NA RUA CITADA EM FRENTE AO N 465 QUATROCENTOS E SESSENTA E CINCO E EM FRENTE A PAROQUIA NOSSA SENHORA [NOME] ENCONTRAMSE DIARIAMENTE UM HOMEM E UMA MULHER NAO IDENTIFICADOS EM SITUACAO DE RUA QUE SAO USUARIOS DE DROGAS E QUANDO ESTAO SOB EFEITO DE ENTORPECENTES ESPANCAM UM CAO QUE VIVE COM ELES NO LOCAL E JA ESTA COM MUITOS FERIMENTOS",
-    "local_mencionado": {
-      "lat": -22.9552367,
-      "lng": -43.1952513,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-12-18T19:23:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 229 DUZENTOS E VINTE E NOVE ENCONTRASE UM MORADOR DE RUA NAO IDENTIFICADO USUARIO DE DROGAS QUE E ENCONTRADO NO LOCAL CITADO TODOS OS [NOME] EM QUALQUER HORARIO E QUE POSSUI UM CACHORRO DE RACA NAO DEFINIDA NO QUAL PRATICA MAUS TRATOS AGREDINDO MUITO O ANIMAL",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-12-03T15:17:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 207 DUZENTOS E [NOME] NA CALCADA DO BANCO ITAU DIARIAMENTE ENCONTRAMSE USUARIOS DE DROGAS COMETENDO ASSALTOS A TRANSEUNTES E OBSTRUINDO A CALCADA COM COLCHOES E PAPELOES",
-    "local_mencionado": {
-      "lat": -22.9527217,
-      "lng": -43.1880723,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-11-21T08:27:00",
-    "texto": "NO ENDERECO CITADO ESQUINA COM A RUA MENA [NOME] LOCALIZASE UM FERRO VELHO ONDE SAO COMERCIALIZADOS PRODUTOS ROUBADOS QUE SAO COMPRADAS DE USUARIOS DE DROGAS NAO IDENTIFICADOS TODOS OS [NOME] MANHA POLICIAIS MILITARES NAO IDENTIFICADOS VAO AO LOCAL RECEBER PROPINA PARA MANTER O FUNCIONAMENTO DO FERRO VELHO",
-    "local_mencionado": {
-      "lat": -22.9550766,
-      "lng": -43.1888187,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-11-03T16:13:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 220 DUZENTOS E VINTE AO LADO DA DROGARIA [NOME] DIARIAMENTE NO PERIODO DA MANHA E TARDE PODE SER ENCONTRADO UM INDIVIDUO NAO IDENTIFICADO EM SITUACAO DE RUA CONSUMINDO ENTORPECENTES EM MEIO AOS TRANSEUNTES ALEM DISSO OS AMEACA E INTIMIDA SENTANDO NA FRENTE DA ENTRADA DOS PREDIOS E COMERCIOS",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-10-31T16:31:00",
-    "texto": "NA RUA CITADA NA CALCADA EM FRENTE AO N 220 DUZENTOS E VINTE PROXIMO AO PREZUNIC NESTE MOMENTO ENCONTRASE UM INDIVIDUO NAO IDENTIFICADO CONSUMINDO DROGAS E AMEACANDO TRANSEUNTES",
-    "local_mencionado": {
-      "lat": -22.9527217,
-      "lng": -43.1880723,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
@@ -1237,54 +745,6 @@
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-06-03T17:47:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA SAO [NOME] NESTE MOMENTO ENCONTRAMSE SEIS MORADORES DE RUA NAO IDENTIFICADOS USANDO ENTORPECENTES E SUJANDO AS RUAS COM LIXOS",
-    "local_mencionado": {
-      "lat": -22.9551263,
-      "lng": -43.1915283,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-06-02T21:56:00",
-    "texto": "NA RUA CITADA ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS QUE SAO USUARIOS DE CRACK ONDE DIARIAMENTE  ELES IMPORTUNAM OS MORADORES LOCAIS COM O CHEIRO E ALGAZARRA",
-    "local_mencionado": {
-      "lat": -22.9551263,
-      "lng": -43.1915283,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-06-02T21:56:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA SAO [NOME] DIARIAMENTE ENCONTRAMSE USUARIOS DE DROGAS QUE AMEACAM OS TRANSEUNTES",
-    "local_mencionado": {
-      "lat": -22.9551263,
-      "lng": -43.1915283,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-06-02T21:05:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA SAO [NOME] LOCALIZAMSE CONSTANTEMENTE CERCA DE QUATRO A SEIS INDIVIDUOS NAO IDENTIFICADOS QUE FICAM USANDO DROGAS NO LOCAL E TENTAM ASSALTAR OS PEDESTRES NAO IDENTIFICADOS E MORADORES NAO IDENTIFICADOS DA REGIAO",
-    "local_mencionado": {
-      "lat": -22.9551263,
-      "lng": -43.1915283,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_recebimento": "2025-05-22T11:40:00",
     "texto": "NA RUA CITADA ESQUINA COM A VOLUNTARIOS DA PATRIA NA MANHA DE HOJE 22052025 DOIS INDIVIDUOS NAO IDENTIFICADOS PORTANDO ARMAS DE FOGO UTILIZANDO UMA MOTO PLACA E MODELO IGNORADOS ESTAVAM PRATICANDO ASSALTOS CONTRA TRANSEUNTES",
     "local_mencionado": {
@@ -1294,18 +754,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-05-02T10:39:00",
-    "texto": "NO ENDERECO CITADO PROXIMO AO DETRAN E PROXIMO A UPA LOCALIZASE UMA CASA DE DOIS ANDARES PINTADA DE BEGE COM UM PE DE MANGA NA FRENTE ONDE RESIDE UMA MULHER NAO IDENTIFICADA QUE NESTE MOMENTO SE ENCONTRA AGREDINDO FISICAMENTE SEU [NOME] NAO IDENTIFICADO DE 3 ANOS A MESMA PERDEU A CRIANCA PARA O CONSELHO TUTELAR POREM CONSEGUIU PEGAR A GUARDA DA CRIANCA NOVAMENTE MENCIONA QUE ELA CHEGOU BEBADA DE MANHA COM A CRIANCA NO COLO ACRESCENTA QUE ELA SAI PARA BARES E LEVA A CRIANCA ALEM DE USAR ENTORPECENTES NA FRENTE DO SEU [NOME]",
-    "local_mencionado": {
-      "lat": -22.9545245,
-      "lng": -43.1953657,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
@@ -1333,18 +781,6 @@
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-03-04T23:09:00",
-    "texto": "NO ENDERECO CITADO EM FRENTE AO N 23 VINTE E TRES LOCALIZASE UM TERRENO BALDIO ONDE CONSTANTEMENTE TEM SIDO INVADIDO POR INDIVIDUOS NAO IDENTIFICADOS QUE SAO USUARIO DE DROGAS ONDE ESTAO UTILIZANDO O LOCAL PARA GUARDAREM MERCADORIAS ROUBADAS E USO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9570242,
-      "lng": -43.1932706,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_recebimento": "2025-01-30T09:34:00",
     "texto": "NA RUA CITADA ACESSO [NOME] RUA VOLUNTARIOS DA PATRIA ONDE FREQUENTEMENTE A PARTIR DAS 19H OS MORADORES RETORNANDO DO TRABALHANDO OU OS TRANSEUNTES QUE POR ALI PASSEM ESTAO SENDO ASSALTADOS POR TRES INDIVIDUOS NAO IDENTIFICADOS ARMADOS QUE UTILIZAM DUAS MOTOS NAO DESCRITAS",
     "local_mencionado": {
@@ -1354,42 +790,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2025-01-01T01:58:00",
-    "texto": "NO ENDERECO CITADO PROXIMO PREDIO DA NET SITUASE UM PREDIO DE UM ANTIGO HOME CARE QUE NESTE MOMENTO ESTA SENDO INVADIDO POR USUARIOS DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9517488,
-      "lng": -43.1853402,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2024-10-30T23:03:00",
-    "texto": "NA RUA CITADA EM FRENTE AO N 101 CENTO E UM TODOS OS [NOME] PRINCIPALMENTE NO PERIODO DA NOITE CERCA DE TRES A [NOME] MORADORES DE RUA E DEPENDENTES QUIMICOS NAO IDENTIFICADOS FICAM CONSUMINDO DROGAS CONSTANTEMENTE SE DEGLADIAM E FAZEM BASTANTE BADERNA",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2024-10-19T10:04:00",
-    "texto": "NO ENDERECO CITADO DO LADO DA AMOEDO ESQUINA COM A SAO CLEMENTE LOCALIZASE O RESTAURANTE E BAR BOTECO 24 HORAS O LOCAL NAO TEM ALVARA DE FUNCIONAMENTO NOS FUNDOS TEM MAQUINAS CACAS NIQUEIS E NA PARTE DE CIMA FUNCIONA UM PONTO DE VENDA DE DROGAS O LOCAL FUNCIONA 24 HORAS DE SEGUNDA A DOMINGO O MOVIMENTO E MAIS DE SEXTA A DOMINGO NO LOCAL TEM MUITOS USUARIOS DE DROGAS TAMBEM O COZINHEIRO  NAO IDENTIFICADOQUE CUIDA DA VENDA DAS DROGAS",
-    "local_mencionado": {
-      "lat": -22.9492877,
-      "lng": -43.1823686,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
@@ -1429,30 +829,6 @@
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2024-06-13T12:48:00",
-    "texto": "NA RUA MENCIONADA PROXIMO A RUA CAMUIRANO FREQUENTEMENTE DO PERIODO DO DIA AO PERIODO DA MADRUGADA ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO DROGAS CRACK E MACONHA E PROMOVENDO BADERNA",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2024-02-26T16:32:00",
-    "texto": "NA RUA CITADA PROXIMO AO N 134 CENTO E TRINTA E QUATRO E AO POSTO DE SAUDE PODEM SER VISTOS DIARIAMENTE VARIOS INDIVIDUOS NAO IDENTIFICADOS COM MOCHILAS DO IFOOD OS MESMOS FAZEM USO DE ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.9541702,
-      "lng": -43.1906425,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_recebimento": "2024-02-23T20:16:00",
     "texto": "NA RUA CITADA NA ESQUINA COM A RUA VOLUNTARIOS DA PATRIA TRES INDIVIDUOS DOS QUAIS CONSTA UM TRAVESTI CARACTERIZADOS ENCONTRAMSE PEDINDO ESMOLAS E ASSALTANDO OS TRANSEUNTES QUE NAO DAO DINHEIRO RELATA QUE HOJE 23022024 ELES TENTARAM ASSALTAR UM TRANSEUNTE E ENTRARAM EM LUTA CORPORAL COM O MESMO",
     "local_mencionado": {
@@ -1462,18 +838,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-11-14T10:13:00",
-    "texto": "NA RUA CITADA AO LONGOS DESTA VIA DIARIAMENTE EM HORARIOS ALTERNADOS SAO VISTOS DIVERSOS MORADORES DE RUAS E USUARIOS DE ENTORPECENTES CONSUMINDO DROGAS NESTA RUA SEMPRE FICAM DIVERSOS MORADORES DE RUA DORMINDO NAS CALCADAS E MANTENDO RELACOES SEXUAIS ESTA VIA ESTA ABANDONADO NAO SE VE NENHUMA VIATURA DA POLICIA MILITAR FAZENDO RONDA",
-    "local_mencionado": {
-      "lat": -22.9536484,
-      "lng": -43.1906818,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
@@ -1489,42 +853,6 @@
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-06-02T11:26:00",
-    "texto": "COMPLEMENTA A DENUNCIA 499452023 INFORMANDO QUE NESTE MOMENTO HA QUATRO INDIVIDUOS NAO IDENTIFICADOS FUMANDO MACONHA E ESTAO JOGANDO PEDRAS NUM PREDIO  499452023NA RUA CITADA ENTRE A RUA REAL GRANDEZA E RUA [NOME] PODEM SER VISTOS TODOS OS [NOME] NA PARTE DA MANHA COM MAIOR INCIDENCIA APOS AS 18H [NOME] TRAFICANTES DE DROGAS UTILIZANDO BICICLETAS E MOTOS NAO DESCRITAS COMERCIALIZANDO ENTORPECENTES ONDE USUARIOS UTILIZAM AS DROGAS NO MESMO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9546101,
-      "lng": -43.1941348,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-05-31T16:11:00",
-    "texto": "NA RUA CITADA PROXIMO A ESQUINA COM A RUA VOLUNTARIOS DA PATRIA DIARIAMENTE POR 24H PERMANECE UM GRUPO DE APROXIMADAMENTE NOVE MORADORES DE RUA E USUARIOS DE CRACK NAO IDENTIFICADOS OS QUAIS PERMANECEM NA REGIAO HA MUITOS MESES CONSUMINDO DROGAS AMEACANDO E INTIMIDANDO TRANSEUNTES PREDOMINANTEMENTE IDOSOS",
-    "local_mencionado": {
-      "lat": -22.9563163,
-      "lng": -43.1920994,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-03-31T13:58:00",
-    "texto": "NA RUA CITADA PROXIMO A REAL GRANDEZA DIARIAMENTE PODEM SER VISTOS VARIOS INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.9551263,
-      "lng": -43.1915283,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
     "data_recebimento": "2023-03-10T09:16:00",
     "texto": "NA RUA CITADA ESQUINA COM A RUA BAMBINA PROXIMO AO RESTAURANTE VERANO FREQUENTEMENTE NO PERIODO DA NOITE ESTAO OCORRENDO ROUBOS A PEDESTRES QUE SAO PRATICADO POR UM INDIVIDUO NAO IDENTIFICADO QUE FICA CIRCULANDO NUMA MOTO NAO DESCRITA COR E PLACA IGNORADA ELE UTILIZA UMA MOCHILA DE IFOOD",
     "local_mencionado": {
@@ -1534,42 +862,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-03-03T16:23:00",
-    "texto": "NA RUA CITADA ENTRE OS N 100 CEM E 114 CENTO E QUATORZE PODEM SER VISTOS DIARIAMENTE VARIOS ENTREGADORES NAO IDENTIFICADOS DO ZE DELIVERY IFOOD E ENTRE OUTRAS DISTRIBUIDORAS DE DELIVERY QUE FUMAM MACONHA EM PLENA [NOME] DO DIA SEM RESPEITAR OS TRANSEUNTES DENTRE ELES ESTUDANTES",
-    "local_mencionado": {
-      "lat": -22.9527557,
-      "lng": -43.1945202,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2023-01-18T15:00:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 41 QUARENTA E UM EM FRENTE DE UM PREDIO COMERCIAL VAZIO ESCONDIDOS ATRAS DE UM TAPUME NESTE MOMENTO HA UM GRUPO DE INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO CRACK E MACONHA",
-    "local_mencionado": {
-      "lat": -22.9543423,
-      "lng": -43.1955827,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-11-07T21:42:00",
-    "texto": "NA RUA CITADA EM FRENTE AO N 10 DEZ AO LADO DA LOJA AMOEDO LOCALIZASE UM BAR QUE FUNCIONA TODOS OS [NOME] POR 24H ONDE OCORRE COMERCIALIZACAO DE ENTORPECENTES NO LOCAL NA PARTE DA NOITE PODEM SER VISTOS VARIOS USUARIOS QUE UTILIZAM OS ENTORPECENTES LIVREMENTE DENTRO DE UMA PORTA SITUADA AO LADO DO BAR ONDE O MOVIMENTO E INTENSO",
-    "local_mencionado": {
-      "lat": -22.9497298,
-      "lng": -43.1897674,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "metro_botafogo_rua_s_09",
@@ -1594,66 +886,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-07-28T14:57:00",
-    "texto": "COMPLEMENTA A DENUNCIA 710172022 INFORMANDO QUE ATE O PRESENTE MOMENTO NENHUMA VIATURA COMPARECEU AO LOCAL PARA REPRIMNIR O USO DE ENTORPECENTES E AS CONDICOES DE MAUS TRATOS AS CRIANCAS710172022NA RUA CITADA EM [NOME] AO N 19 DEZENOVE ACESSO [NOME] RUA SAO CLEMENTE EM FRENTE AO PALACIO AO PREFEITURA HA UMA PRACA NAO NOMEADA NESTE MOMENTO HA DUAS MULHERES EM SITUACAO AS QUAIS ESTAO CONSUMINDO CRACK PROXIMO AOS FILHOS BEBES",
-    "local_mencionado": {
-      "lat": -22.9511917,
-      "lng": -43.1934268,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-07-28T12:38:00",
-    "texto": "NA RUA CITADA EM [NOME] AO N 19 DEZENOVE ACESSO [NOME] RUA SAO CLEMENTE EM FRENTE AO PALACIO AO PREFEITURA HA UMA PRACA NAO NOMEADA NESTE MOMENTO HA DUAS MULHERES EM SITUACAO AS QUAIS ESTAO CONSUMINDO CRACK PROXIMO AOS FILHOS BEBES",
-    "local_mencionado": {
-      "lat": -22.9511917,
-      "lng": -43.1934268,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-07-14T10:22:00",
-    "texto": "NA RUA CITADA ESQUINA COM A VOLUNTARIOS DA PATRIA TODOS OS [NOME] NA PARTE DA NOITE PODEM SER VARIOS INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO GRANDE QUANTIDADE DE CRACK DEFECANDO E DORMINDO NO LOCAL CITA QUE OS MESMOS AMEACAM TRANSEUNTES",
-    "local_mencionado": {
-      "lat": -22.9536484,
-      "lng": -43.1906818,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-05-27T07:41:00",
-    "texto": "NA RUA CITADA PROXIMO AO MUSEU DO INDIO E A RUA SAO CLEMENTE DIARIAMENTE A QUALQUER HORARIO PODEM SER VISTOS CERCA DE DOZE INDIVIDUOS NAO IDENTIFICADOS FUMANDO CRACK",
-    "local_mencionado": {
-      "lat": -22.9512089,
-      "lng": -43.1916536,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "metro_botafogo_rua_s_09",
-    "data_recebimento": "2022-05-12T07:30:00",
-    "texto": "NA RUA CITADA ALTURA DO N 14 QUATORZE PROXIMO A RUA SAO CLEMENTE DIARIAMENTE PODEM SER VISTOS VARIOS INDIVIDUOS NAO IDENTIFICADOS FUMANDO CRACK",
-    "local_mencionado": {
-      "lat": -22.9535902,
-      "lng": -43.1951625,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
@@ -1741,18 +973,6 @@
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2026-02-07T06:24:00",
-    "texto": "NA RUA CITADA RUA DO HOSPITAL MONCORVO [NOME] NESTE MOMENTO ENCONTRAMSE CERCA DE DEZ USUARIOS DE DROGAS NAO IDENTIFICADOS CONSUMINDO ENTORPECENTES E [NOME] RELATOS ELES ESTAO MALTRATANDO OS CACHORROS NA RUA",
-    "local_mencionado": {
-      "lat": -22.9087583,
-      "lng": -43.1916634,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
     "data_recebimento": "2026-02-03T08:24:00",
     "texto": "NO BAIRRO MENCIONADO NAS IMEDIACOES DA PRACA FLORIANO DIARIAMENTE EM QUALQUER HORARIO GRUPOS DE CRIANCAS NAO IDENTIFICADOS E ADOLESCENTES COM IDADES APROXIMADAS ENTRE 8 E 14 ANOS ROUBAM E AGRIDEM PEDESTRES OS GRUPOS FICAM DISPERSOS E SE JUNTAM QUANDO VEEM UMA VITIMA",
     "local_mencionado": {
@@ -1822,42 +1042,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-12-05T14:50:00",
-    "texto": "NA RUA CITADA SEM REFERENCIA OCORREU UM FURTO A UMA [NOME] HOJE 05122025 POR VOLTA DAS 12H REALIZADO POR UM GRUPO DE TRES INDIVIDUOS NAO IDENTIFICADOS NAO ARMADOS EM OUTROS PONTOS DA REGIAO DA CINELANDIA TAMBEM OCORREM TENTATIVAS DE FURTO REALIZADOS POR GRUPOS DE INDIVIDUOS NAO IDENTIFICADOS QUE INCLUEM CRIANCAS ADOLESCENTES E ADULTOS PARTE DO GRUPO COSTUMA FICAR PROXIMO A SAIDA D DO METRO DA CINELANDIA AONDE UM INDIVIDUO NAO IDENTIFICADO COSTUMA FICAR PROXIMO A ESCADA PARA FURTAR E OUTRO INDIVIDUO NAO IDENTIFICADO FICA PROXIMO COM UMA BICICLETA PARA RECEBER O FURTO E IR EMBORA RAPIDAMENTE NA PRACA DA CINELANDIA E NA RUA MAHATMA GANDHI TAMBEM EXISTEM ESSES GRUPOS QUE ATUAM CERCANDO PESSOAS E TENTANDO REALIZAR FURTOS NUNCA ESTAO SOZINHOS SEMPRE EM GRUPOS DE TRES OU QUATRO INDIVIDUOS ALGUMAS VEZES COM DROGAS EM GARRAFAS PODEM SER MAIS FACILMENTE ENCONTRADOS NO HORARIO  DE ALMOCO ENTRE 12H E 14H E 17H E 18H DE SEGUNDA A SABADO E ENTRE 6H E 7H AOS SABADOS MENCIONA QUE NAO HA POLICIAMENTO ADEQUADO",
-    "local_mencionado": {
-      "lat": -22.9123948,
-      "lng": -43.1766811,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-11-28T15:13:00",
-    "texto": "NO ENDERECO MENCIONADO ESQUINA COM A RUA URUGUAIANA NO BAR DO [NOME] NESTE MOMENTO ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS UTILIZANDO DROGAS E SOLTANDO FOGOS DE ARTIFICIOS DESDE 9H",
-    "local_mencionado": {
-      "lat": -22.9029808,
-      "lng": -43.1818767,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-11-24T23:48:00",
-    "texto": "NA RUA CITADA SEM REFERENCIA TODOS OS [NOME] PRINCIPALMENTE NO PERIODO DA NOITE TRAFICANTES NAO IDENTIFICADOS FICAM COMERCIALIZANDO CRACK COCAINA E MACONHA E SEMPRE E POSSIVEL VER DIVERSOS DEPENDENTES QUIMICOS NAO IDENTIFICADOS CONSUMINDO AS DROGAS NO LOCAL [NOME] INFORMACOES QUANDO SOB EFEITO DAS DROGAS OS DEPENDENTES QUIMICOS FICAM EXTREMAMENTE AGRESSIVOS E ARREMESSAM PEDRAS NAS RESIDENCIAS PROXIMAS AO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9087583,
-      "lng": -43.1916634,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
@@ -1957,18 +1141,6 @@
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-09-29T12:49:00",
-    "texto": "NA RUA MENCIONADA PROXIMO A RUA FREI CANECA E A RUA DO SENADO DIARIAMENTE ENCONTRAMSE DIVERSOS INDIVIDUOS NAO IDENTIFICADOS USANDO DROGAS NO LOCAL INFORMA QUE ALGUNS DELES SAO RESPONSAVEIS POR COMETER ASSALTOS AOS TRANSEUNTES",
-    "local_mencionado": {
-      "lat": -22.9086804,
-      "lng": -43.1919566,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
     "data_recebimento": "2025-09-18T14:20:00",
     "texto": "NO ENDERECO MENCIONADO PROXIMO A RUA [NOME] DE SETEMBRO LOCALIZASE UMA LOJA ONDE PODEM SER ENCONTRADOS APARELHOS CELULARES DERIVADOS DE ROUBOS A TURISTAS NAO IDENTIFICADOS",
     "local_mencionado": {
@@ -1990,18 +1162,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-09-02T15:44:00",
-    "texto": "NA RUA CITADA PROXIMO A LAPA ESQUINA COM A RUA [NOME] MURATORIO AO LADO DE UM PREDIO UM INDIVIDUO NAO IDENTIFICADO QUE UTILIZA UMA MOTO DE COR VERMELHA COM PLACA TTF8E48 COLOCOU BANCO E CONES NO LOCAL FAZENDO UM PONTO DE MOTOTAXI CLANDESTINO NA AREA ONDE ESTAO USANDO DROGAS OBSTRUINDO A VIA E PROIBINDO MOTORISTAS DE ESTACIONAREM NO LOCAL ALEGANDO SER AREA DELES SOB AMEACAS",
-    "local_mencionado": {
-      "lat": -22.904257,
-      "lng": -43.1794002,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
@@ -2065,30 +1225,6 @@
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-08-10T08:05:00",
-    "texto": "NO ENDERECO MENCIONADO NO CINEMA [NOME] O QUAL FUNCIONA DE SEGUNDA A SABADO DAS 12H AS 18H PESSOAS TEM RELACOES SEXUAIS DENTRO DO CINEMA FAZEM USO DE ENTORPECENTES ALEM DE OCORREREM ASSALTOS HA CONIVENCIA DOS FUNCIONARIOS DO ESTABELECIMENTO COM A APROXIMACAO DOS GAROTOS QUE FAZEM PROGRAMA FICA UM OLHEIRO NO LOCAL PARA AVISAR CASO A POLICIA CHEGUE O ESPACO POSSUI UMA PARTE TERREA E UM ANDAR SUPERIOR ACESSADO POR UMA ESCADA QUASE ATE A COBERTURA DO CINEMA ONDE [NOME] OCORRENCIAS ACONTECEM",
-    "local_mencionado": {
-      "lat": -22.9074715,
-      "lng": -43.176842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-08-05T14:21:00",
-    "texto": "NA RUA MENCIONADA AO LADO DA FACULDADE UNIRIO DIARIAMENTE DURANTE O DIA TODO ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS POSSUINDO TORNOZELEIRA ELETRONICA E MORADORES DE RUA QUE INSTALARAM ABRIGOS NO LOCAL IMPEDINDO A PASSAGEM DE TRANSEUNTES FAZENDO USO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9087583,
-      "lng": -43.1916634,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
     "data_recebimento": "2025-07-22T20:46:00",
     "texto": "NA RUA MENCIONADA LOCALIZASE O MERCADO POPULAR DA URUGUAIANA ONDE NA QUADRA C DIARIAMENTE ENCONTRAMSE CERCA DE QUATRO INDIVIDUOS NAO IDENTIFICADOS QUE SE REUNEM APOS O FECHAMENTO DOS BOXS PARA DESBLOQUEAR CELULARES ORIUNDOS DE ROUBOS FEITOS DURANTE O DIA NO CENTRO DA CIDADEE VENDEREM NO DIA SEGUINTE INFORMA QUE OS ASSALTANTES TAMBEM APARECEM NO LOCAL PARA VENDER OS APARELHOS ATRAS DA LOJA [NOME] CONSERTOS",
     "local_mencionado": {
@@ -2134,18 +1270,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "presidente_vargas_ca_20",
-    "data_recebimento": "2025-06-03T23:35:00",
-    "texto": "NO ENDERECO CITADO SEM REFERENCIA LOCALIZASE UM APARTAMENTO ONDE RESIDE UMA MULHER TRANS NAO IDENTIFICADA QUE FREQUENTEMENTE CONSOME DROGAS DE FORMA DESENFREADA E AGRIDE FISICAMENTE E PROFERE INJURIAS E AMEACAS CONTRA SEU IRMAO NAO IDENTIFICADO QUE POSSUI OBESIDADE MORBIDA E TEM NECESSIDADES ESPECIAIS",
-    "local_mencionado": {
-      "lat": -22.9012249,
-      "lng": -43.1791747,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "presidente_vargas_ca_20",
@@ -2257,18 +1381,6 @@
   },
   {
     "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2026-04-01T23:16:00",
-    "texto": "NO ENDERECO CITADO PROXIMO AO [NOME] DE ALAH LOCALIZASE O EDIFICIO LAGOA DE MURO NA COR VERDE ONDE NESTE MOMENTO ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS USUARIOS DE DROGAS QUE MONTARAM UMA BARRACA FEITA DE PAPELAO NA FRENTE DO EDIFICIO PARA CONSUMIREM AS DROGAS E ESTAO INTIMIDANDO OS MORADORES LOCAIS",
-    "local_mencionado": {
-      "lat": -22.982504,
-      "lng": -43.2137571,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
     "data_recebimento": "2026-01-07T09:33:00",
     "texto": "NA AVENIDA CITADA ENTRE O N 17 [NOME] E O N 100 CEM EM FRENTE AO MONUMENTO RIACHUELO DIARIAMENTE ENCONTRAMSE APROXIMADAMENTE VINTE INDIVIDUOS NAO IDENTIFICADOS EM SITUACAO DE RUA CONSUMINDO DROGAS PROMOVENDO BADERNAS ASSALTANDO E AMEACANDO TRANSEUNTES MENCIONA QUE NO LOCAL HA ACUMULO DE LIXO",
     "local_mencionado": {
@@ -2278,18 +1390,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2025-11-24T15:46:00",
-    "texto": "NA RUA CITADA NA RUA CITADA AO LADO DO SHOPPING LEBLON TODOS OS [NOME] FLANELINHAS NAO IDENTIFICADOS FICAM COM COLETES REFLETIVOS COMERCIALIZANDO DROGAS LIVREMENTE NO LOCAL ACRESCENTA QUE OS USUARIOS COMPRAM E COSTUMAM UTILIZAR AS DROGAS PROXIMOS AOS CARROS ESTACIONADOS NA RUA DO LADO DA RUA ALMIRANTE [NOME] E COM MAIOR FREQUENCIA NO PERIODO DA TARDE PARA NOITE ACRESCENTA TAMBEM QUE DIVERSAS VEZES OS FLANELINHAS AMEACAM OS MOTORISTAS SOB EFEITO DA DROGA",
-    "local_mencionado": {
-      "lat": -22.9828269,
-      "lng": -43.2166794,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "jardim_de_alah_10",
@@ -2317,42 +1417,6 @@
   },
   {
     "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2024-01-23T18:56:00",
-    "texto": "NA AVENIDA CITADA PROXIMO AO SHOPPING LEBLON DIARIAMENTE A QUALQUER HORARIO PODEM SER VISTOS DIVERSOS USUARIOS NAO IDENTIFICADOS QUE ESTAO RESIDINDO NAS CALCADAS FAZENDO USO DE CRACK ENQUANTO PEDESTRES CIRCULAM [NOME] REGIAO ELES GERAM INSEGURANCA",
-    "local_mencionado": {
-      "lat": -22.980111,
-      "lng": -43.2158639,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2023-07-13T13:40:00",
-    "texto": "NA RUA MENCIONADA ESQUINA COM A RUA ALMIRANTE [NOME] DIARIAMENTE PRINCIPALMENTE NO PERIODO DA NOITE POR VOLTA DAS 20H ENCONTRAMSE USUARIOS DE DROGAS NAO IDENTIFICADOS PROMOVENDO ROUBO A TRANSEUNTES ELES COMPRAM ENTORPECENTES NO PONTO DE VENDAS FIXO DA CRUZADA SAO [NOME] BLOCO DOIS DOIS CONSOMEM NA RUA CITADA E PRATICAM OS ROUBOS PARA COMPRAREM MAIS DROGAS",
-    "local_mencionado": {
-      "lat": -22.9828269,
-      "lng": -43.2166794,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2023-03-23T15:47:00",
-    "texto": "NA PRACA CITADA INSERIDA NO [NOME] DE ALAH EM FRENTE AO SHOPPING LEBLON NESTE MOMENTO HA UM GRUPO DE MORADORES DE RUA CONSUMINDO CRACK NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9837108,
-      "lng": -43.2149919,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
     "data_recebimento": "2022-08-02T14:03:00",
     "texto": "NA AVENIDA CITADA ALTURA DO N 600 SEISCENTOS LOCALIZASE UMA PONTO ABANDONADA PELO METRO ONDE SE CRIOU UMA CRACOLANDIA CITA QUE EM QUALQUER HORARIO DO DIA NOTAMSE INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO GRANDE QUANTIDADE DE CRACK E ROUBANDO OS  TRANSEUNTES",
     "local_mencionado": {
@@ -2362,30 +1426,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2022-05-09T17:38:00",
-    "texto": "NO ENDERECO CITADO NO BLOCO 07 [NOME] DE COR VERDE PODEM SER VISTOS DIARIAMENTE POR 24H VARIOS TRAFICANTES NAO IDENTIFICADOS COMERCIALIZANDO E CONSUMIDO ENTORPECENTES ARMADOS DE PISTOLAS PERTENCENTES A FACCAO DO COMANDO VERMELHO NO LOCAL OCORREM BAILES FUNK TODOS OS [NOME] A PARTIR AS 19H",
-    "local_mencionado": {
-      "lat": -22.9851987,
-      "lng": -43.2162312,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2022-03-30T12:26:00",
-    "texto": "NO ENDERECO CITADO RESIDE [NOME] RIBAS NAO CARACTERIZADO DE APROXIMADAMENTE 67 ANOS QUE ESTA APRESENTANDO PROBLEMAS PSICOLOGICOS E TEM ACUMULADO UMA GRANDE QUANTIDADE DE LIXO QUE CONSEQUENTEMENTE EXALA MAL CHEIRO E INFESTACAO DE INSETOS PERCEBESE QUE ESPORADICAMENTE [NOME] E VISTO ACOMPANHADO INDIVIDUOS QUE FAZEM USO DE DROGAS NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9845721,
-      "lng": -43.2162923,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "jardim_de_alah_10",
@@ -2401,42 +1441,6 @@
   },
   {
     "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2021-09-03T19:59:00",
-    "texto": "NO ENDERECO CITADO NA CRUZADA SAO [NOME] RESIDE O TRAFICANTE [NOME] VULGO MT NO INTERIOR DO IMOVEL NAO HA ENTORPECENTES ELES COSTUMAM ESCONDER ENTORPECENTES NAS LIXEIRAS EM MOMENTOS COM MENOR MOVIMENTO AOS FINAIS DE SEMANA HA FILAS DE CONSUMIDORES DE ENTORPECENTES PERTO DE UM SAGUAO",
-    "local_mencionado": {
-      "lat": -22.980677,
-      "lng": -43.2147514,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2020-12-04T12:50:00",
-    "texto": "NA RUA CITADA PERTO DA IGREJA [NOME] ANJOS NA CRUZADA SAO [NOME] NA ALTURA DO N 699 SEISCENTOS E NOVENTA E NOVE EM FRENTE AO BLOCO DE N 7 [NOME] PODEM SER VISTOS FREQUENTEMENTE INDIVIDUOS NAO IDENTIFICADOS INCLUSIVE MENORES DE DEZOITO ANOS USANDO DROGAS COMO COCAINA",
-    "local_mencionado": {
-      "lat": -22.980677,
-      "lng": -43.2147514,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2020-11-27T17:11:00",
-    "texto": "NO ENDERECO CITADO NA CRUZADA SAO [NOME] RESIDE A IDOSA ADILSA DE 69 ANOS MAE DE JONANTHAN QUE TEM ESQUIZOFRENIA E FELIPO FELIPO E AGRESSIVO USUARIO DE ENTORPECENTES E BATE EM JONANTHAN POIS QUE SE APROPRIAR DO BENEFICIO QUE ELE RECEBE FELIPO TAMBEM AGRIDE A MAE ADILSA",
-    "local_mencionado": {
-      "lat": -22.9815857,
-      "lng": -43.2169835,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
     "data_recebimento": "2020-11-03T18:47:00",
     "texto": "NO ENDERECO MENCIONADO LOCALIZASE A CRUZADA SAO [NOME] ONDE NO BLOCO N 07 [NOME] SAO ENCONTRADOS ADOLESCENTES NAO IDENTIFICADOS VENDENDO DROGAS OS MESMOS COSTUMAM ROUBAR PEDESTRES NAS IMEDIACOES DO SHOPPING LEBLON",
     "local_mencionado": {
@@ -2446,18 +1450,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "jardim_de_alah_10",
-    "data_recebimento": "2020-07-02T15:00:00",
-    "texto": "NO ENDERECO CITADO NA ALTURA DO POSTO 12 EM FRENTE A UMA [NOME] LOCALIZASE UM PREDIO EM UM DOS APARTAMENTOS RESIDE O TRAFICANTE CONHECIDO COMO DERICK O QUAL E UM DOS GRANDES NOMES DO TRAFICO DE DROGAS SINTETICAS NO RIO DE JANEIRO NO LOCAL HOJE 02072020 POR VOLTA DAS 23H ACONTECERA UMA FESTA PROMOVIDA POR DERICK ONDE PODERAO SER VISTOS INDIVIDUOS CONSUMINDO GRANDES QUANTIDADES DE DROGAS INFORMA QUE ALGUNS USUARIOS E DISTRIBUIDORES DEPOSITAM DINHEIRO NA CONTA DE N 00159344 AGENCIA N 31720 BANCO DO BRADESCO QUE ESTA NO NOME DE [NOME] ACRESCENTA QUE DERICK E PROPRIETARIO DE MAIS DOIS IMOVEIS UM DELES E UM FLAT LOCALIZADO NO LEBLON ONDE ELE ESCONDE A MAIOR PARTE DAS DROGAS E O OUTRO E UM APARTAMENTO NO RECREIO",
-    "local_mencionado": {
-      "lat": -22.9835763,
-      "lng": -43.217107,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
@@ -2509,18 +1501,6 @@
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2026-01-10T19:19:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 62 SESSENTA E DOIS NESTE MOMENTO OCORRE UMA GRANDE FESTA COM PRESENCA DE ADOLESCENTES CONSUMINDO DROGAS E BEBIDAS ALCOOLICAS DE FORMA DESENFREADA",
-    "local_mencionado": {
-      "lat": -22.909233,
-      "lng": -43.2003317,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
     "data_recebimento": "2025-12-18T18:09:00",
     "texto": "EM UMA PRACA ENTRE A RUA CITADA E A ULYSSES [NOME] PROXIMO A ESTACAO DE METRO ESTACIO DIARIAMENTE NO INICIO DA NOITE INDIVIDUOS NAO IDENTIFICADOS SE REUNEM E FICAM OBSERVANDO AS PESSOAS PARA COMETER ASSALTOS ENTRE 16H E 22H ELES FICAM CIRCULANDO DE BICICLETA ENTORNO DA PRACA E DO CENTRO ADMINISTRATIVO SAO [NOME] USANDO [NOME] DE MOTO CAMISA PRETA E BERMUDA",
     "local_mencionado": {
@@ -2530,18 +1510,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2025-12-10T21:50:00",
-    "texto": "NO ENDERECO CITADO NA CALCADA DA CAIXA ECONOMICA RESIDE UM IDOSA NAO IDENTIFICADA COM SEU [NOME] NAO IDENTIFICADO QUE E USUARIO DE DROGAS ELA VIVE EM SITUACAO DE MAUS TRATOS VIVE EM LOCAL INSALUBRE FICA [NOME] POR [NOME] E SEM ALIMENTACAO ADEQUADA",
-    "local_mencionado": {
-      "lat": -22.910438,
-      "lng": -43.2031596,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
@@ -2569,18 +1537,6 @@
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2025-10-26T03:33:00",
-    "texto": "NO ENDERECO MENCIONADO [NOME] A AVENIDA [NOME] BICALHO E EM FRENTE A ESTACAO DO VLT PRAIA FORMOSA SITUASE BCO SPACE MAKERS ONDE AOS SABADOS DURANTE SEU FUNCIONAMENTO O SOM E UTILIZADO EM VOLUME ALTISSIMO E ACONTECE O CONSUMO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9023734,
-      "lng": -43.2086887,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
     "data_recebimento": "2025-10-11T22:12:00",
     "texto": "NA AVENIDA CITADA PROXIMO A PASSAGEM ABAIXO DA [NOME] DO TREM TODOS OS [NOME] NO PERIODO DA NOITE INDIVIDUO NAO IDENTIFICADOS ROUBAM APARELHOS CELULARES DE MOTORISTAS E TRANSEUNTES [NOME] INFORMCOES SEMPRE FICA UMA VIATURA DA POLICIA MILITAR BASEADA PROXIMO AO LOCAL MAS PROVIDENCIAS ALGUMA E TOMADA",
     "local_mencionado": {
@@ -2602,18 +1558,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2025-09-14T18:52:00",
-    "texto": "NA AVENIDA CITADA ATRAS DA RODOVIARIA LOCALIZAMSE UM GRUPO DE MOTORISTAS QUE FICAM USANDO DROGAS E COM CARROS ESTACIONADOS DE FORMA ILEGAL OBSTRUINDO A PASSAGEM DE PEDESTRES",
-    "local_mencionado": {
-      "lat": -22.9089216,
-      "lng": -43.2098706,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
@@ -2929,18 +1873,6 @@
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2024-01-29T17:17:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA DO CARTORIO LOCALIZASE UMA CASA DE ESQUINA ABANDONADA QUE ESTA SENDO UTILIZADA POR USUARIOS DE CRACK ONDE SAO VISTOS TODOS OS [NOME] A QUALQUER HORA VARIOS INDIVIDUOS UTILIZANDO DROGAS GERANDO ASSALTOS A TRANSEUNTES [NOME] REDONDEZA",
-    "local_mencionado": {
-      "lat": -22.9153775,
-      "lng": -43.2089677,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
     "data_recebimento": "2024-01-23T13:05:00",
     "texto": "NA AVENIDA MENCIONADA EM FRENTE A RODOVIARIA NOVO RIO FREQUENTEMENTE ENCONTRAMSE INDIVIDUOS NAO IDENTIFICADOS PROMOVENDO ASSALTOS A TRANSEUNTES GERALMENTE ELES USAM UM AUTO VOYAGE DE COR PRETA PLACA IGNORADA ABORDAM A VITIMA E A LEVAM PARA LOCAL DESCONHECIDO PARA PAGAR ALGUMA CONTA COM PAGAMENTO VIA PIX",
     "local_mencionado": {
@@ -2989,42 +1921,6 @@
   },
   {
     "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2023-09-06T08:55:00",
-    "texto": "NO ENDERECO CITADO LOCALIZASE UM ESTACIONAMENTO ONDE O RESPONSAVEL DE VULGO RUSSO E VISTO FAZENDO USO LIVREMENTE DE MACONHA ALICIANDO AS CRIANCAS QUE MORAM AO LADO A CONSUMIREM TAMBEM MENCIONA QUE RUSSO TAMBEM TEM UM [NOME] NAO IDENTIFICADO DE APROXIMADAMENTE 8 ANOS DE IDADE QUE [NOME] COM ELE E ACOMPANHA TODO O COMPORTAMENTO DO AVO",
-    "local_mencionado": {
-      "lat": -22.9105982,
-      "lng": -43.1997482,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2023-07-11T08:09:00",
-    "texto": "NO ENDERECO CITADO APOS A CEDAE LOCALIZASE UM ESTACIONAMENTO ONDE O VULGO RUSSO E VISTO DIARIAMENTE A PARTIR DAS 6H DA MANHA FAZENDO USO DE MACONHA LIVREMENTE NA PRESENCA PRINCIPALMENTE DE CRIANCAS QUE RESIDEM EM UMA PEQUENA COMUNIDADE AO LADO DEVIDO A MOVIMENTACAO DE PESSOAS ENTRANDO E SAINDO DO ESTACIONAMENTO MESMO SEM ESTAREM CONDUZINDO CARROS ACREDITASE QUE RUSSO ESTEJA VENDENDO A DROGA",
-    "local_mencionado": {
-      "lat": -22.9105982,
-      "lng": -43.1997482,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2023-06-28T16:04:00",
-    "texto": "EM FRENTE AO ENDERECO CITADO ONDE TEM UMA CASA [NOME] NESTE MOMENTO HA CERCA DE CINCO USUARIOS DE DROGAS NAO IDENTIFICADOS CONSUMINDO ENTORPECENTES E ENTRE ELES HA ADOLESCENTES",
-    "local_mencionado": {
-      "lat": -22.9117228,
-      "lng": -43.1981458,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
     "data_recebimento": "2023-06-15T13:08:00",
     "texto": "NA AVENIDA CITADA FREQUENTEMENTE NA PARTE DA NOITE NOTASE UM INDIVIDUO CARACTERIZADO O QUAL PORTANDO ARMA DE FOGO EMBARCA NOS COLETIVOS E ASSALTA OS PASSAGEIROS RELATA QUE APOS OS ASSALTOS O MESMO DESEMBARCA NA SUBIDA DA PONTE RIONITEROI PERTO DO HOSPITAL INTO",
     "local_mencionado": {
@@ -3046,18 +1942,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rodoviaria_terminal__02",
-    "data_recebimento": "2023-04-24T10:39:00",
-    "texto": "NO ENDERECO CITADO PROXIMO DA CEDAE LOCALIZASE UM ESTACIONAMENTO DE PROPRIEDADE DE RUSSO O QUAL TODOS OS [NOME] E VISTO CONSUMINDO DROGAS LIVREMENTE NA PRESENCA DE CRIANCAS",
-    "local_mencionado": {
-      "lat": -22.9105982,
-      "lng": -43.1997482,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rio_sul_12",
@@ -3094,30 +1978,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2025-07-30T15:06:00",
-    "texto": "NA AVENIDA CITADA LOCALIZASE UM CAPS ONDE PACIENTES DO LOCAL USAM ENTORPECENTES COM FREQUENCIA E OS RESPONSAVEIS NAO IDENTIFICADOS SAO CONIVENTES COM A SITUACAO",
-    "local_mencionado": {
-      "lat": -22.9552483,
-      "lng": -43.1774011,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2025-05-02T23:11:00",
-    "texto": "NA RUA MENCIONADA PROXIMO AO 2 BPM ENCONTRAMSE DIVERSOS FLANELINHAS NAO IDENTIFICADOS QUE ESTAO TRAZENDO TRANSTORNOS A REGIAO DEVIDO AO CONSUMO DE DROGAS E VANDALISMOS SOBRE OS VEICULOS DE QUEM NAO ACEITA EFETUAR O PAGAMENTO A ELES",
-    "local_mencionado": {
-      "lat": -22.9557162,
-      "lng": -43.1787938,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rio_sul_12",
@@ -3181,18 +2041,6 @@
   },
   {
     "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2024-08-03T19:58:00",
-    "texto": "NA RUA CITADA PROXIMO AO SHOPPING RIOSUL E AO CONDOMINIO MORADA DO SOL EM FRENTE A UMA OFICINA PODEM SER VISTOS DIARIAMENTE HORARIO NAO MENCIONADO VARIOS INDIVIDUOS NAO IDENTIFICADOS REALIZANDO A COBRANCA DE R 2000 VINTE REAIS PARA OS MOTORISTAS QUE NECESSITAM ALI ESTACIONAREM OS MESMOS SAO USUARIOS DE ENTORPECENTES E COAGEM OS MOTORISTAS",
-    "local_mencionado": {
-      "lat": -22.9557162,
-      "lng": -43.1787938,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
     "data_recebimento": "2024-07-24T18:00:00",
     "texto": "NA AVENIDA CITADA EM FRENTE AO INSTITUTO MUNICIPAL PHELLIPE PINEL DIARIAMENTE DE 16H30 ATE O FINAL DA TARDE PODEM SER VISTOS CERCA DE TRES INDIVIDUOS NAO IDENTIFICADOS APARENTEMENTE MENORES DE IDADE ASSALTANDO TRANSEUNTES",
     "local_mencionado": {
@@ -3253,18 +2101,6 @@
   },
   {
     "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2023-09-04T12:34:00",
-    "texto": "NO ENDERECO CITADO SEM REFERENCIA LOCALIZASE O EDIFICIO RAJAH ONDE UM INDIVIDUO NAO IDENTIFICADO INVADIU UM APARTAMENTO ONDE HABITA SEM AS MINIMAS CONDICOES DE HIGIENE [NOME] INFORMACOES ELE E USUARIO DE CRACK E POSSUI PROBLEMAS MENTAIS",
-    "local_mencionado": {
-      "lat": -22.9511931,
-      "lng": -43.1807842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
     "data_recebimento": "2023-08-02T18:18:00",
     "texto": "NA PRACA CITADA PROXIMO DA RUA SAO CLEMENTE FREQUENTEMENTE NA PARTE DA NOITE SAO VISTOS DOIS INDIVIDUOS NAO IDENTIFICADOS OS QUAIS PROMOVEM FURTOS AOS TRANSEUNTES E FREQUENTADORES DO LOCALOBS QUESTIONADO SEM MAIS INFORMACOES",
     "local_mencionado": {
@@ -3277,30 +2113,6 @@
   },
   {
     "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2023-07-06T18:31:00",
-    "texto": "NO ENDERECO CITADO ENTRE A RUA VOLUNTARIOS DA PATRIA E A RUA SAO CLEMENTE RESIDE CRISTIAN NAO CARACTERIZADO QUE DIARIAMENTE EM HORARIOS ALTERNADOS FAZ USO DE DROGAS INCLUSIVE CRACK NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9511931,
-      "lng": -43.1807842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2023-05-11T15:01:00",
-    "texto": "NO ENDERECO CITADO ESQUINA COM A RUA VOLUNTARIOS DA PATRIA HA UMA GALERIA COMERCIAL COM DIVERSOS BARES NAO NOMEADO ONDE FREQUENTEMENTE DE QUARTAFEIRA A DOMINGO A PARTIR DAS 20H NOTASE A PRESENCA DE INDIVIDUOS NAO IDENTIFICADOS FUMANDO MACONHA",
-    "local_mencionado": {
-      "lat": -22.9511931,
-      "lng": -43.1807842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
     "data_recebimento": "2022-11-30T17:56:00",
     "texto": "NO BAIRRO CITADO EM FRENTE AO BOTAFOGO PRAIA SHOPPING LOCALIZASE UMA PASSAGEM SUBTERRANEA ONDE LOCALIZASE UMA BOCA DE FUMO COM PRESENCA DE VARIOS USUARIOS DE DROGAS COMO CRACK INFORMA QUE OS USUARIOS VEM COMETENDO ROUBOS A TRANSEUNTES [NOME] REGIAO PARA ASSIM CONSEGUIR COMPRAR OS ENTORPECENTES",
     "local_mencionado": {
@@ -3310,30 +2122,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2022-10-25T21:02:00",
-    "texto": "NA AVENIDA CITADA LOCALIZASE A UNIVERSIDADE FEDERAL DO ESTADO DO RIO DE JANEIRO UNIRIO ONDE DE SEGUNDA A SEXTAFEIRA ENTRE 12H E 14H ALUNOS NAO IDENTIFICADOS FUMAM MACONHA NA FILA DO BANDEJAO OU EM UMA AREA LIVRE AO LADO DO BANDEJAO",
-    "local_mencionado": {
-      "lat": -22.9527079,
-      "lng": -43.1728805,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2022-07-27T21:21:00",
-    "texto": "NO ENDERECO CITADO LOCALIZASE UMA GALERIA ONDE FUNCIONA UM BAR NO LOCAL NESTE MOMENTO PODEM SER VISTOS SEIS INDIVIDUOS NAO IDENTIFICADOS CONSUMINDO O ENTORPECENTE MACONHA LIVREMENTE NA FRENTE DE QUALQUER [NOME]",
-    "local_mencionado": {
-      "lat": -22.9511931,
-      "lng": -43.1807842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rio_sul_12",
@@ -3409,30 +2197,6 @@
   },
   {
     "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-11-29T19:00:00",
-    "texto": "NO ENDERECO CITADO PROXIMO AO SHOPPING RIOSUL SITUASE A RESIDENCIA DE ILKER DUCH [NOME] NAO CARACTERIZADO QUE E USUARIO DE ENTORPECENTES O MESMO COSTUMA FICAR COM SEU [NOME] NAO IDENTIFICADO DE QUASE DOIS ANOS EM RODAS PARA UTILIZACAO DAS DROGAS VINDO A COLOCAR EM RISCO A CRIANCA",
-    "local_mencionado": {
-      "lat": -22.9545131,
-      "lng": -43.1739869,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-11-24T10:56:00",
-    "texto": "NA PRAIA CITADA ALTURA DO N 118 CENTO E DEZOITO ENTRE AS RUAS [NOME] E SENADOR VERGUEIRO PODE SER ENCONTRADA UMA MORADORA DE RUA E SEU COMPANHEIRO CARACTERIZADOS OS QUAIS DIARIAMENTE POR VOLTA DAS 22H VIVEM DISCUTINDO E [NOME] RELATOS A MULHER SOFRE AGRESSOES FISICAS POR PARTE DELE HA UMA SUSPEITA QUE ELES SEJAM USUARIOS DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9511931,
-      "lng": -43.1807842,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
     "data_recebimento": "2021-10-22T18:48:00",
     "texto": "NA AVENIDA CITADA ALTURA DOS NUMEROS 72 SETENTA E DOIS E N 44 QUARENTA E QUATRO OCORREM ASSALTOS A TRANSEUNTES DIARIAMENTE ENTRE 16H30 E 21H PRATICADOS POR INDIVIDUOS NAO IDENTIFICADOS PORTANDO MOCHILAS E FACAS OS MESMOS TAMBEM COMETEM OS ASSALTOS NA PRAIA DE BOTAFOGO EM FRENTE AO NUMERO 524 QUINHENTOS E VINTE E QUATRO ONDE SITUASE O COLEGIO IMPERIAL PROXIMO AO VIADUTO",
     "local_mencionado": {
@@ -3442,18 +2206,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-09-10T19:51:00",
-    "texto": "NO ENDERECO CITADO ACESSO [NOME] RUA GENERAL POLIDORO RESIDE O CONSUMIDOR DE ENTORPECENTES [NOME] CHAGAS FRAGOSO QUE PODE SER VISTO TODOS OS [NOME] CONSUMINDO O ENTORPECENTE MACONHA QUANDO SUAS FILHAS COM IDADE ENTRE 6 E 10 ANOS ESTAO VISITANDOO ELE CONSOME O ENTORPECENTE NA FRENTE DAS CRIANCAS",
-    "local_mencionado": {
-      "lat": -22.9506641,
-      "lng": -43.1787341,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rio_sul_12",
@@ -3481,18 +2233,6 @@
   },
   {
     "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-08-10T13:20:00",
-    "texto": "NO BAIRRO CITADO NA ENSEADA DOMINGO 15082021 POR VOLTA DAS 11H EM UM BARCO OCORRERA A FESTA YET IN BOX O EMBARQUE DOS PASSAGEIROS OCORRERA NA [NOME] DA [NOME] E NA PRAIA DA URCA NO BARCO PODERAO SER VISTAS MUITAS PESSOAS AGLOMERADAS CONTRIBUINDO PARA A PROPAGACAO DO CORONAVIRUS E CONSUMINDO DROGAS",
-    "local_mencionado": {
-      "lat": -22.9510978,
-      "lng": -43.1807461,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
     "data_recebimento": "2021-06-29T19:53:00",
     "texto": "NA AVENIDA CITADA ENTRE O CLUBE BOTAFOGO E O HOSPITAL PINEL TODOS OS [NOME] ENTRE AS 18H E 22H NOTAMSE CERCA DE VINTE MENORES DE IDADE  CONSUMINDO DROGAS REALIZANDO FURTOS A TRANSEUNTES E A MOTORISTAS QUANDO ESTAO PARADOS NOS ENGARRAFAMENTOS",
     "local_mencionado": {
@@ -3514,126 +2254,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-03-06T11:00:00",
-    "texto": "NA AVENIDA CITADA NA ALTURA DO N 54 CINQUENTA E QUATRO EM FRENTE AO SHOPPING RIO SUL EMBAIXO DE UMA ARVORE ONDE NESTE MOMENTO HA QUATRO MOTOQUEIROS FUMANDO MACONHA NO LOCAL HA UMA MOTO PRETA OUTRA BRANCA UMA VERMELHA E OUTRA NA COR AZUL",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-02-22T13:40:00",
-    "texto": "NA AVENIDA CITADA NA CALCADA QUE DA ACESSO AO SHOPPING RIO SUL PODEM SER ENCONTRADOS SER ENCONTRADOS DIARIAMENTE A PARTIR DAS 10H ENTREGADORES DE DELIVERY NAO IDENTIFICADOS CONSUMINDO ENTORPECENTES INFORMA QUE ELES PERMANECEM COM SUAS MOTOS NAO DESCRITAS ESTACIONADAS NA CALCADA OBSTRUINDO A PASSAGEM DE PEDESTRES PELO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-01-16T16:33:00",
-    "texto": "NA AVENIDA CITADA NA ALTURA DO N 54 CINQUENTA E QUATRO PROXIMO DE UMA ARVORE ONDE NESTE MOMENTO HA SEIS MOTOQUEIROS NO LOCAL CONSUMINDO MACONHA DOIS DESTE MOTOQUEIROS PORTAM ARMA NA CINTURA",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-01-15T18:31:00",
-    "texto": "NA AVENIDA CITADA PROXIMO AO SHOPPING RIOSUL EMBAIXO DE UMA ARVORE PODEM SER VISTOS DIARIAMENTE A PARTIR DAS 10H VARIOS CONSUMIDORES DE ENTORPECENTES NAO IDENTIFICADOS OS MESMOS FICAM ALTERADOS E COSTUMAM ESCONDER AS DROGAS PERTO DAS MOTOCICLETAS PLACAS NAO MENCIONADAS COLOCANDO EM RISCO A COLETIVIDADE",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2021-01-08T16:14:00",
-    "texto": "NA AVENIDA CITADA EM FRENTE AO SHOPPING RIO SUL PROXIMO A UMA LADEIRA DIARIAMENTE DURANTE TODO DIA PODEM SER ENCONTRADOS MOTOTAXISTAS NAO IDENTIFICADOS CONSUMINDO MACONHA NO LOCAL [NOME] RELATOS ELES TEM O HABITO DE PRATICAR ASSALTOS A TRANSEUNTES NA LOCALIDADE",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2020-11-24T18:55:00",
-    "texto": "NA AVENIDA CITADA EM FRENTE AO N 54 CINQUENTA E QUATRO DEBAIXO DE UMA ARVORE PODEM SER VISTOS CERCA DE DEZ INDIVIDUOS NAO IDENTIFICADOS FAZENDO USO DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2020-08-06T18:28:00",
-    "texto": "NA AVENIDA CITADA EM FRENTE A ACADEMIA BODY TECH NA PRACA ONDE TEM O CHAVEIRO NESTE MOMENTO O AMBULANTE CONHECIDO COMO [NOME] ESTA SOB EFEITO DE ENTORPECENTES CAUSANDO TRANSTORNOS AOS TRANSEUNTES ELE E FORAGIDO DA JUSTICA POR NAO PAGAMENTO DE PENSAO ALIMENTICIA E TEM UMA FACA NA MOCHILA",
-    "local_mencionado": {
-      "lat": -22.9558145,
-      "lng": -43.1778588,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2020-07-04T14:53:00",
-    "texto": "NA AVENIDA CITADA EM FRENTE AO SHOPPING RIO SUL TODOS OS [NOME] PODEM SER VISTOS CERCA DE OITO INDIVIDUOS NAO IDENTIFICADOS ELES FICAM CIRCULANDO NA LOCALIDADE COM MOTOS E CONSUMEM DROGAS NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2020-06-27T14:44:00",
-    "texto": "NA AVENIDA CITADA EM FRENTE AO SHOPPING RIO SUL NESTE MOMENTO PODE SER VISTOS CERCA DE SEIS INDIVIDUOS NAO IDENTIFICADOS ELES ESTAO EM MOTOS PARADOS EMBAIXO DE UMA ARVORE USANDO ENTORPECENTES",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "rio_sul_12",
-    "data_recebimento": "2020-06-20T11:48:00",
-    "texto": "NA AVENIDA CITADA PROXIMO AO N 54 CINQUENTA E QUATRO E NA ENTRADA DO SHOPPING RIOSUL EMBAIXO DE UMA ARVORE DIRECAO DE QUEM VAI PARA O CENTRO DA CIDADE PODEM SER VISTOS NESTE MOMENTO DOIS GRUPOS DE USUARIOS DE ENTORPECENTES NAO IDENTIFICADOS OS MESMOS SE ENCONTRAM ARMADOS E AMEACAM OS TRANSEUNTES SOLICITA AVERIGUACAO",
-    "local_mencionado": {
-      "lat": -22.9583576,
-      "lng": -43.1764388,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "rio_sul_12",
@@ -3673,30 +2293,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2026-04-07T20:29:00",
-    "texto": "NA RUA MENCIONADA PROXIMO AO PALACIO GUANABARA LOCALIZASE UM VIADUTO ONDE PODEM SER ENCONTRADOS INDIVIDUOS NAO IDENTIFICADOS USUARIOS DE DROGAS QUE FREQUENTEMENTE FURTAM FIOS DE COBRE NA REGIAO",
-    "local_mencionado": {
-      "lat": -22.9437967,
-      "lng": -43.1839729,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2026-04-07T08:34:00",
-    "texto": "NA RUA MENCIONADA EMBAIXO DO VIADUTO E EM FRENTE AO LABORATORIO BRONSTEIN PODESE ENCONTRAR DIARIAMENTE INDIVIDUOS NAO IDENTIFICADOS EM SITUACAO DE RUA CONSUMINDO DROGAS E AMEACADO PEDESTRES OS MESMOS SAO OS RESPONSAVEIS PELOS FURTOS DE CABOS DE COBRE NA REGIAO",
-    "local_mencionado": {
-      "lat": -22.9437967,
-      "lng": -43.1839729,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2026-04-02T20:20:00",
     "texto": "NA RUA MENCIONADA NA PRACA [NOME] NA ESCADARIA E POSSIVEL ENCONTRAR DIARIAMENTE NO PERIODO DA NOITE DOIS INDIVIDUOS NAO IDENTIFICADOS ARMADOS CONSUMINDO DROGAS E FURTANDO TRANSEUNTES",
     "local_mencionado": {
@@ -3718,18 +2314,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2025-11-15T06:25:00",
-    "texto": "NA RUA CITADA ACESSO A COMUNIDADE DO MORRO AZUL HA DIVERSOS USUARIOS DE ENTORPECENTES QUE FICAM TRANSITANDO NESTA VIA E FURTANDO PORTAS DE ALUMINIO ALEM DO HIDROMETRO",
-    "local_mencionado": {
-      "lat": -22.9371507,
-      "lng": -43.1784779,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
@@ -3805,18 +2389,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2025-06-27T16:51:00",
-    "texto": "NA PRAIA MENCIONADA ENTRE O POSTO DOIS E TRES EM DIAGONAL AO PREDIO 200 DUZENTOS LOCALIZASE A BARRACA 73 SETENTA E TRES POINT DO [NOME] ONDE FREQUENTEMENTE TANTO NO PERIODO DAS 08H AS 09H QUANTO A PARTIR DAS 22H PODE SER ENCONTRADO O FUNCIONARIO VULGO FERRUGEM NAO CARACTERIZADO QUE VEM COLOCANDO SOM MUITO ALTO E QUANDO INTERPELADO PELOS MORADORES NAO IDENTIFICADOS EM VIRTUDE DE SER USUARIO DE DROGAS AGE COM VIOLENCIA VERBAL AMEACANDO E PODENDO CHEGAR AS VIAS DE FATO FERRUGEM PERNOITA NESSA BARRACA",
-    "local_mencionado": {
-      "lat": -22.9332358,
-      "lng": -43.1746947,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2025-05-30T17:51:00",
     "texto": "NA RUA CITADA NAS PROXIMIDADES DO NUMERO 11 ONZE TORNARAMSE FREQUENTES OS ROUBOS A TRANSEUNTES OCORRENDO PRINCIPALMENTE ENTRE AS 17H E AS 23H",
     "local_mencionado": {
@@ -3853,30 +2425,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2025-02-10T12:56:00",
-    "texto": "NA RUA CITADA ESQUINA COM A RUA BARAO DA TORRE NA CALCADA DO MERCADO PAO DE ACUCAR LOCALIZASE UM CASAL DESDE SEXTAFEIRA722025 COM DUAS CRIANCAS SENDO UMA RECEMNASCIDA E OUTRA APARENTA TER 7 ANOS QUE FICAM SOZINHAS EXPOSTAS AO SOL E CHORANDO MUITO ENQUANTO ELES DORMEM NA CALCADA APARENTEMENTE DROGADOS",
-    "local_mencionado": {
-      "lat": -22.9411821,
-      "lng": -43.1809626,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2025-01-16T15:34:00",
-    "texto": "NO ENDERECO MENCIONADO AO LADO DO SUPERMERCADO ZONA SUL LOCALIZASE UM PREDIO DE DOZE ANDARES ONDE NO APARTAMENTO N 1002 MIL E DOIS DIARIAMENTE PODE SER ENCONTRADA A IDOSA ILZA ELIZABETH E SEU ESPOSO [NOME] VULGO LEO SOFRENDO MAUS TRATOS [NOME] VICIADA EM DROGAS COM PASSAGEM [NOME] POLICIA E DESEMPREGADA QUE OS AGRIDE CONSTANTEMENTE [NOME] E MAE DE DUAS CRIANCAS ENTRE TRES E [NOME] ANOS NAO IDENTIFICADAS AS QUAIS SAO ABANDONADAS POR ELA COM SUA MAE SEM OS DEVIDOS CUIDADOS PARA SE DROGAR",
-    "local_mencionado": {
-      "lat": -22.9341893,
-      "lng": -43.1755464,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2024-12-29T20:11:00",
     "texto": "NO ENDEREO MENCIONADO EM FRENTE AO BOTAFOGO PRAIA SHOPPING ALTURA DO N 400 QUATROCENTOS NESTE MOMENTO DOIS INDIVIDUOS APENAS UM CARACTERIZADO ESTAO TENTANDO ROUBAR CELULARS NO SEMAFORO EM FRENTE AO SHOPPING INFOMA QUE UM DELES ESTA USANDO UMA CAMISETA AZUL SHOTS PRETO E UMA BOLSA TRANSPASSADA NO PEITO",
     "local_mencionado": {
@@ -3898,18 +2446,6 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2024-10-28T19:11:00",
-    "texto": "NA RUA CITADA NA ALTURA DO N 177 CENTO E SETENTA E [NOME] EXISTE UMA GRANDE AGLOMERACAO DE MORADORES DE RUA NAO IDENTIFICADOS QUE CONSOMEM DROGAS MONTAM BARRACAS NAS RUAS ESPALHAM LIXO QUE SE ACUMULA NA VIA E SE MASTURBAM EM PUBLICO",
-    "local_mencionado": {
-      "lat": -22.9372578,
-      "lng": -43.1759213,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
@@ -3997,66 +2533,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2024-03-25T17:29:00",
-    "texto": "NO ENDERECO CITADO AO LADO DE UMA PADARIA SITUASE UMA LOJA DA PROPRIEDADE DE EUSTAQUIO NAO CARACTERIZADO QUE COSTUMA COMPRAR CELULARES ORIUNDOS DE FURTOS DOS USUARIOS DE ENTORPECENTES E EM SEGUIDA OS REVENDE",
-    "local_mencionado": {
-      "lat": -22.9368511,
-      "lng": -43.1775446,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2024-03-01T09:50:00",
-    "texto": "NA RUA CITADA QUASE ESQUINA COM A RUA SENADOR VERGUEIRO HA APROXIMADAMENTE DUAS SEMANAS A PARTIR DAS 19H UM GRUPO DE SEIS INDIVIDUOS NAO IDENTIFICADOS QUE SAO VISTOS USANDO DROGAS ESTAO SE INSTANDO AOS POUCOS NA CALCADA FAZENDO BARRACOS AS MARGENS DE UM MURO ACRESCENTA QUE OS USUARIOS FICAM FAZENDO ABORDAGENS AOS TRANSEUNTES COM AGRESSIVIDADE",
-    "local_mencionado": {
-      "lat": -22.9401599,
-      "lng": -43.1764329,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2023-12-21T10:40:00",
-    "texto": "NO ACESSO A RUA CITADA EM FRENTE A BASILICA IMACULADA [NOME] VIADUTO SAN [NOME] DIARIAMENTE A QUALQUER HORARIO PODEM SER VISTOS VARIOS INDIVIDUOS NAO IDENTIFICADOS USANDO CRACK CITA QUE ELES BRIGAM MUITO E FICANDO FAZENDO BADERNA NO LOCAL",
-    "local_mencionado": {
-      "lat": -22.9419611,
-      "lng": -43.1821854,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2023-11-28T20:06:00",
-    "texto": "NA RUA CITADA EM FRENTE A GALERIA DE N 203 DUZENTOS E TRES HA UM PONTO DE ONIBUS QUE VEM SENDO DEPREDADO POR USUARIOS DE ENTORPECENTES OS MESMOS DIARIAMENTE POR VOLTA DAS 2H SE DIRECIONAM AO LOCAL PARA RETIRAREM O TETO E OS FERROS QUE SUSTENTAM O ABRIGO DE ONIBUS UM DOS INDIVIDUOS FICAM NA ESQUINA DA SENADOR VERGUEIRO COM A RUA DESEMBARGADOR SADY [NOME] EM FRENTE AO PREDIO DE N 232 DUZENTOS E TRINTA E DOIS FINGINDO SER UM CATADOR DE LIXO ENQUANTO O OUTRO FICA RETIRANDO A FERRAGEM QUE SUSTENTA O PONTO DE ONIBUS AO ESCUTAREM A CIRENE DA POLICIA SE DIRECIONAM PARA A RUA DESEMBARGADOR SADY [NOME] COM O PRODUTO DO ROUBO SE ESCONDENDO DO LADO DIREITO ENTRE OS CARROS HOJE 28112023 A PREFEITURA FEZ A MANUTENCAO VINDO A DEVOLVER OS FERROS FURTADOS CONSEQUENTEMENTE E CERTO DE NOVA INVESTIDA POR PARTE DOS USUARIOS DE DROGAS",
-    "local_mencionado": {
-      "lat": -22.9369456,
-      "lng": -43.1757809,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2023-09-21T11:20:00",
-    "texto": "NO ENDERECO CITADO LOCALIZASE A FACULDADE UNIVERITAS ONDE DIARIAMENTE PODEM SER VISTOS INDIVIDUOS NAO IDENTIFICADOS FUMANDO MACONHA NO PORTAO INCLUSIVE NO HORARIO DE ENTRADA E SAIDA DOS ALUNOS DO COLEGIO PENSI FLAMENGO",
-    "local_mencionado": {
-      "lat": -22.9356955,
-      "lng": -43.1769268,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2023-09-20T13:15:00",
     "texto": "NA RUA CITADA ENTRE AS RUAS SENADOR VERGUEIRO E [NOME] DIARAIMENTE DEPOIS DAS 21H PODEM SER VISTOS INDIVIDUOS NAO IDENTIFICADOS PORTANDO ARMAS DE FOGO PRATICANDO ASSALTOS A TRANSEUNTES",
     "local_mencionado": {
@@ -4141,18 +2617,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2022-11-09T21:00:00",
-    "texto": "NA TRAVESSA CITADA ENTRE AS RUAS SENADOR VERGUEIRO E [NOME] DE ABRANTES LOCALIZASE O BAR BAMBI ONDE CONSTANTEMENTE PRINCIPALMENTE A NOITE OS FREQUENTADORES NAO IDENTIFICADOS FAZEM USO DE DROGAS NO BANHEIRO DO ESTABELECIMENTO",
-    "local_mencionado": {
-      "lat": -22.9345615,
-      "lng": -43.176406,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2022-10-29T10:55:00",
     "texto": "NA RUA CITADA PROXIMO A RUA BAMBINA DIARIAMENTE A PARTIR DAS 18H OCORREM ASSALTOS A TRANSEUNTES POR DOIS INDIVIDUOS NAO IDENTIFICADOS ARMADOS QUE AO TERMINO DO ILICITO FOGEM [NOME] PRAIA DE BOTAFOGO NAO SE VE POLICIAMENTO NO LOCAL",
     "local_mencionado": {
@@ -4225,18 +2689,6 @@
   },
   {
     "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2022-02-25T11:47:00",
-    "texto": "NO ENDERECO MENCIONADO PROXIMO A PRAIA DE BOTAFOGO LOCALIZASE O EDIFICIO [NOME] ONDE RESIDE [NOME] DERVICAL [NOME] QUE E USUARIO DE DROGAS E [NOME] INFORMACOES ELE RECEBE O PAGAMENTO AS APOSENTADORIAS DOS PAIS LENITA [NOME] DE 76 ANOS E ARMINDO [NOME] E USA PARTE DO DINHEIRO EM BENEFICIO PROPRIO INFORMA QUE O IDOSO ARMINDO ENCONTRASE INTERNADO NO HOSPITAL PRO CARDIACO NO BAIRRO DE BOTAFOGO E ESTA COM CANCER E SOFREU UM AVC E A IDOSA LENITA POSSUI MAL DE PARKISON E  ENCONTRASE NA CASA DE REPOUSO VOVO HOUSE SITUADA NA LADEIRA SANTA TERESA INFORMA QUE NO FINAL DO MES DE JANEIRO OS IDOSOS ESTAVAM SOZINHOS NA RESIDENCIA E A IDOSA CAIU E CORTOU A CABECA OS IDOSOS SOFRIAM NEGLIGENCIAS POR PARTE DO [NOME]",
-    "local_mencionado": {
-      "lat": -22.939918,
-      "lng": -43.1773795,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
     "data_recebimento": "2022-02-07T20:07:00",
     "texto": "NA RUA CITADA ESQUINA COM PRAIA DE BOTAFOGO PROXIMO A CASA  VIDEO OCORREM ASSALTOS A TRANSEUNTES PRATICADOS POR DOIS INDIVIDUOS NAO IDENTIFICADOS EM UMA MOTOCICLETA DE COR PRETA PLACA NAO MENCIONADA OS MESMOS COSTUMAM AGIR NA PARTE DA TARDE",
     "local_mencionado": {
@@ -4246,17 +2698,5 @@
     },
     "horario_mencionado": null,
     "tema_principal": "crimes contra o patrimônio"
-  },
-  {
-    "poligono_fm_id": "praia_de_botafogo_ru_14",
-    "data_recebimento": "2021-10-07T12:04:00",
-    "texto": "NA RUA CITADA PROXIMO AO RESPIRADOURO DA ESTACAO DO METRO FLAMENGO ONDE NESTE MOMENTO HA CINCO INDIVIDUOS NAO IDENTIFICADOS UTILIZANDO UM CACHIMBO PARA FUMAREM CRACK",
-    "local_mencionado": {
-      "lat": -22.9368085,
-      "lng": -43.1784037,
-      "descricao": null
-    },
-    "horario_mencionado": null,
-    "tema_principal": "substâncias entorpecentes"
   }
 ]

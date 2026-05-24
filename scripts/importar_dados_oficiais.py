@@ -257,6 +257,10 @@ def importar_denuncias(areas_geom):
             tema = (row.get("classe") or row.get("tipos.tipo") or "").strip().lower()
             tema_curto = tema[:80] if tema else None
 
+            # FOCO FM: apenas crimes contra patrimônio
+            if "patrimônio" not in tema and "patrimonio" not in tema and "receptaçã" not in tema and "receptaca" not in tema:
+                continue
+
             por_area.setdefault(pid, []).append({
                 "poligono_fm_id": pid,
                 "data_recebimento": dt.isoformat(),

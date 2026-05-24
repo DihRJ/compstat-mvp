@@ -261,7 +261,7 @@ PAGINAS = [
     "Importar dados",
     "Quadro de Missao Diaria",
     "Evolucao 90 dias",
-    "Gerar DOCX",
+    "Relatorios",
 ]
 
 if "pagina" not in st.session_state:
@@ -464,7 +464,19 @@ st.sidebar.caption(f"v MVP · {date.today():%d/%m/%Y}")
 
 def render_dashboard():
     st.title("Dashboard")
-    st.caption("Visao executiva das areas prioritarias da Forca Municipal.")
+    st.caption(
+        f"Visão executiva das áreas prioritárias da Força Municipal · "
+        f"Período: **{label_periodo()}**"
+    )
+    st.markdown(
+        "<div class='institucional'>"
+        "<strong>Foco da análise:</strong> crimes contra o patrimônio "
+        "(roubos e furtos) — competência da Força Municipal. "
+        "Outros delitos (drogas, violência interpessoal) são "
+        "competência das polícias estaduais."
+        "</div>",
+        unsafe_allow_html=True,
+    )
 
     dados = carregar_tudo(*resolver_periodo())
     areas = dados["areas"]
@@ -472,125 +484,127 @@ def render_dashboard():
 
     if not areas:
         st.info(
-            "Nenhuma area cadastrada. Va em **Editor de areas → Criar nova** para comecar.",
+            "Nenhuma área cadastrada. Vá em **Editor de áreas → Criar nova** para começar.",
             icon="📍",
         )
         return
 
-    # ----- KPIs nativos -----
+    # ===== KPIs no topo =====
     col1, col2, col3, col4 = st.columns(4)
-    col1.container(border=True).metric("Areas ativas", len(areas))
-    col2.container(border=True).metric("Ocorrencias (60d)", len(dados["ocorrencias"]))
-    col3.container(border=True).metric("RELINTs ativos", len(dados["relints"]))
-    col4.container(border=True).metric("Denuncias disque", len(dados["denuncias"]))
+    col1.container(border=True).metric("Áreas ativas", len(areas))
+    col2.container(border=True).metric("Ocorrências", len(dados["ocorrencias"]))
+    col3.container(border=True).metric("RELINTs", len(dados["relints"]))
+    col4.container(border=True).metric("Denúncias", len(dados["denuncias"]))
 
-    st.markdown("## Mapa de risco")
+    # ===== Tabs principais =====
+    tab_mapa, tab_ranking = st.tabs(["🗺️  Mapa de risco", "🏆  Ranking de áreas"])
 
-    # ---- Filtros do mapa ----
-    f1, f2 = st.columns([2, 1])
-    with f1:
-        areas_filtradas = st.multiselect(
-            "Áreas visíveis no mapa",
-            [a.poligono_id for a in areas],
-            default=[a.poligono_id for a in areas],
-            format_func=lambda i: next(
-                a.nome_area for a in areas if a.poligono_id == i
-            ),
-            help="Selecione as áreas que deseja ver. Padrão: todas.",
-        )
-    with f2:
-        modo_viz = st.radio(
-            "Visualização",
-            ["🔥 Mapa de calor", "📍 Pins (ocorrências)"],
-            horizontal=False,
-            label_visibility="visible",
-        )
+    # --------- TAB 1: MAPA ---------
+    with tab_mapa:
+        # Filtros colapsados (default fechado)
+        with st.expander("⚙️ Filtros e camadas", expanded=False):
+            f1, f2 = st.columns([3, 2])
+            with f1:
+                areas_filtradas = st.multiselect(
+                    "Áreas visíveis",
+                    [a.poligono_id for a in areas],
+                    default=[a.poligono_id for a in areas],
+                    format_func=lambda i: next(
+                        a.nome_area for a in areas if a.poligono_id == i
+                    ),
+                )
+            with f2:
+                modo_viz = st.radio(
+                    "Visualização das ocorrências",
+                    ["🔥 Mapa de calor", "📍 Pins (cluster)"],
+                    horizontal=False,
+                )
 
-    # Filtro por tipo de crime
-    tipos_disponiveis = sorted({o.tipo for o in dados["ocorrencias"]})
-    tipos_filtrados = st.multiselect(
-        "Tipos de crime",
-        tipos_disponiveis,
-        default=tipos_disponiveis,
-        format_func=lambda t: t.replace("_", " ").title(),
-    )
-
-    # Legenda
-    st.markdown(
-        """
-        <div class='legend-box'>
-          <strong>Faixa de risco (score)</strong>
-          <div class='legend-row'>
-            <span class='legend-sq' style='background:#2E7D32'></span>
-            Baixo (0,00 a 0,30)
-          </div>
-          <div class='legend-row'>
-            <span class='legend-sq' style='background:#EF6C00'></span>
-            Médio (0,31 a 0,60)
-          </div>
-          <div class='legend-row'>
-            <span class='legend-sq' style='background:#C62828'></span>
-            Alto (0,61 a 1,00)
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.caption(
-        "ℹ️ Use o controle de camadas (canto superior direito do mapa) "
-        "para ligar/desligar áreas, ocorrências e pontos de interceptação."
-    )
-
-    # Aplica filtros
-    areas_render = [a for a in areas if a.poligono_id in areas_filtradas]
-    bingos_render = [
-        b for b in bingos if b.poligono_fm_id in areas_filtradas
-    ]
-    ocorrencias_render = [
-        o for o in dados["ocorrencias"]
-        if o.poligono_fm_id in areas_filtradas and o.tipo in tipos_filtrados
-    ][:1000]  # cap para performance
-
-    try:
-        from streamlit_folium import st_folium
-        m = construir_mapa_folium(
-            areas_render, bingos_render,
-            ocorrencias=ocorrencias_render,
-            modo_visualizacao="heatmap" if "calor" in modo_viz else "pins",
-        )
-        from heatmap import adicionar_cameras_ao_mapa
-        m = adicionar_cameras_ao_mapa(m)
-        st_folium(m, width=None, height=550, returned_objects=[])
-        st.caption(
-            f"Mostrando {len(areas_render)} áreas · "
-            f"{len(ocorrencias_render)} ocorrências · "
-            f"{', '.join(tipos_filtrados[:3]) + ('...' if len(tipos_filtrados) > 3 else '')}"
-        )
-    except ImportError:
-        st.warning("Para o mapa instale: `pip install streamlit-folium folium`")
-
-    st.markdown("## Top 5 areas por score")
-    st.caption("Clique em **Abrir QMD →** para ir direto para o Quadro de Missao da area.")
-
-    top5 = bingos[:5]
-    for b in top5:
-        c = b.componentes
-        with st.container(border=True):
-            col_info, col_score, col_acao = st.columns([5, 2, 2])
-            col_info.markdown(
-                f"**{b.nome_area}** &nbsp; {badge_score(c.score_final)}"
-                f" &nbsp; <span style='color:#666;font-size:.85rem'>"
-                f"{b.n_camadas_ativas}/4 camadas</span>",
-                unsafe_allow_html=True,
+            tipos_disponiveis = sorted({o.tipo for o in dados["ocorrencias"]})
+            tipos_filtrados = st.multiselect(
+                "Tipos de crime",
+                tipos_disponiveis,
+                default=tipos_disponiveis,
+                format_func=lambda t: t.replace("_", " ").title(),
             )
-            col_info.caption(b.justificativa)
-            col_score.progress(min(c.score_final, 1.0), text=f"Score {c.score_final:.2f}")
-            if col_acao.button(
-                "Abrir QMD →",
-                key=f"goto_qmd_{b.poligono_fm_id}",
-                use_container_width=True,
-            ):
-                navegar_para("Quadro de Missao Diaria", b.poligono_fm_id)
+            st.caption(
+                "💡 No mapa, use o controle de camadas no canto superior direito "
+                "para alternar Áreas / Ocorrências / Câmeras / Pontos de interceptação."
+            )
+
+        # Aplica filtros
+        if "areas_filtradas" not in dir():
+            areas_filtradas = [a.poligono_id for a in areas]
+        if "tipos_filtrados" not in dir():
+            tipos_filtrados = sorted({o.tipo for o in dados["ocorrencias"]})
+        if "modo_viz" not in dir():
+            modo_viz = "🔥 Mapa de calor"
+
+        areas_render = [a for a in areas if a.poligono_id in areas_filtradas]
+        bingos_render = [
+            b for b in bingos if b.poligono_fm_id in areas_filtradas
+        ]
+        ocorrencias_render = [
+            o for o in dados["ocorrencias"]
+            if o.poligono_fm_id in areas_filtradas and o.tipo in tipos_filtrados
+        ][:1000]
+
+        # Legenda discreta acima do mapa
+        st.markdown(
+            "<div style='font-size:.82rem; color:#555; margin:.3rem 0'>"
+            "<strong>Faixa de risco:</strong> &nbsp;"
+            "<span class='legend-sq' style='background:#2E7D32'></span> Baixo &nbsp;·&nbsp;"
+            "<span class='legend-sq' style='background:#EF6C00'></span> Médio &nbsp;·&nbsp;"
+            "<span class='legend-sq' style='background:#C62828'></span> Alto"
+            "</div>",
+            unsafe_allow_html=True,
+        )
+
+        try:
+            from streamlit_folium import st_folium
+            m = construir_mapa_folium(
+                areas_render, bingos_render,
+                ocorrencias=ocorrencias_render,
+                modo_visualizacao="heatmap" if "calor" in modo_viz else "pins",
+            )
+            from heatmap import adicionar_cameras_ao_mapa
+            m = adicionar_cameras_ao_mapa(m)
+            st_folium(m, width=None, height=560, returned_objects=[])
+            st.caption(
+                f"{len(areas_render)} áreas · {len(ocorrencias_render)} ocorrências no mapa"
+            )
+        except ImportError:
+            st.warning("Para o mapa instale: `pip install streamlit-folium folium`")
+
+    # --------- TAB 2: RANKING ---------
+    with tab_ranking:
+        st.caption(
+            "Áreas ordenadas por score consolidado. Clique em **Abrir QMD →** "
+            "para ver o Quadro de Missão Diária da área."
+        )
+
+        for i, b in enumerate(bingos, 1):
+            c = b.componentes
+            with st.container(border=True):
+                col_pos, col_info, col_acao = st.columns([1, 7, 2])
+                col_pos.markdown(
+                    f"<div style='font-size:1.6rem; font-weight:700; "
+                    f"color:#1E2761; text-align:center'>{i}º</div>",
+                    unsafe_allow_html=True,
+                )
+                col_info.markdown(
+                    f"**{b.nome_area}** &nbsp; {badge_score(c.score_final)}"
+                    f" &nbsp; <span style='color:#666;font-size:.85rem'>"
+                    f"{b.n_camadas_ativas}/4 camadas · bônus x{c.bonus_faccional:.2f}</span>",
+                    unsafe_allow_html=True,
+                )
+                col_info.caption(b.justificativa[:200])
+                if col_acao.button(
+                    "Abrir QMD →",
+                    key=f"goto_qmd_{b.poligono_fm_id}",
+                    use_container_width=True,
+                ):
+                    navegar_para("Quadro de Missao Diaria", b.poligono_fm_id)
 
 
 # ============================================================
@@ -701,7 +715,7 @@ def render_scores():
                 "Gerar DOCX →", key=f"score_docx_{b.poligono_fm_id}",
                 use_container_width=True,
             ):
-                navegar_para("Gerar DOCX", b.poligono_fm_id)
+                navegar_para("Relatorios", b.poligono_fm_id)
 
 
 # ============================================================
@@ -1271,7 +1285,7 @@ def render_qmd():
     if col_docx.button(
         "Gerar DOCX desta area →", type="primary", use_container_width=True,
     ):
-        navegar_para("Gerar DOCX", pid)
+        navegar_para("Relatorios", pid)
 
 
 # ============================================================
@@ -1376,22 +1390,35 @@ def render_evolucao():
 # PAGINA 6: GERAR DOCX
 # ============================================================
 
-def render_docx():
-    st.title("Gerar relatorio DOCX editavel")
+def render_relatorios():
+    st.title("Relatórios")
     st.caption(
-        "DOCX gerado para reuniao do CompStat. Totalmente editavel no "
-        "Word ou LibreOffice apos download."
+        "Geração de relatórios analíticos no formato oficial CompStat Municipal. "
+        "Por área ou consolidado (todas as áreas ativas)."
     )
 
-    with st.expander("O que vai no relatorio?", expanded=True):
+    aba_area, aba_geral = st.tabs([
+        "📄 Relatório por área",
+        "📚 Relatório consolidado (todas as áreas)",
+    ])
+
+    with aba_area:
+        _render_relatorio_por_area()
+    with aba_geral:
+        _render_relatorio_consolidado()
+
+
+def _render_relatorio_por_area():
+    """Aba 1: relatório individual de uma área."""
+    with st.expander("O que vai no relatório?", expanded=False):
         st.markdown(
-            "- **Identificacao da area** (AISP, base FM, DP, BPM)  \n"
-            "- **Score detalhado** com tabela de pesos diferenciados  \n"
-            "- **Heatmap temporal** 7x24 das ocorrencias  \n"
-            "- **Recomendacao de patrulhamento** (modalidade, efetivo, pontos)  \n"
-            "- **QMD completo** com modus operandi e rotas  \n"
-            "- **Evolucao 90 dias** com grafico antes/depois  \n"
-            "- **Padroes do Disque** e **apoio interinstitucional** (se houver)"
+            "- **Capa institucional** com período de análise e total de roubos  \n"
+            "- **Resumo Executivo** com Score + tabela 4×4 de perguntas norteadoras  \n"
+            "- **1. Ocorrências criminais** (identificação, indicadores, top tipos, análise temporal)  \n"
+            "- **2. Dinâmica criminal** sintetizada do RELINT e Disque  \n"
+            "- **3. Efetivo empregado FM** (tabela 5×4 — efetivo padrão da área usado)  \n"
+            "- **4. Fatores de incidência criminal** por órgão  \n"
+            "- **5. Plano de ação e responsabilização** pré-populado pela IA"
         )
 
     dados = carregar_tudo(*resolver_periodo())
@@ -1418,28 +1445,33 @@ def render_docx():
     st.session_state["area_selecionada"] = pid
 
     area_sel = get_area(areas, pid)
-    efetivo_max = max(80, area_sel.efetivo_padrao * 2) if area_sel else 80
-    col_s, col_b = st.columns([3, 1])
-    efetivo = col_s.slider(
-        "Efetivo alocado",
-        min_value=5, max_value=efetivo_max,
-        value=int(area_sel.efetivo_padrao) if area_sel else 25,
-        key=f"docx_efetivo_{pid}",
-        help=f"Padrão atual: {area_sel.efetivo_padrao} agentes." if area_sel else "",
-    )
-    if area_sel and col_b.button(
-        "💾 Salvar padrão", key=f"docx_save_padrao_{pid}",
-        use_container_width=True,
-        disabled=(efetivo == area_sel.efetivo_padrao),
-    ):
-        AreasFMStore(DATA_DIR / "areas.json").atualizar(
-            poligono_id=pid, efetivo_padrao=int(efetivo),
-        )
-        st.cache_data.clear()
-        st.toast(f"Padrão de {area_sel.nome_area} agora é {efetivo}.", icon="💾")
-        st.rerun()
+    if not area_sel:
+        st.error("Area não encontrada.")
+        return
 
-    if st.button("Gerar DOCX", type="primary"):
+    # Cabeçalho institucional da área selecionada (somente leitura)
+    bingo_sel = get_bingo(bingos, pid)
+    with st.container(border=True):
+        c1, c2, c3 = st.columns([3, 1, 1])
+        c1.markdown(
+            f"### {area_sel.nome_area}<br>"
+            f"<span style='font-size:.85rem;color:#666'>"
+            f"{area_sel.aisp} · {area_sel.base_fm} · {area_sel.subprefeitura}</span>",
+            unsafe_allow_html=True,
+        )
+        if bingo_sel:
+            c2.metric("Score", f"{bingo_sel.componentes.score_final:.2f}")
+        c3.metric("Efetivo no período", area_sel.efetivo_padrao)
+
+    st.caption(
+        f"📅 Período de análise: {label_periodo()}. "
+        f"Para alterar, use o seletor na barra lateral."
+    )
+
+    # Efetivo usado é o `efetivo_padrao` da área (sem slider)
+    efetivo = area_sel.efetivo_padrao
+
+    if st.button("📄 Gerar relatório da área", type="primary"):
         with st.status("Gerando relatorio...", expanded=True) as status:
             try:
                 area = get_area(areas, pid)
@@ -1534,6 +1566,115 @@ def render_docx():
                 print(traceback.format_exc(), file=sys.stderr)
 
 
+def _render_relatorio_consolidado():
+    """Aba 2: relatório consolidado com todas as áreas ativas."""
+    st.markdown(
+        "Relatório único cobrindo **todas as áreas ativas** da Força Municipal. "
+        "Inclui ranking, indicadores agregados e ficha resumida por área."
+    )
+
+    with st.expander("O que vai no relatório consolidado?", expanded=False):
+        st.markdown(
+            "- **Capa consolidada** com totais gerais  \n"
+            "- **Ranking** das áreas por score de risco  \n"
+            "- **Indicadores agregados**: roubos, furtos, RELINTs, fatores  \n"
+            "- **Ficha resumida de cada área** (identificação + score + top 3 fatores)  \n"
+            "- **Plano de ação consolidado** agrupado por órgão responsável  \n"
+            "- **Comparativo de evolução 90 dias** com gráfico"
+        )
+
+    dados = carregar_tudo(*resolver_periodo())
+    areas = dados["areas"]
+    bingos = dados["bingos"]
+
+    if not areas:
+        st.info("Nenhuma área cadastrada.")
+        return
+
+    # Resumo rápido na UI antes de gerar
+    st.caption(f"📅 Período: {label_periodo()}")
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Áreas", len(areas))
+    k2.metric("Ocorrências", len(dados["ocorrencias"]))
+    k3.metric("RELINTs", len(dados["relints"]))
+    k4.metric("Fatores", len(dados["fatores"]))
+
+    if st.button(
+        "📚 Gerar relatório consolidado de todas as áreas", type="primary",
+    ):
+        from docx_generator import gerar_relatorio_geral_docx
+        snapshots = carregar_snapshots()
+        nome_por = {a.poligono_id: a.nome_area for a in areas}
+        comparativos = comparar_todas_areas(snapshots, nome_por)
+        periodo_ini, periodo_f = resolver_periodo()
+
+        with st.status("Gerando relatório consolidado...", expanded=True) as status:
+            try:
+                st.write("✓ Coletando dados de todas as áreas")
+                # Agrupa dados por área
+                por_area = {}
+                for a in areas:
+                    pid = a.poligono_id
+                    por_area[pid] = {
+                        "area": a,
+                        "bingo": get_bingo(bingos, pid),
+                        "ocorrencias": [o for o in dados["ocorrencias"] if o.poligono_fm_id == pid],
+                        "relints": [r for r in dados["relints"] if r.poligono_fm_id == pid],
+                        "denuncias": [d for d in dados["denuncias"] if d.poligono_fm_id == pid],
+                        "fatores": [f for f in dados["fatores"] if f.poligono_fm_id == pid],
+                    }
+
+                st.write("✓ Calculando sugestões de efetivo para todas as áreas")
+                for pid, d in por_area.items():
+                    if d["bingo"]:
+                        d["sugestao"] = sugerir_efetivo(
+                            d["area"], d["bingo"], d["ocorrencias"],
+                            d["relints"], d["fatores"],
+                        )
+
+                st.write("✓ Compondo gráfico consolidado")
+                grafico_png = None
+                if comparativos:
+                    grafico_png = gerar_grafico_evolucao(comparativos)
+
+                st.write("✓ Renderizando DOCX consolidado")
+                nome_arq = (
+                    OUTPUT_DIR /
+                    f"relatorio_consolidado_{date.today():%Y%m%d}.docx"
+                )
+                gerar_relatorio_geral_docx(
+                    por_area=por_area,
+                    bingos_ranking=bingos,
+                    comparativos=comparativos,
+                    grafico_evolucao_png=grafico_png,
+                    periodo_inicio=periodo_ini,
+                    periodo_fim=periodo_f,
+                    output_path=str(nome_arq),
+                )
+
+                status.update(
+                    label=f"Consolidado gerado ({nome_arq.stat().st_size // 1024} KB)",
+                    state="complete", expanded=False,
+                )
+
+                with open(nome_arq, "rb") as f:
+                    st.download_button(
+                        "📚 Baixar Relatório Consolidado",
+                        data=f.read(),
+                        file_name=nome_arq.name,
+                        mime=(
+                            "application/vnd.openxmlformats-officedocument."
+                            "wordprocessingml.document"
+                        ),
+                        type="primary",
+                    )
+                st.toast("Consolidado pronto.", icon="📚")
+            except Exception:
+                status.update(label="Falha na geração", state="error")
+                st.error("Não foi possível gerar o relatório consolidado.")
+                print(traceback.format_exc(), file=sys.stderr)
+
+
 # ============================================================
 # ROUTER
 # ============================================================
@@ -1545,7 +1686,7 @@ PAGINA_RENDERS = {
     "Importar dados": render_importar,
     "Quadro de Missao Diaria": render_qmd,
     "Evolucao 90 dias": render_evolucao,
-    "Gerar DOCX": render_docx,
+    "Relatorios": render_relatorios,
 }
 
 PAGINA_RENDERS[st.session_state["pagina"]]()

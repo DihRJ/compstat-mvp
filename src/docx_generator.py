@@ -511,3 +511,259 @@ def gerar_relatorio_docx(
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     doc.save(output_path)
     return output_path
+
+
+# ============================================================
+# RELATÓRIO CONSOLIDADO (TODAS AS ÁREAS)
+# ============================================================
+
+def gerar_relatorio_geral_docx(
+    por_area: dict,
+    bingos_ranking: list[BingoArea],
+    *,
+    comparativos: Optional[list[ComparativoEvolucao]] = None,
+    grafico_evolucao_png: Optional[bytes] = None,
+    periodo_inicio: Optional[date] = None,
+    periodo_fim: Optional[date] = None,
+    output_path: str = "output/relatorio_consolidado.docx",
+) -> str:
+    """Gera DOCX consolidado cobrindo todas as áreas ativas da FM.
+
+    Args:
+        por_area: dict {poligono_id: {area, bingo, ocorrencias, relints,
+                  denuncias, fatores, sugestao}}
+        bingos_ranking: bingos ordenados (maior score primeiro)
+        comparativos: lista de ComparativoEvolucao
+    """
+    doc = Document()
+
+    style = doc.styles["Normal"]
+    style.font.name = "Calibri"
+    style.font.size = Pt(11)
+
+    # ---------- CAPA CONSOLIDADA ----------
+    p_inst = doc.add_paragraph()
+    p_inst.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_inst.add_run("CompStat Municipal  |  Prefeitura do Rio de Janeiro")
+    run.bold = True
+    run.font.color.rgb = COR_NAVY
+    run.font.size = Pt(10)
+
+    titulo = doc.add_paragraph()
+    titulo.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = titulo.add_run("RELATÓRIO CONSOLIDADO")
+    run.bold = True
+    run.font.size = Pt(24)
+    run.font.color.rgb = COR_NAVY
+
+    subtit = doc.add_paragraph()
+    subtit.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = subtit.add_run(
+        f"Todas as áreas prioritárias da Força Municipal ({len(por_area)} áreas)"
+    )
+    run.italic = True
+    run.font.size = Pt(12)
+    run.font.color.rgb = COR_CINZA
+
+    doc.add_paragraph()
+
+    if periodo_inicio and periodo_fim:
+        periodo_str = (
+            f"Período: {periodo_inicio:%d/%m/%Y} a {periodo_fim:%d/%m/%Y}"
+        )
+    else:
+        periodo_str = "Período: Todo o histórico disponível"
+
+    p_per = doc.add_paragraph()
+    p_per.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_per.add_run(periodo_str)
+    run.bold = True
+    run.font.size = Pt(11)
+
+    # Totais
+    n_oco_total = sum(len(d["ocorrencias"]) for d in por_area.values())
+    n_relints_total = sum(len(d["relints"]) for d in por_area.values())
+    n_fatores_total = sum(len(d["fatores"]) for d in por_area.values())
+
+    doc.add_paragraph()
+    totais = _add_table(doc, 2, 4)
+    _header_row(totais, ["Áreas", "Ocorrências", "RELINTs", "Fatores"])
+    totais.rows[1].cells[0].text = str(len(por_area))
+    totais.rows[1].cells[1].text = str(n_oco_total)
+    totais.rows[1].cells[2].text = str(n_relints_total)
+    totais.rows[1].cells[3].text = str(n_fatores_total)
+
+    doc.add_page_break()
+
+    # ---------- RANKING ----------
+    doc.add_heading("RANKING DAS ÁREAS POR SCORE DE RISCO", level=1)
+    doc.add_paragraph(
+        "Ordenação decrescente pelo score consolidado (mancha + RELINT + "
+        "fator urbano + Disque + modus/rotas × bônus faccional).",
+        style="Intense Quote",
+    )
+
+    rank_tab = _add_table(doc, len(bingos_ranking) + 1, 6)
+    _header_row(rank_tab, [
+        "Posição", "Área", "Score", "Camadas ativas",
+        "Bônus faccional", "Facções",
+    ])
+    for i, b in enumerate(bingos_ranking, 1):
+        row = rank_tab.rows[i].cells
+        row[0].text = f"{i}º"
+        row[1].text = b.nome_area
+        row[2].text = f"{b.componentes.score_final:.2f}"
+        row[3].text = f"{b.n_camadas_ativas}/4"
+        row[4].text = f"x{b.componentes.bonus_faccional:.2f}"
+        row[5].text = ", ".join(b.faccoes_envolvidas) if b.faccoes_envolvidas else "—"
+
+    doc.add_page_break()
+
+    # ---------- COMPARATIVO 90D ----------
+    if comparativos:
+        doc.add_heading("EVOLUÇÃO 90 DIAS — TODAS AS ÁREAS", level=1)
+        doc.add_paragraph(
+            "Comparativo de roubos e furtos antes vs depois da atuação da FM.",
+            style="Intense Quote",
+        )
+
+        evo_tab = _add_table(doc, len(comparativos) + 1, 4)
+        _header_row(evo_tab, [
+            "Área", "Variação roubos", "Variação furtos", "Classificação",
+        ])
+        for i, c in enumerate(
+            sorted(comparativos, key=lambda c: c.variacao_roubos_pct), 1,
+        ):
+            row = evo_tab.rows[i].cells
+            row[0].text = c.nome_area
+            row[1].text = f"{c.variacao_roubos_pct:+.1f}%"
+            row[2].text = f"{c.variacao_furtos_pct:+.1f}%"
+            row[3].text = c.classificacao.replace("_", " ")
+
+        if grafico_evolucao_png:
+            doc.add_paragraph()
+            doc.add_picture(io.BytesIO(grafico_evolucao_png), width=Inches(6.5))
+
+        doc.add_page_break()
+
+    # ---------- FICHA RESUMIDA POR ÁREA ----------
+    doc.add_heading("FICHAS RESUMIDAS POR ÁREA", level=1)
+
+    # Ordena pelas mesmas posições do ranking
+    ordem_areas = [b.poligono_fm_id for b in bingos_ranking]
+    for pos, pid in enumerate(ordem_areas, 1):
+        if pid not in por_area:
+            continue
+        d = por_area[pid]
+        area = d["area"]
+        bingo = d["bingo"]
+        if bingo is None:
+            continue
+
+        doc.add_heading(f"{pos}º — {area.nome_area}", level=2)
+
+        # Identificação compacta
+        ident = montar_identificacao(area, d["relints"])
+        ind = _ind_resumido(d["ocorrencias"], pid, bingos_ranking)
+
+        info = _add_table(doc, 2, 4)
+        info.rows[0].cells[0].text = "AISP"
+        info.rows[0].cells[1].text = "Base FM"
+        info.rows[0].cells[2].text = "Score"
+        info.rows[0].cells[3].text = "Efetivo padrão"
+        for c in info.rows[0].cells:
+            for r in c.paragraphs[0].runs:
+                r.bold = True
+                r.font.color.rgb = COR_NAVY
+        info.rows[1].cells[0].text = ident.aisp
+        info.rows[1].cells[1].text = ident.base_fm
+        info.rows[1].cells[2].text = f"{bingo.componentes.score_final:.2f}"
+        info.rows[1].cells[3].text = f"{area.efetivo_padrao}"
+
+        doc.add_paragraph()
+        ind_tab = _add_table(doc, 2, 3)
+        _header_row(ind_tab, ["Roubos", "Furtos", "Camadas ativas"])
+        ind_tab.rows[1].cells[0].text = str(ind["roubos"])
+        ind_tab.rows[1].cells[1].text = str(ind["furtos"])
+        ind_tab.rows[1].cells[2].text = f"{bingo.n_camadas_ativas}/4"
+
+        # Top 3 fatores urbanos
+        if d["fatores"]:
+            doc.add_paragraph()
+            p_fat = doc.add_paragraph()
+            p_fat.add_run("Top 3 fatores urbanos: ").bold = True
+            fatores_grupo = montar_tabela_fatores(d["fatores"])[:3]
+            p_fat.add_run("; ".join(
+                f"{lf.fator} ({lf.responsavel})" for lf in fatores_grupo
+            ))
+
+        # Dinâmica resumida
+        if d["relints"]:
+            r0 = d["relints"][0]
+            p_din = doc.add_paragraph()
+            p_din.add_run("Dinâmica: ").bold = True
+            p_din.add_run(r0.modus_operandi_principal[:300] + "...")
+
+        doc.add_paragraph()
+
+    doc.add_page_break()
+
+    # ---------- PLANO DE AÇÃO CONSOLIDADO POR ÓRGÃO ----------
+    doc.add_heading("PLANO DE AÇÃO CONSOLIDADO POR ÓRGÃO", level=1)
+    doc.add_paragraph(
+        "Ações agrupadas pelo órgão responsável, somando demandas de "
+        "todas as áreas. Use como pauta única na reunião CompStat.",
+        style="Intense Quote",
+    )
+
+    # Coleta todas as ações pré-populadas
+    acoes_por_orgao: dict[str, list[tuple[str, str, str]]] = {}
+    for pid, d in por_area.items():
+        if not d["fatores"]:
+            continue
+        # Pega plano de ação da área (sem recomendacao da FM aqui)
+        # Vamos só refletir os fatores
+        fatores_grupo = montar_tabela_fatores(d["fatores"])
+        for lf in fatores_grupo:
+            acoes_por_orgao.setdefault(lf.responsavel, []).append((
+                d["area"].nome_area, lf.fator, lf.descricao[:200],
+            ))
+
+    if acoes_por_orgao:
+        for orgao, items in sorted(acoes_por_orgao.items()):
+            doc.add_heading(f"{orgao} ({len(items)} demandas)", level=3)
+            tab = _add_table(doc, len(items) + 1, 3)
+            _header_row(tab, ["Área", "Fator", "Resumo"])
+            for i, (area_nome, fator, desc) in enumerate(items, 1):
+                row = tab.rows[i].cells
+                row[0].text = area_nome
+                row[1].text = fator
+                row[2].text = desc
+            doc.add_paragraph()
+
+    # ---------- RODAPÉ ----------
+    doc.add_paragraph()
+    p_footer = doc.add_paragraph()
+    p_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p_footer.add_run(
+        f"Secretaria-Geral do CompStat Municipal · "
+        f"Gerado em {datetime.now():%d/%m/%Y %H:%M}"
+    )
+    run.italic = True
+    run.font.size = Pt(9)
+    run.font.color.rgb = COR_CINZA
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    doc.save(output_path)
+    return output_path
+
+
+def _ind_resumido(
+    ocorrencias_area: list[Ocorrencia],
+    pid: str,
+    bingos_todos: list[BingoArea],
+) -> dict:
+    """Indicadores resumidos para a ficha consolidada."""
+    n_roubos = sum(1 for o in ocorrencias_area if o.tipo.startswith("roubo"))
+    n_furtos = sum(1 for o in ocorrencias_area if o.tipo.startswith("furto"))
+    return {"roubos": n_roubos, "furtos": n_furtos}
