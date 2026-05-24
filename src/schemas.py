@@ -82,6 +82,11 @@ class AreaPoligonoFM(BaseModel):
     bpm: Optional[str] = None
     ativo: bool = True
     centroide: Optional[Coordenada] = None
+    efetivo_padrao: int = Field(
+        default=25,
+        ge=0,
+        description="Quantitativo padrão de agentes da FM para a área. Usado como default no QMD e DOCX.",
+    )
     criado_em: datetime = Field(default_factory=datetime.now)
     atualizado_em: datetime = Field(default_factory=datetime.now)
     observacoes: Optional[str] = None

@@ -73,6 +73,7 @@ class AreasFMStore:
         observacoes: Optional[str] = None,
         base_fm: Optional[str] = None,
         subprefeitura: Optional[str] = None,
+        efetivo_padrao: Optional[int] = None,
     ) -> AreaPoligonoFM:
         area = self.obter(poligono_id)
         if area is None:
@@ -90,6 +91,8 @@ class AreasFMStore:
             area.base_fm = base_fm
         if subprefeitura:
             area.subprefeitura = subprefeitura
+        if efetivo_padrao is not None:
+            area.efetivo_padrao = efetivo_padrao
 
         area.atualizado_em = datetime.now()
         self._substituir(area)
